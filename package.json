@@ -1,0 +1,66 @@
+{
+  "name": "@dejaos/docs",
+  "version": "1.0.0",
+  "description": "Official documentation website for DejaOS - JavaScript Runtime Environment for Embedded Devices.",
+  "author": {
+    "name": "DejaOS team",
+    "email": "service@dxiot.com",
+    "url": "https://dejaos.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DejaOS/dejaos.github.io.git"
+  },
+  "keywords": [
+    "javascript",
+    "embedded",
+    "iot",
+    "runtime",
+    "quickjs",
+    "lvgl",
+    "armlinux"
+  ],
+  "bugs": {
+    "url": "https://github.com/DejaOS/dejaos.github.io/issues"
+  },
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "start:3002": "docusaurus start --port 3002",
+    "start:3003": "docusaurus start --port 3003",
+    "start:3004": "docusaurus start --port 3004",
+    "build": "docusaurus build",
+    "deploy": "docusaurus deploy",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.7.0",
+    "@docusaurus/preset-classic": "^3.7.0",
+    "@eightshift/ui-components": "^3.0.1",
+    "@infinum/docusaurus-theme": "^0.5.0",
+    "@mdx-js/react": "^3.1.0",
+    "@wp-playground/client": "^1.0.28",
+    "clsx": "^2.1.1",
+    "es-text-loader": "file:plugins/es-text-loader",
+    "prism-react-renderer": "^2.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "raw-loader": "^4.0.2"
+  }
+}
