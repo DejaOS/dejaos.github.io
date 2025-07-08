@@ -35,6 +35,7 @@
     "clear": "docusaurus clear"
   },
   "dependencies": {
+    "@docsearch/react": "^3.9.0",
     "@docusaurus/core": "^3.7.0",
     "@docusaurus/preset-classic": "^3.7.0",
     "@eightshift/ui-components": "^3.0.1",

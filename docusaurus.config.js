@@ -76,26 +76,14 @@ module.exports = {
 			links: [],
 			copyright: 'Made with ❤️ by DejaOS team.',
 		},
-		// algolia: {
-		// 	appId: 'CWB1S6U3C4',
-		// 	apiKey: 'cbae3fc769aee256328548eff1e91c1c',
-		// 	indexName: 'infinum_eightshift',
-		// 	startUrls: [
-		// 		'https://eightshift.com',
-		// 		'https://eightshift.com/docs',
-		// 		'https://eightshift.com/forms',
-		// 	],
-		// 	contextualSearch: false,
-		// },
-		// 临时搜索配置 - 保留搜索框但功能待实现
 		algolia: {
-			appId: 'temp',
-			apiKey: 'temp',
-			indexName: 'temp',
+			appId: '6AJUQ28C49',
+			apiKey: 'd3e5fb24b60f78b0e2a1d946b1b7381f',
+			indexName: 'dejaos',
 			startUrls: [
-				'https://dejaos.com',
-				'https://dejaos.com/docs',
-				'https://dejaos.com/modules',
+				'https://dejaos.github.io',
+				'https://dejaos.github.io/docs',
+				'https://dejaos.github.io/modules',
 			],
 			contextualSearch: false,
 		},
