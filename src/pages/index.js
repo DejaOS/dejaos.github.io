@@ -79,7 +79,7 @@ export default function Home() {
 								message: 'Install Guide',
 								description: 'The button label for the first CTA card'
 							}),
-							buttonUrl: '/docs/basics/installation',
+							buttonUrl: 'https://github.com/DejaOS/DejaOS',
 						},
 						{
 							icon: icons.puzzleOpenJob,
@@ -93,7 +93,7 @@ export default function Home() {
 								message: 'Device List',
 								description: 'The button label for the second CTA card'
 							}),
-							buttonUrl: '/docs/basics/devices',
+							buttonUrl: 'https://github.com/DejaOS/DejaOS',
 						}
 					]}
 				/>
