@@ -2,10 +2,8 @@ module.exports = {
 	docs: {
 		'Getting Started': [
 			'welcome',
-			// 'basics/installation',
-			// 'basics/devices',
-			// 'basics/quick-start',
-			// 'basics/project-structure',
+			'basics/installation',
+			'basics/quick-start',
 		],
 		// 'Core Concepts': [
 		// 	// 'basics/javascript-engine',

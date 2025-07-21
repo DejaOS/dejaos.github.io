@@ -1,61 +1,84 @@
+# What is DejaOS
+
+## 🌐 Overview
+
+**DejaOS** is a JavaScript runtime environment purpose-built for embedded devices, enabling low-cost, resource-constrained smart hardware to run JavaScript code efficiently. By adopting JavaScript as the primary development language, DejaOS dramatically lowers the barrier and cost for embedded development, making the process simpler and more productive.
+
+DejaOS has been successfully deployed in various IoT scenarios, demonstrating excellent performance and development efficiency.
+
 ---
-id: welcome
-title: Welcome to DejaOS
+
+## ⚙️ Architecture
+
+DejaOS is built on the following core components:
+
+- **Mip / ARM Linux**: Provides system-level process, thread, and resource management
+- **QuickJS**: A lightweight, fast JavaScript engine supporting the ES2020 standard
+- **LVGL**: A popular open-source embedded graphics library, supporting rich UI development in both C and JavaScript
+
 ---
 
-DejaOS is a JavaScript runtime environment designed for embedded devices, enabling low-cost, low-spec smart devices to run JavaScript code. It uses JavaScript as the development language, reducing costs and simplifying development.
+## 📚 Features
 
-### 🚀 Core Features
+DejaOS offers a comprehensive set of JavaScript APIs and system capabilities:
 
-DejaOS provides a comprehensive set of JavaScript modules for embedded development:
+### 🔌 Hardware Interface Libraries
 
-- **Hardware Interface Module** - GPIO, PWM, UART, RS-485, RS-232, USB, Wiegand, Watchdog, Capturer, ALSA, NFC, QRCode, BLE, Face Recognition, etc.
-- **Networking and Communication Protocol Module** - Net, TCP, TCP Server, MQTT, UDP, HTTP, Web Server, OSDP, etc.
-- **Graphics Module** - Supports drawing GUI screens using JavaScript, compatible with all LVGL native capabilities.
-- **Utility Module** - Threads, encryption/decryption, logging, EventBus, NTP, SQLite, etc.
-- **Third-Party Module** - Supports using pure JavaScript third-party modules with import (ESM).
-- **Native C Library Support** - Allows development through embedded native C libraries wrapped in JavaScript.
+- GPIO, PWM, UART, RS-485, RS-232, USB, Wiegand, Watchdog
+- Capturer, ALSA, NFC, QRCode, BLE, Face Recognition, and more
 
-### 🛠 Technical Foundation
+### 🌐 Networking & Communication Protocols
 
-DejaOS is built on the foundations of Mip/ARMLinux, QuickJS, and LVGL:
+- Net, TCP, TCP Server, MQTT, UDP, HTTP, Web Server, OSDP, etc.
 
-- **Mip/ARMLinux** - Embedded Linux with system processes, threads, and resource scheduling capabilities.
-- **QuickJS** - A compact and fast JavaScript engine that supports the ES2020 standard.
-- **LVGL** - The most popular free open-source embedded graphics library, allowing easy creation of beautiful UIs using JavaScript.
+### 🖼️ Graphics Library
 
-### 📱 Development Process
+- Build GUIs in JavaScript, fully compatible with native LVGL features
 
-The development process for DejaOS apps is straightforward:
+### 🛠️ Utility Libraries
 
-1. **Prepare Development Environment** - Install Node.js (20+), VSCode, and DXIDE (VSCode plugin)
-2. **Connect Device** - Connect your development device to VSCode using USB
-3. **Write Code** - Write JavaScript applications in VSCode with real-time sync
-4. **Build & Deploy** - Build DPK installation packages and deploy to production devices
+- Threads, encryption/decryption, logging, EventBus, NTP, SQLite, and more
 
-### 🎯 Why Choose DejaOS?
+### 📦 Third-Party Libraries
 
-- **JavaScript Everywhere** - Use JavaScript for both frontend and backend development
-- **Rich Hardware Support** - Comprehensive hardware interface modules
-- **Modern GUI** - Beautiful UI development with LVGL integration
-- **Real-time Development** - Live code sync and debugging
-- **Production Ready** - Easy packaging and deployment system
-- **Open Source** - MIT licensed, community-driven development
+- Supports importing ESM-format third-party JavaScript libraries via `import`
 
-### 🏗 Project Structure
+### ⚙️ Native C Library Integration
 
-A typical DejaOS project consists of:
+- Integrate native C libraries and expose them to JavaScript
 
-| File       | Required | Function                   |
-| ---------- | -------- | -------------------------- |
-| .temp      | NO       | Store temporary files      |
-| dxmodules  | NO       | Store dependent files      |
-| src        | YES      | Project logic              |
-| main.js    | YES      | Project entry file         |
-| app.dxproj | YES      | Project configuration file |
+---
 
-### 🚀 Quick Start
+## 🚀 Development Workflow
 
-Ready to get started? Check out our [Quick Start Guide](basics/quick-start) to create your first DejaOS application in minutes!
+### 📥 Environment Setup
 
-For more information about supported devices and setup instructions, visit our [Installation Guide](basics/installation).
+- Install [Node.js (v20+)](https://nodejs.org)
+- Install [Visual Studio Code](https://code.visualstudio.com)
+- Install the [DejaOS IDE extension](https://marketplace.visualstudio.com/items?itemName=dxide.dxide)
+
+### 🔧 Device Preparation
+
+1. Acquire a development device
+2. Connect the device to your computer (VSCode) via USB
+
+### 🧪 Quick Start
+
+- Use JavaScript in VSCode to [build your first application](./docs/demo_CN.md)
+- Instantly sync code to your device and view real-time logs
+
+### 📦 Build & Deploy
+
+1. Acquire production devices
+2. Use VSCode to package your project as a `.dpk` installer
+3. Deploy via OTA or use the [DPK installer tool](./docs/demo_CN.md) for serial installation
+
+---
+
+## 🤝 Support
+
+If you have any questions, feel free to contact us:
+
+📧 Email: **service@dxiot.com**
+
+We are happy to assist you!

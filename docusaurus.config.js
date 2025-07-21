@@ -11,18 +11,6 @@ module.exports = {
 	organizationName: 'DejaOS',
 	projectName: 'dejaos-docs',
 	onBrokenLinks: 'warn',
-	i18n: {
-		defaultLocale: 'en',
-		locales: ['en', 'zh'],
-		localeConfigs: {
-			en: {
-				label: 'English',
-			},
-			zh: {
-				label: '中文',
-			},
-		},
-	},
 	staticDirectories: ['static'],
 	scripts: [
 		{
@@ -64,7 +52,6 @@ module.exports = {
 					label: 'Showcase',
 					position: 'right',
 				},
-				{ type: 'localeDropdown', position: 'right' },
 				{
 					href: 'https://github.com/DejaOS/DejaOS',
 					label: 'GitHub',
