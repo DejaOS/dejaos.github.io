@@ -1,71 +1,23 @@
-ruzevic:
-  name: Ivan Ružević
-  title: WordPress Engineer
-  url: https://github.com/iruzevic
-  image_url: https://avatars.githubusercontent.com/u/23283324?v=4
+buter:
+  name: butander
+  title: DejaOS Engineer
+  url: https://github.com/butander
+  image_url: https://avatars.githubusercontent.com/u/7885619?v=4
 
-volf:
-  name: Karlo Volf
-  title: WordPress Engineer
-  url: https://github.com/volfkarlo
-  image_url: https://avatars.githubusercontent.com/u/46056662?v=4
+mazx:
+  name: mazhixiang377
+  title: DejaOS Engineer
+  url: https://github.com/mazhixiang377
+  image_url: https://avatars.githubusercontent.com/u/123849006?v=4
 
-zoljom:
-  name: Denis Žoljom
-  title: WordPress Engineer
+hanxu:
+  name: han-xu-code
+  title: DejaOS Engineer
   url: https://github.com/dingo-d
-  image_url: https://avatars.githubusercontent.com/u/8638515?v=4
+  image_url: https://avatars.githubusercontent.com/u/86034591?v=4
 
-alković:
-  name: Goran Alković
-  title: WordPress Engineer
-  url: https://github.com/goranalkovic-infinum
-  image_url: https://avatars.githubusercontent.com/u/77000136?v=4
-
-mjertan:
-  name: Mario Borna Mjertan
-  title: WordPress Engineer
-  url: https://github.com/mbmjertan
-  image_url: https://avatars.githubusercontent.com/u/1742806?v=4
-
-prislin:
-  name: Davorin Prislin
-  title: WordPress Engineer
-  url: https://github.com/dadadavorin
-  image_url: https://avatars.githubusercontent.com/u/81157133?v=4
-
-ramljak:
-  name: Ivan Ramljak
-  title: WordPress Engineer
-  url: https://github.com/piqusy
-  image_url: https://avatars.githubusercontent.com/u/22823970?v=4
-
-ivanac:
-  name: Šimun Ivanac
-  title: WordPress Engineer
-  url: https://github.com/simun-ivanac
-  image_url: https://avatars.githubusercontent.com/u/19992824?v=4
-
-obradovic:
-  name: Igor Obradović
-  title: WordPress Engineer
-  url: https://github.com/iobrado
-  image_url: https://avatars.githubusercontent.com/u/23059501?v=4
-
-djidjaleska:
-  name: Sandra Djidjaleska
-  title: WordPress Engineer
-  url: https://github.com/DjidjaleskaSandra
-  image_url: https://avatars.githubusercontent.com/u/97440314?v=4
-
-glogoski:
-  name: Gabriel Glogoški
-  title: WordPress Engineer
-  url: https://github.com/gabriel-glo
-  image_url: https://avatars.githubusercontent.com/u/41635034?v=4
-
-kancijan:
-  name: Ivan Kancijan
-  title: WordPress Engineer
-  url: https://github.com/kancijan
-  image_url: https://avatars.githubusercontent.com/u/135589039?v=4
+voxer:
+  name: iamvoxer
+  title: DejaOS Engineer
+  url: https://github.com/iamvoxer
+  image_url: https://avatars.githubusercontent.com/u/114376014?v=4

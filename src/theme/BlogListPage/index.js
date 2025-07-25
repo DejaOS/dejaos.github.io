@@ -10,8 +10,6 @@ import BlogLayout from '@theme/BlogLayout';
 import BlogListPaginator from '@theme/BlogListPaginator';
 import SearchMetadata from '@theme/SearchMetadata';
 import BlogPostItems from '@theme/BlogPostItems';
-import { EsOpenSource } from '../sections/os-projects';
-import { EsOsFreebies } from '../sections/os-freebies';
 
 function BlogListPageMetadata(props) {
 	const { metadata } = props;
@@ -34,15 +32,13 @@ function BlogListPageContent(props) {
 
 	return (
 		<BlogLayout>
-			<h1 className='es-big-title'>Typing as <wbr /> we code</h1>
+			<h3 className='es-big-title'>Familiar Feeling. <wbr /> New Frontier</h3>
 
 			<div className='es-blog-grid'>
 				<BlogPostItems items={items} />
 			</div>
 
 			<BlogListPaginator metadata={metadata} />
-			<EsOpenSource gray />
-			<EsOsFreebies gray />
 		</BlogLayout>
 	);
 }

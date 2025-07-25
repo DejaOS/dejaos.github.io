@@ -63,7 +63,7 @@ export default function Home() {
 					})}
 					subtitle={translate({
 						id: 'homepage.ctaCards.subtitle',
-						message: "Set up your DejaOS development environment quickly. Get instructions for installing DXIDE, connecting your device, and start coding your first embedded JavaScript application.",
+						message: "Set up your DejaOS development environment quickly. Get instructions for installing VSCode extension, connecting your device, and start coding your first embedded JavaScript application.",
 						description: 'The subtitle for the call-to-action cards section'
 					})}
 					cards={[
