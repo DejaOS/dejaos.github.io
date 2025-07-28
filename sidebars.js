@@ -4,14 +4,16 @@ module.exports = {
 			'welcome',
 			'basics/installation',
 			'basics/quick-start',
+			'basics/dejaos-device'
 		],
-		// 'Core Concepts': [
-		// 	// 'basics/javascript-engine',
-		// 	// 'basics/gui-engine',
-		// 	// 'basics/modules',
+		 'Core Concepts': [
+			'basics/dejaos-arch',
+			'basics/javascript-engine',
+		 	'basics/gui-engine',
+			'basics/modules',
 		// 	// 'basics/dxide',
 		// 	// 'basics/debugging',
-		// ],
+		 ],
 		// 'Hardware Interfaces': [
 		// 	// 'hardware/gpio',
 		// 	// 'hardware/pwm',
