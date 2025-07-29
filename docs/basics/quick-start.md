@@ -139,5 +139,5 @@ When development is complete, you can package your project as a `.dpk` installer
 
 ## 📘 Next Steps
 
-- 📦 To install or upgrade your `.dpk` application on a device, see: [App Packaging, Installation, and Upgrade](./app_CN.md)
-- 🧪 For more JavaScript example projects, see: [Example Projects](./example_CN.md)
+- 📦 To install or upgrade your `.dpk` application on a device, see: [App Packaging, Installation, and Upgrade](./app.md)
+- 🧪 For more JavaScript App projects, see: [Example Projects](https://github.com/DejaOS/DejaOS/tree/main/demos)

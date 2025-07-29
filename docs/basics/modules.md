@@ -1,4 +1,4 @@
-# Introduction to DejaOS Module System
+# Module System
 
 ---
 
@@ -52,6 +52,16 @@ Similar to `npm install`, the DejaOS IDE plugin provides a one-click install but
 - Module installation automatically handles dependency processing and platform adaptation;
 - Requires internet access to download resources from official web services;
 - For offline development environments, contact the official team to obtain offline installation packages.
+
+---
+
+## Module Composition
+
+After successfully `install`ing a module, the module files will be downloaded to the `dxmodules` directory in the current project. Generally, there are 3 types of modules, each with different corresponding file types:
+
+1. **Pure JavaScript Modules**: These modules contain only .js files, and the versions are consistent across different devices. Examples include `dxLogger` and `dxEventBus`
+2. **SOC-based Modules**: These modules contain both .js and .so files. Versions are consistent for different device models under the same SOC. For example, `dxMqttClient` and `dxHttpClient` are consistent on devices DW200 and DW200_v20, as these two device types share the same SOC - their only difference is that V20 has an additional WiFi module
+3. **Device Model-based Modules**: These modules contain both .js and .so files. The .js files are basically the same across different device models, but the .so files are definitely different. Examples include `dxCode` and `dxNfc`. These modules are typically related to underlying hardware.
 
 ---
 

@@ -1,4 +1,4 @@
-# Introduction to DejaOS JavaScript Engine
+# JavaScript Engine
 
 ---
 

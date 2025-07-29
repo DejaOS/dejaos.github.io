@@ -11,8 +11,11 @@ module.exports = {
 			'basics/javascript-engine',
 		 	'basics/gui-engine',
 			'basics/modules',
-		// 	// 'basics/dxide',
-		// 	// 'basics/debugging',
+		 	'basics/ide',
+			'basics/project',
+			'basics/debugging',
+			'basics/app',
+			'basics/mode',
 		 ],
 		// 'Hardware Interfaces': [
 		// 	// 'hardware/gpio',

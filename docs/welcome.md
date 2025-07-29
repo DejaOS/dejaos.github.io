@@ -64,14 +64,14 @@ DejaOS offers a comprehensive set of JavaScript APIs and system capabilities:
 
 ### 🧪 Quick Start
 
-- Use JavaScript in VSCode to [build your first application](./docs/demo_CN.md)
+- Use JavaScript in VSCode to [build your first application](./basics/quick-start.md)
 - Instantly sync code to your device and view real-time logs
 
 ### 📦 Build & Deploy
 
 1. Acquire production devices
 2. Use VSCode to package your project as a `.dpk` installer
-3. Deploy via OTA or use the [DPK installer tool](./docs/demo_CN.md) for serial installation
+3. Deploy via OTA or use the [DPK installer tool](https://github.com/DejaOS/DejaOS/tree/main/tools) for serial installation
 
 ---
 

@@ -1,4 +1,4 @@
-# Introduction to DejaOS GUI Engine
+# GUI Engine
 
 ---
 
