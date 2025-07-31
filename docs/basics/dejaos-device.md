@@ -54,28 +54,28 @@ DejaOS has been deployed on various IoT devices, which can be roughly categorize
 - **Features**: No screen, communicates with backend systems via network, controls multiple peripherals through serial ports, supports GPIO input/output.
 - **Applications**: Access control main controller, IoT controller, backend communication node.
 
-![CC104](/img/CC101.png)
+![CC104](/img/devices/CC104.png)
 
-### 2. Reader Devices (e.g., Q350)
+### 2. Reader Devices (e.g., M350)
 
 - **Features**: Used for identifying cards, QR codes, and other identification information. Can work with control boards or directly communicate with systems via network. Generally no screen included.
 - **Applications**: Access control card reading, QR code door opening, identity recognition.
 
-![Q350](/img/Q350.png)
+![M350](/img/devices/M350.png)
 
 ### 3. Face Recognition Devices (e.g., VF105)
 
 - **Features**: Integrated face recognition related software and hardware, equipped with 6-inch or larger screens, network connectivity capability, automatically enters face recognition application after startup.
 - **Applications**: Smart access control, face clock-in, visitor recognition.
 
-![VF105](/img/VF105.png)
+![VF105](/img/devices/VF105.png)
 
 ### 4. Multi-function Panel Devices (e.g., DW200)
 
 - **Features**: Provides comprehensive communication and control interfaces (network, NFC, Bluetooth, serial port, GPIO, QR code recognition, etc.), equipped with small-sized touch screens.
 - **Applications**: Smart panels, device control terminals, scene linkage hub.
 
-![DW200](/img/DW200.png)
+![DW200](/img/devices/DW200.png)
 
 ---
 
@@ -84,6 +84,6 @@ DejaOS has been deployed on various IoT devices, which can be roughly categorize
 | Device Type             | Has Screen  | Communication Method      | Typical Functions                         | Example Models |
 | ----------------------- | ----------- | ------------------------- | ----------------------------------------- | -------------- |
 | Control Board           | No          | Network + Serial          | Peripheral Control, GPIO                  | CC104          |
-| Reader                  | No          | Network / Serial          | Card Recognition, QR Code Scanning        | Q350           |
+| Reader                  | No          | Network / Serial          | Card Recognition, QR Code Scanning        | M350           |
 | Face Recognition Device | Yes         | Network + Multi-interface | Face Recognition, Camera                  | VF105          |
 | Multi-function Panel    | Yes (Touch) | Network + Multi-interface | Comprehensive Control, NFC, QR Code, etc. | DW200          |

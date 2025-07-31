@@ -41,6 +41,12 @@ module.exports = {
 					position: 'right',
 				},
 				{
+					to: '/devices',
+					activeBasePath: 'devices',
+					label: 'Devices',
+					position: 'right',
+				},
+				{
 					to: '/blog',
 					activeBasePath: 'blog',
 					label: 'Blog',
@@ -54,8 +60,15 @@ module.exports = {
 				},
 				{
 					href: 'https://github.com/DejaOS/DejaOS',
-					label: 'GitHub',
 					position: 'right',
+					className: 'header-github-link',
+					'aria-label': 'GitHub repository',
+				},
+				{
+					href: 'https://www.youtube.com/@dxdop_iot',
+					position: 'right',
+					className: 'header-youtube-link',
+					'aria-label': 'YouTube channel',
 				}
 			],
 		},
