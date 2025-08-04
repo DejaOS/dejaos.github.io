@@ -59,6 +59,11 @@ module.exports = {
 					position: 'right',
 				},
 				{
+					href: 'http://54.196.161.216/',
+					label: 'FEOCEY',
+					position: 'right',
+				},
+				{
 					href: 'https://github.com/DejaOS/DejaOS',
 					position: 'right',
 					className: 'header-github-link',
@@ -74,7 +79,7 @@ module.exports = {
 		},
 		footer: {
 			links: [],
-			copyright: 'Made with ❤️ by DejaOS team.',
+			copyright: 'Made with ❤️ by DejaOS team. ',
 		},
 		algolia: {
 			appId: '6AJUQ28C49',

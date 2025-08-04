@@ -25,7 +25,7 @@ export default function Devices() {
                 memory: '64MB',
                 storage: '128MB',
             },
-            purchaseUrl: 'https://'
+            purchaseUrl: 'http://54.196.161.216/product/fc6820/'
         },
         {
             id: 'vf105',
@@ -44,7 +44,7 @@ export default function Devices() {
                 OS: 'DejaOS2.0',                
                 dimensions: '293.6*126*26.35mm'
             },
-            purchaseUrl: 'https://'
+            purchaseUrl: 'http://54.196.161.216/product/fcv4905/'
         },
         {
             id: 'vf114',

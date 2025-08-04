@@ -14,14 +14,15 @@ module.exports = {
         // 	// 'hardware/audio',
         // 	// 'hardware/watchdog',
         // ],
-        // 'Network & Communication': [
-        // 	// 'network/tcp',
-        // 	// 'network/udp',
-        // 	// 'network/http',
-        // 	// 'network/mqtt',
-        // 	// 'network/webserver',
-        // 	// 'network/osdp',
-        // ],
+         'Network & Communication': [
+            'network/dxNetwork',
+            'network/dxHttpServer',
+            'network/dxHttpClient',
+         ],
+         'DB':[
+            'db/dxSqlite',
+            'db/dxKeyValueDB',
+         ]
         // 'GUI Development': [
         // 	// 'gui/components',
         // 	// 'gui/layouts',

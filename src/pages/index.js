@@ -93,7 +93,7 @@ export default function Home() {
 								message: 'Device List',
 								description: 'The button label for the second CTA card'
 							}),
-							buttonUrl: '/docs/basics/dejaos-device',
+							buttonUrl: '/devices',
 						}
 					]}
 				/>

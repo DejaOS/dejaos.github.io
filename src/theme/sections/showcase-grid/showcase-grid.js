@@ -73,6 +73,12 @@ export default function ShowcaseGrid(props) {
 			link: 'https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_weblogcat',
 		},
 		{
+			image: useBaseUrl('https://github.com/DejaOS/DejaOS/raw/main/demos/dw200_v20/dw200_test_network/screenshot.png'),
+			label: 'Network Demo',
+			desc: 'This Demo showcases the complete network connection, configuration, and diagnostic capabilities of the DW200_V20 device, including Ethernet and WiFi connection testing, network status monitoring, ping testing, and other practical features.',
+			link: 'https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_test_network',
+		},
+		{
 			image: useBaseUrl('img/showcase/nfckey.gif'),
 			label: 'NFC Key',
 			desc: 'This is an access control case using a customized NFC key. The NFC key is a dedicated peripheral that supports both NFC and Bluetooth, communicating with the DW200 via these two methods to manage door access.',
