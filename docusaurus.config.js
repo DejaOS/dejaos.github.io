@@ -117,7 +117,7 @@ module.exports = {
 					sidebarCollapsible: true,
 				},
 				gtag: {
-					trackingID: 'GTM-P5GG5DH',
+					trackingID: 'G-C56H85CFTX',
 					anonymizeIP: true,
 				},
 				theme: {

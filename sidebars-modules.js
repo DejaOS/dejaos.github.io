@@ -18,6 +18,9 @@ module.exports = {
             'network/dxNetwork',
             'network/dxHttpServer',
             'network/dxHttpClient',
+            'network/dxNet',
+            'network/dxWebserver',
+            'network/dxHttp',
          ],
          'DB':[
             'db/dxSqlite',
