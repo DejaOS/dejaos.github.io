@@ -25,20 +25,20 @@ module.exports = {
          'DB':[
             'db/dxSqlite',
             'db/dxKeyValueDB',
-         ]
+         ],
         // 'GUI Development': [
         // 	// 'gui/components',
         // 	// 'gui/layouts',
         // 	// 'gui/events',
         // 	// 'gui/threading',
         // ],
-        // 'System & Utilities': [
-        // 	// 'utils/threads',
+        'System & Utilities': [
+         	 'utils/dxNtp',
         // 	// 'utils/eventbus',
         // 	// 'utils/encryption',
         // 	// 'utils/logging',
         // 	// 'utils/ntp',
         // 	// 'utils/sqlite',
-        // ],
+         ],
     },
 }; 

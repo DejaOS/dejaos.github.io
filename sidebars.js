@@ -6,17 +6,20 @@ module.exports = {
 			'basics/quick-start',
 			'basics/dejaos-device'
 		],
-		 'Core Concepts': [
+		'Core Concepts': [
 			'basics/dejaos-arch',
 			'basics/javascript-engine',
-		 	'basics/gui-engine',
+			'basics/gui-engine',
 			'basics/modules',
-		 	'basics/ide',
+			'basics/ide',
 			'basics/project',
 			'basics/debugging',
 			'basics/app',
 			'basics/mode',
-		 ],
+		],
+		'FAQ': [
+			'basics/faq',
+		],
 		// 'Hardware Interfaces': [
 		// 	// 'hardware/gpio',
 		// 	// 'hardware/pwm',
