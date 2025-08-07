@@ -54,13 +54,19 @@ In addition to using tools to switch modes, you can also trigger mode switching 
 
 ```javascript
 import common from "../dxmodules/dxCommon.js";
-
-common.setMode("dev"); // Supported parameters include: dev, test, prod, safe
+if (condition1) {
+  common.setMode("prod"); // Supported parameters include: dev, test, prod
+} else if (condition2) {
+  common.setMode("dev"); // Supported parameters include: dev, test, prod
+}
 ```
 
 > ⚠️ Note:
 >
-> - After mode switching, device restart is required for changes to take effect
+> - After switching the mode, the device will automatically restart.
+> - It's best to trigger the mode change conditionally, not on application startup, to prevent continuous reboots.
+> - After switching to production mode, you can no longer modify code via VSCode, so there must be a way to switch back to development mode.
+> - Usually, this is triggered by external commands like a QR code or MQTT. Refer to the [example of triggering a change via QR code](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_switch_mode)
 
 ---
 
