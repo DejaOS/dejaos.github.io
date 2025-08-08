@@ -34,6 +34,7 @@ module.exports = {
         // ],
         'System & Utilities': [
          	 'utils/dxNtp',
+             'utils/dxIconv',
         // 	// 'utils/eventbus',
         // 	// 'utils/encryption',
         // 	// 'utils/logging',
