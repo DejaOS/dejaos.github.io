@@ -3,17 +3,18 @@ module.exports = {
         'Getting Started': [
             'welcome',
         ],
-        // 'Hardware Interfaces': [
+         'Hardware Interfaces': [
         // 	// 'hardware/gpio',
         // 	// 'hardware/pwm',
         // 	// 'hardware/uart',
         // 	// 'hardware/usb',
         // 	// 'hardware/nfc',
-        // 	// 'hardware/qrcode',
+        'hardware/dxBarcode',
+        'hardware/dxCode',
         // 	// 'hardware/bluetooth',
         // 	// 'hardware/audio',
         // 	// 'hardware/watchdog',
-        // ],
+         ],
          'Network & Communication': [
             'network/dxNetwork',
             'network/dxHttpServer',
