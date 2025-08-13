@@ -12,7 +12,9 @@ module.exports = {
         'hardware/dxBarcode',
         'hardware/dxCode',
         // 	// 'hardware/bluetooth',
-        // 	// 'hardware/audio',
+        'hardware/dxAudio',
+        'hardware/dxAlsa',
+        'hardware/dxAlsaplay',
         // 	// 'hardware/watchdog',
          ],
          'Network & Communication': [

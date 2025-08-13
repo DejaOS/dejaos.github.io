@@ -117,14 +117,14 @@ For complete working examples, refer to the demo files in the source repository.
 - **UPC-E** (Universal Product Code E): Type 2
   ![UPC-E](/img/barcode/UPC-E.gif)
 
-- **CODE128** (Code 128)
-  ![CODE128](/img/barcode/Code-128.gif)：Type 7
+- **CODE128** (Code 128)：Type 7
+  ![CODE128](/img/barcode/Code-128.gif)
 
-- **CODE93** (Code 93)
-  ![CODE93](/img/barcode/Code-93.gif)：Type 6
+- **CODE93** (Code 93)：Type 6
+  ![CODE93](/img/barcode/Code-93.gif)
 
-- **CODE39** (Code 39)
-  ![CODE39](/img/barcode/Code-39.gif)：Type 5
+- **CODE39** (Code 39)：Type 5
+  ![CODE39](/img/barcode/Code-39.gif)
 
 - **EAN-8** (European Article Number 8-digit): Type 2
   ![EAN-8](/img/barcode/EAN-8.gif)
