@@ -18,7 +18,8 @@ module.exports = {
 			'basics/mode',
 		],
 		'FAQ': [
-			'basics/faq',
+			'faq/basicfaq',
+			'faq/devfaq',
 		],
 		// 'Hardware Interfaces': [
 		// 	// 'hardware/gpio',

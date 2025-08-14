@@ -1,7 +1,7 @@
 ---
-id: faq
-title: FAQ
-sidebar_label: FAQ
+id: devfaq
+title: FAQ2
+sidebar_label: FAQ2
 ---
 
 ### 1. Can I use a GitHub sample if its device type doesn't match the one I have?

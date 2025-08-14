@@ -1,25 +1,34 @@
-
 # dxHttpServer
+
 ## 1. Overview
+
 This module is part of the official system module library of [dejaOS](https://github.com/DejaOS/DejaOS), used to start an HTTP Web service, listen on ports, and allow clients to access the device through the HTTP protocol. It is typically used to control devices through a computer browser within a local area network, provided that the device's IP address is known.
 Includes common HTTP Web service features:
- - Static Web Service
- - Service Listening and Startup
- - Route Registration
+
+- Static Web Service
+- Service Listening and Startup
+- Route Registration
+- Supports file upload, Content-Type should be 'application/octet-stream' or 'text/plain' etc, **not** support 'multipart/form-data'
+- Supports file download
+- Multi-threading **not** supported, all functions should run in a single thread. For cross-thread communication, use dxEventbus to pass data
 
 ## 2. Files
+
 - dxHttpServer.js
 - libvbar-m-dxhttpcserver.so (embedded mongoose)
 
 > - Ensure these 2 files are included in the dxmodules subdirectory under the project root directory
 
 ## 3. Dependencies
+
 - None
 
 ## 4. Compatible Devices
+
 Compatible with all devices running dejaOS v2.0+
 
 ## 5. Usage
+
 ### Initialization
 
 - `httpserver.init()`
@@ -53,7 +62,9 @@ scrrenshot as below: 192.168.50.212 is the device IP
 ![](https://dxiot-autobackup.oss-cn-hangzhou.aliyuncs.com/mydiagram/rdmsAdmin/ec5636b0f035bc8c.png)
 
 ## 6. Related Modules
+
 Related to another module dxWebserver, with similar functionality. dxHttpServer is a replacement for dxWebserver, and dxWebserver is being gradually deprecated
 
 ## 7. Example
+
 [Source Code](https://github.com/DejaOS/DejaOS/tree/main/demos/modules/dxHttpServer)

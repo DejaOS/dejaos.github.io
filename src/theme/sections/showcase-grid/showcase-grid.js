@@ -102,6 +102,13 @@ export default function ShowcaseGrid(props) {
 			desc: 'This is a paper strip ticket system for arcade game scoring. The DW200 serves as a peripheral device for game machines, functioning as both an NFC card reader for player identification and a controller for processing paper ticket data.',
 			link: '',
 		},
+		{
+			image: useBaseUrl('img/showcase/smartgranary.png'),
+			label: 'Smart Granary',
+			desc: 'This is a smart granary app that uses the VF105 to manage the temperature and humidity of the granary, and control access by Face Recognition.',
+			link: '',
+		},
+		
 	];
 
 	const itemsData = publicData;
