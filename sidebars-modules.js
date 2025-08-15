@@ -21,9 +21,11 @@ module.exports = {
             'network/dxNetwork',
             'network/dxHttpServer',
             'network/dxHttpClient',
+            'network/dxMqttClient',
             'network/dxNet',
             'network/dxWebserver',
             'network/dxHttp',
+            'network/dxMqtt',
          ],
          'DB':[
             'db/dxSqlite',
