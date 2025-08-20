@@ -177,6 +177,10 @@ This namespace contains various functions for converting data between different 
 - `codec.leToDecimal(hexString)`: Converts a little-endian hex string to a decimal number.
 - `codec.decimalToLeHex(decimalNumber, byteSize)`: Converts a decimal number to a little-endian hex string of a specified byte size.
 
+**BCC**
+- `codec.bcc(data)`:Calculates the BCC (Block Check Character / XOR Checksum) of the input data.
+- **Returns:** The calculated 8-bit BCC value (0-255).
+  
 ## 7. Constants
 
 ### AES Constants
@@ -207,7 +211,7 @@ dxCommonUtils.RSA_KEY_SIZE = {
 
 ## 8. Related Modules
 
-- **dxCommon:** Deprecated. This module is the official replacement.
+- **dxCommon:** Deprecated. Replaced by dxOs and dxCommonUtils.
 
 ## 9. Example
 
@@ -342,6 +346,17 @@ function testCodec() {
   } catch (e) {
     assert(e.message.includes("valid hex string"), true, "codec.hexToBytes throws on invalid char");
   }
+
+  // BCC (XOR Checksum)
+  const bccStr = "12345"; // ASCII: 0x31, 0x32, 0x33, 0x34, 0x35
+  // 0x31^0x32^0x33^0x34^0x35 = 49 (0x31)
+  assert(dxCommonUtils.codec.bcc(bccStr), 49, "codec.bcc (ASCII string)");
+  const bccUtf8 = "你好"; // UTF-8 Hex: e4 b_d a0 e5 a5 bd
+  // 0xe4 ^ 0xbd ^ 0xa0 ^ 0xe5 ^ 0xa5 ^ 0xbd = 4
+  assert(dxCommonUtils.codec.bcc(bccUtf8), 4, "codec.bcc (UTF-8 string)");
+  const bccBuffer = dxCommonUtils.codec.hexToArrayBuffer("01020304");
+  // 1 ^ 2 ^ 3 ^ 4 = 4
+  assert(dxCommonUtils.codec.bcc(bccBuffer), 4, "codec.bcc (ArrayBuffer)");
 }
 
 function testRandom() {
