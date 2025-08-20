@@ -19,6 +19,9 @@ module.exports = {
 			defer: true,
 		},
 	],
+	metadata: [
+		{ name: "algolia-site-verification", content: "1468C299D39DF4D1" }
+	],
 	themeConfig: {
 		navbar: {
 			logo: {
