@@ -86,9 +86,7 @@ module.exports = {
 			apiKey: 'd3e5fb24b60f78b0e2a1d946b1b7381f',
 			indexName: 'dejaos',
 			startUrls: [
-				'https://dejaos.github.io',
-				'https://dejaos.github.io/docs',
-				'https://dejaos.github.io/modules',
+				'https://dejaos.com'
 			],
 			contextualSearch: false,
 		},
