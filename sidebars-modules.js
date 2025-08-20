@@ -11,6 +11,7 @@ module.exports = {
         // 	// 'hardware/nfc',
         'hardware/dxBarcode',
         'hardware/dxCode',
+        'hardware/dxOs',
         // 	// 'hardware/bluetooth',
         'hardware/dxAudio',
         'hardware/dxAlsa',
@@ -40,7 +41,8 @@ module.exports = {
         'System & Utilities': [
          	 'utils/dxNtp',
              'utils/dxIconv',
-        // 	// 'utils/eventbus',
+             'utils/dxOta',
+             'utils/dxCommonUtils',
         // 	// 'utils/encryption',
         // 	// 'utils/logging',
         // 	// 'utils/ntp',
