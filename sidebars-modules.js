@@ -39,6 +39,7 @@ module.exports = {
         // 	// 'gui/threading',
         // ],
         'System & Utilities': [
+             'utils/dxLogger',
          	 'utils/dxNtp',
              'utils/dxIconv',
              'utils/dxOta',
