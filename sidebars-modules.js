@@ -16,6 +16,7 @@ module.exports = {
         'hardware/dxAudio',
         'hardware/dxAlsa',
         'hardware/dxAlsaplay',
+        'hardware/dxPwm',
         // 	// 'hardware/watchdog',
          ],
          'Network & Communication': [
