@@ -47,6 +47,7 @@ module.exports = {
              'utils/dxStd',
              'utils/dxCommonUtils',
              'utils/dxCryptoES',
+             'utils/dxEventBus',
         // 	// 'utils/encryption',
         // 	// 'utils/logging',
         // 	// 'utils/ntp',

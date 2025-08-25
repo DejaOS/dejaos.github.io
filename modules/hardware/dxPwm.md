@@ -20,7 +20,7 @@ It includes comprehensive PWM control features:
 
 ## 3. Dependencies
 
-- os (for sleep functionality)
+- None
 
 ## 4. Compatible Devices
 
@@ -65,8 +65,6 @@ pwm.successBeep();  // Two short beeps for success
 pwm.failBeep();     // Long beep for failure
 pwm.warningBeep();  // Standard warning beep
 
-// Clean up when done
-pwm.deinit();
 ```
 
 ## 6. API Reference
@@ -116,7 +114,7 @@ Sets the power level of the specified PWM channel.
 
 ### `pwm.beep(options, channel)`
 
-Generates a non-blocking beep sound with customizable parameters.
+Generates a beep sound with customizable parameters.
 
 **Parameters:**
 
@@ -204,8 +202,6 @@ No specific constants are defined in this module. However, the following ranges 
 - **Volume Range:** 0-100 (0 = no sound, 100 = maximum volume)
 
 ## 8. Related Modules
-
-- **os:** Used for sleep functionality in beep operations
 
 ## 9. Example
 
