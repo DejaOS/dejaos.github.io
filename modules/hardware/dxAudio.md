@@ -47,7 +47,7 @@ audio.setVolume(7);
 
 // Get current volume
 let currentVolume = audio.getVolume();
-console.log("Current volume:", currentVolume);
+log.info("Current volume:", currentVolume);
 
 // Interrupt current playback
 audio.interrupt();

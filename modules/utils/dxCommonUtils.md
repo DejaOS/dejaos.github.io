@@ -212,6 +212,17 @@ dxCommonUtils.RSA_KEY_SIZE = {
 ## 8. Related Modules
 
 - **dxCommon:** Deprecated. Replaced by dxOs and dxCommonUtils.
+- **dxCryptoES**
+This module has functional overlap with `dxCommonUtils`. The primary difference is the underlying implementation, which impacts performance and feature set. Choose the appropriate module based on your specific needs.
+
+| Feature             | dxCryptoES (Pure JS)                  | dxCommonUtils (C/Native)            |
+|---------------------|---------------------------------------|-------------------------------------|
+| **Performance**     | Lower                                 | **High (Hardware Accelerated)**     |
+| **Hashing**         | **Wide Support (SHA2/3, etc.)**       | Limited (MD5 only)                  |
+| **Symmetric Ciphers** | **Wide Support (AES, DES, etc.)**     | AES only                            |
+| **Asymmetric (RSA)**  | No                                    | **Yes**                             |
+| **Key Derivation**    | **Yes (PBKDF2)**                      | No                                  |
+| **Security**        | Provides modern, secure algorithms    | Provides fast but older algorithms  |
 
 ## 9. Example
 
