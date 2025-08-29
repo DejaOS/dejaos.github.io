@@ -1,116 +1,178 @@
 # dxHttpClient
+
 ## 1. Overview
-This module is part of the official system module library of [dejaOS](https://github.com/DejaOS/DejaOS), used for accessing HTTP servers via the HTTP protocol.
-It includes common HTTP client features:
- - GET/POST/PUT/PATCH/DELETE requests
- - File upload/download
- - HTTPS support
- - Progress callback
- - Support for various HTTP request settings, including url, verifyPeer, verifyHost, caFile, method, body, headers, onProgress, timeout
+
+`dxHttpClient` module is part of the official system module library of [dejaOS](https://github.com/DejaOS/DejaOS), used for accessing HTTP servers via the HTTP/HTTPS protocol.
+
+This module provides a **stateless, function-based API**. Each request call (such as `get`, `post`) is an independent, isolated operation, ensuring code simplicity and thread safety, avoiding configuration state confusion issues that could occur in the old API.
+
+**Key Features:**
+- Send GET/POST/PUT/PATCH/DELETE requests
+- File upload and download with progress callback support
+- HTTPS support with certificate verification options
+- Fully configurable via a unified `options` object for each request
+- Automatic JSON stringification for object bodies
+- Robust error handling and parameter validation
 
 ## 2. Files
-- dxHttpClient.js
-- libvbar-m-dxhttpclient.so
 
-> - Ensure these 2 files are included in the dxmodules subdirectory under your project root directory
+- `dxHttpClient.js` - JavaScript module wrapper
+- `libvbar-m-dxhttpclient.so` - Underlying C language implementation
+
+> Ensure both files are included in the `dxmodules` subdirectory under your project root directory.
 
 ## 3. Dependencies
-- libcurl: curl library
+
+- **libcurl**: curl library
 
 ## 4. Compatible Devices
+
 Compatible with all devices running dejaOS v2.0+
 
-## 5. Usage
-- For simple GET/POST/PUT/PATCH/DELETE requests, use the corresponding functions directly
-``` javascript
-client.get(urlroot + "/get?name=quickjs&age=1")
-client.post(urlroot + "/post", { foo: "bar", num: 42 })
-client.put(urlroot + "/put", { id: 123, name: "Updated User" })
-client.patch(urlroot + "/patch", { status: "active" })
-client.delete(urlroot + "/delete/123")
-```
-- For complex requests, use setOpt and request functions
-``` javascript
-client.reset();
-client.setOpt("url", urlroot + "/post");
-client.setOpt("method", "POST");
-client.setOpt("headers", ["Content-Type: application/json"]);
-client.setOpt("body", JSON.stringify({ foo: "bar", num: 42 }));
-log.info(client.request());
-```
-> Remember to use reset before making a request to clear previous settings
+## 5. API Reference
 
-- For more detailed usage, refer to the Demo: test_client.js, test_server.js
+### `httpclient.request(options)`
 
-## 6. Related Modules
-Related to another module called dxHttp, with similar functionality. dxHttpClient is the replacement for dxHttp, and dxHttp is being gradually deprecated. 
+This is the core function of the module. All other convenience functions (such as `get`, `post`) are wrappers around this function.
 
-## 7. Example
-``` javascript
-// Replace with your server address, the matching server code is '../server/test_server.js'
+- `options` `{object}`: An object containing all request configuration.
+  - `url` `{string}`: **(Required)** The request URL.
+  - `method` `{string}`: Request method (e.g., 'GET', 'POST', 'PUT', etc.). **Defaults to 'GET'**.
+  - `headers` `{object}`: A key-value pair header object, e.g., `{ 'Content-Type': 'application/json' }`.
+  - `body` `{string|object}`: Request body. If a JS object is provided, it will be **automatically converted** to a JSON string, and the `'Content-Type: application/json'` header will be automatically added.
+  - `timeout` `{number}`: Timeout in milliseconds. **Defaults to 5000**.
+  - `onProgress` `{Function}`: Progress callback function, receiving parameters `(dltotal, dlnow, ultotal, ulnow)`.
+  - `verifyPeer` `{number}`: Whether to verify peer certificate (0: disable, 1: enable). **Defaults to 0**.
+  - `verifyHost` `{number}`: Whether to verify hostname (0: disable, 2: enable). **Defaults to 0**.
+  - `caFile` `{string}`: Path to CA certificate file.
+
+### Convenience Functions
+
+- `httpclient.get(url, [timeout=5000], [options={}])`
+- `httpclient.post(url, body, [timeout=5000], [options={}])`
+- `httpclient.put(url, body, [timeout=5000], [options={}])`
+- `httpclient.patch(url, body, [timeout=5000], [options={}])`
+- `httpclient.delete(url, [timeout=5000], [options={}])`
+- `httpclient.download(url, localPath, [timeout=30000], [options={}])`
+- `httpclient.upload(url, localPath, [timeout=30000], [options={}])`
+
+**Note:** The convenience functions maintain backward compatibility by accepting `timeout` as the second parameter, followed by `options` as the third parameter.
+
+## 6. Usage Examples
+
+```javascript
+import httpclient from 'dxmodules/dxHttpClient.js';
+import * as std from 'std';
+import * as log from 'dxmodules/dxLogger.js';
+
+// Replace with your server address
 const urlroot = "http://192.168.50.36:3000";
-// 1. GET demo
+
+// 1. Simple GET request
 log.info("\n=== GET ===");
-log.info(client.get(urlroot + "/get?name=quickjs&age=1"));
-// Output: {"code":0,"status":200,"data":"{\"method\":\"GET\",\"query\":{\"name\":\"quickjs\",\"age\":\"1\"},\"headers\":{\"host\":\"192.168.50.233:3000\",\"accept\":\"*/*\"}}"}
+let res_get = httpclient.get(urlroot + "/get?name=quickjs&age=1", 5000);
+log.info(res_get);
+// Output: {"code":0,"status":200,"data":"{\"method\":\"GET\",..."}}
 
-// 2. POST demo
+// 2. POST with object (automatically converted to JSON string)
 log.info("\n=== POST ===");
-log.info(client.post(urlroot + "/post", JSON.stringify({ foo: "bar", num: 42 })));
-// Output: {"code":0,"status":200,"data":"{\"method\":\"POST\",\"body\":{\"foo\":\"bar\",\"num\":42},\"headers\":{\"host\":\"192.168.50.233:3000\",\"accept\":\"*/*\",\"content-type\":\"application/json\",\"content-length\":\"22\"}}"}
+let res_post = httpclient.post(urlroot + "/post", { foo: "bar", num: 42 }, 5000);
+log.info(res_post);
+// Output: {"code":0,"status":200,"data":"{\"method\":\"POST\",\"body\":{\"foo\":\"bar\"...}}"}
 
-// 3. Download file demo
-log.info("\n=== Download ===");
-let opts = {}
-opts.verifyPeer = 0;
-opts.verifyHost = 0;
-log.info(client.download(urlroot + "/download", "/tmp/bigfile.txt", null, opts));
-log.info('download file length:', std.loadFile("/tmp/bigfile.txt").length);
-// Output: {"code":0,"status":200} download file length: 2290
-
-// 4. Upload file demo
-log.info("\n=== Upload ===");
-log.info(client.upload(urlroot + "/upload", "/app/code/dxmodules/libvbar-m-dxhttpclient.so"));
-// Output: {"code":0,"status":200}
-
-// 5. Download file demo with progress
-log.info("\n=== Download ===");
-client.reset();
-client.setOpt("method", "GET");
-client.setOpt("url", urlroot + "/download");
-client.setOpt("onProgress", function (dTotal, dLoaded, uTotal, uLoaded) {
-    log.info('progress:', dTotal, dLoaded, uTotal, uLoaded);
-    // Output: progress: xxx yyy 0 0
-});
-log.info(client.getNative().downloadToFile("/tmp/bigfile.txt"));
-log.info('download file length:', std.loadFile("/tmp/bigfile.txt").length);
-// Output: {"code":0,"status":200} download file length: xxxx
-
-// 6. HTTPS demo
-log.info("\n=== HTTPS ===");
-client.reset();
-client.setOpt("url", "https://reqres.in/api/users?page=2");
-client.setOpt("method", "GET");
-client.setOpt("verifyPeer", 0);
-client.setOpt("verifyHost", 0);
-client.setOpt("headers", ["x-api-key: reqres-free-v1"]);
-log.info(client.request());
-// Output: {"code":0,"status":200,"data":"{\"page\":2,\"per_page\":6,\"total\":12...
-
-// 7. PUT demo
+// 3. PUT request with custom headers
 log.info("\n=== PUT ===");
-log.info(client.put(urlroot + "/put", JSON.stringify({ id: 123, name: "Updated User", email: "updated@example.com" })));
-// Output: {"code":0,"status":200,"data":"{\"method\":\"PUT\",\"body\":{\"id\":123,\"name\":\"Updated User\",\"email\":\"updated@example.com\"},\"headers\":{\"host\":\"192.168.50.233:3000\",\"accept\":\"*/*\",\"content-type\":\"application/json\",\"content-length\":\"62\"},\"message\":\"Resource updated completely\"}"}
+let res_put = httpclient.put(
+    urlroot + "/put", 
+    { id: 123, name: "Updated User" },
+    5000,
+    { headers: { 'X-Custom-Header': 'MyValue' } }
+);
+log.info(res_put);
 
-// 8. PATCH demo
+// 4. Download file
+log.info("\n=== Download ===");
+let res_download = httpclient.download(urlroot + "/download", "/tmp/bigfile.txt", 30000);
+if (res_download.code === 0) {
+    log.info('Download successful, file size:', std.loadFile("/tmp/bigfile.txt").length);
+} else {
+    log.error('Download failed:', res_download.message);
+}
+
+// 5. File upload with progress callback
+log.info("\n=== Upload with Progress ===");
+let res_upload = httpclient.upload(
+    urlroot + "/upload",
+    "/app/code/dxmodules/libvbar-m-dxhttpclient.so",
+    30000,
+    {
+        onProgress: function (dTotal, dLoaded, uTotal, uLoaded) {
+            if (uTotal > 0) {
+                log.info(`Upload progress: ${Math.round(uLoaded / uTotal * 100)}%`);
+            }
+        }
+    }
+);
+log.info(res_upload);
+
+// 6. HTTPS request (with certificate verification disabled)
+log.info("\n=== HTTPS GET ===");
+let res_https = httpclient.get("https://reqres.in/api/users?page=2", 5000, {
+    headers: { "x-api-key": "reqres-free-v1" },
+    verifyPeer: 0,
+    verifyHost: 0
+});
+log.info(res_https);
+
+// 7. PATCH request
 log.info("\n=== PATCH ===");
-log.info(client.patch(urlroot + "/patch", JSON.stringify({ email: "patched@example.com", status: "active" })));
-// Output: {"code":0,"status":200,"data":"{\"method\":\"PATCH\",\"body\":{\"email\":\"patched@example.com\",\"status\":\"active\"},\"headers\":{\"host\":\"192.168.50.233:3000\",\"accept\":\"*/*\",\"content-type\":\"application/json\",\"content-length\":\"49\"},\"message\":\"Resource updated partially\"}"}
+let res_patch = httpclient.patch(urlroot + "/patch", 5000, { 
+    email: "patched@example.com", 
+    status: "active" 
+});
+log.info(res_patch);
 
-// 9. DELETE demo (without body)
+// 8. DELETE request (without body)
 log.info("\n=== DELETE ===");
-log.info(client.delete(urlroot + "/delete/123"));
-// Output: {"code":0,"status":414,"data":"{\"method\":\"DELETE\",\"error\":\"User 123 not found\",\"path\":\"/delete/123\",\"headers\":{\"host\":\"192.168.50.233:3000\",\"accept\":\"*/*\"}}","message":"Client Error: HTTP 404"}
-
+let res_delete = httpclient.delete(urlroot + "/delete/123", 5000);
+log.info(res_delete);
 ```
+
+## 7. Response Format
+
+All HTTP request functions return a response object with the following structure:
+
+```javascript
+{
+    "code": 0,           // CURL error code (0 = success)
+    "status": 200,       // HTTP status code
+    "data": "...",       // Response body (string)
+    "message": "..."     // Error message (only present on errors)
+}
+```
+
+**Note:** The `download` function returns a response object without the `data` field, as the response body is written directly to the local file.
+
+## 8. Deprecated APIs
+
+The old stateful API (`init`, `deinit`, `setOpt`, `reset`, `request()`) is now **deprecated** and should not be used in new projects. For backward compatibility, these functions may still exist but will throw errors or perform no operations.
+
+**Always use the new stateless functional API** - it's safer, simpler, and more reliable.
+
+## 9. Related Modules
+
+`dxHttpClient` is the replacement for the `dxHttp` module. `dxHttp` is being gradually phased out - please use `dxHttpClient` in new projects.
+
+## 10. Technical Improvements
+
+The latest version includes several important improvements:
+
+- **Robust parameter handling**: All optional parameters are properly validated before processing
+- **Memory safety**: Enhanced integer overflow protection and memory management
+- **Error handling**: Better error messages and exception handling
+- **Thread safety**: Each request is completely isolated and stateless
+- **Performance**: Optimized memory allocation and cleanup routines
+
+## 11. Demo
+
 [Source Code](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_test_httpclient)

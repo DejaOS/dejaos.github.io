@@ -15,6 +15,19 @@ function Footer() {
 					{footer.copyright && (
 						<div className="footer__copyright">{footer.copyright}</div>
 					)}
+					<div className="footer__beian">
+						<a
+							href="https://beian.miit.gov.cn/"
+							target="_blank"
+							rel="noopener noreferrer"
+							style={{ color: '#666', textDecoration: 'none' }}
+						>
+							苏ICP备2024152646号-4
+						</a>
+						<span style={{ color: '#666', marginLeft: '8px' }}>
+							苏州酷豆物联科技有限公司
+						</span>
+					</div>
 				</div>
 			</div>
 		</footer>

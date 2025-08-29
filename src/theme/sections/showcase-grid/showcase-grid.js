@@ -108,7 +108,7 @@ export default function ShowcaseGrid(props) {
 			desc: 'This is a smart granary app that uses the VF105 to manage the temperature and humidity of the granary, and control access by Face Recognition.',
 			link: '',
 		},
-		
+
 	];
 
 	const itemsData = publicData;
@@ -153,7 +153,6 @@ export default function ShowcaseGrid(props) {
 				title={ctaTitle}
 				buttonLabel={ctaSubtitle}
 				buttonUrl={ctaUrl}
-				imageUrl='img/showcase/cta.svg'
 			/>
 		</Fragment>
 	);

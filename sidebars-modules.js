@@ -31,6 +31,7 @@ module.exports = {
          ],
          'DB':[
             'db/dxSqlite',
+            'db/dxSqliteDB',
             'db/dxKeyValueDB',
          ],
         // 'GUI Development': [
@@ -50,6 +51,7 @@ module.exports = {
              'utils/dxEventBus',
              'utils/dxConfiguration',
              'utils/dxConfig',
+             'utils/dxMap',
         // 	// 'utils/encryption',
         // 	// 'utils/logging',
         // 	// 'utils/ntp',
