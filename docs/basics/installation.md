@@ -22,14 +22,13 @@ To develop DejaOS applications on your computer, please prepare the following to
    This is a VSCode extension. Search for `DejaOS IDE` in the VSCode Extensions Marketplace, or install directly via:  
    👉 [DejaOS IDE Extension](https://marketplace.visualstudio.com/items?itemName=dxide.dxide)
 
-> Once installed, you'll see the DejaOS icon in the VSCode sidebar. Click it to access the project management interface.
+> - Once installed, you'll see the DejaOS icon in the VSCode sidebar. Click it to access the project management interface.
 
 ![DejaOS IDE Extension UI](/img/dxide.png)
 
 ## ⚠️ System Support
 
-Currently, the development environment **only supports Windows**.  
-**macOS and Linux** are not yet supported.
+Currently, the development environment **supports Windows,MacOS**.  
 
 ---
 
@@ -40,4 +39,4 @@ During development, DejaOS IDE may need to download official JavaScript modules:
 - **Online Development**: Access the DejaOS module repository to fetch the latest modules and dependencies.
 - **Offline Development**: Previously downloaded modules are cached locally, allowing continued development without an internet connection.
 
-> We recommend staying online to ensure you always have access to the latest modules.
+> - We recommend staying online to ensure you always have access to the latest modules.

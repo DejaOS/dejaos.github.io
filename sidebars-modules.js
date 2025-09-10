@@ -52,6 +52,9 @@ module.exports = {
              'utils/dxConfiguration',
              'utils/dxConfig',
              'utils/dxMap',
+             'utils/dxQueue',
+             'utils/dxWorkerPool'
+
         // 	// 'utils/encryption',
         // 	// 'utils/logging',
         // 	// 'utils/ntp',

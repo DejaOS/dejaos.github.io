@@ -30,7 +30,7 @@ Only familiarity with JavaScript and basic technical stacks (such as threading, 
 
 ### 7. Is development supported on Mac or Linux?
 
-Currently only Windows is supported, but since VSCode is cross-platform, support for Mac and Linux will be available soon.
+Currently Windows and Mac is supported, but since VSCode is cross-platform, support for Linux will be available soon.
 
 ### 8. How is the security of dejaOS application source code ensured?
 
