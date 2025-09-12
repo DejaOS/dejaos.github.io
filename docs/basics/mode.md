@@ -53,11 +53,11 @@ You can manually switch to test mode using tools in safe mode.
 In addition to using tools to switch modes, you can also trigger mode switching through code, such as scanning QR codes on the device or using other protocols. You can use the `setMode` function of the `dxCommon` module for switching:
 
 ```javascript
-import common from "../dxmodules/dxCommon.js";
+import dxos from '../dxmodules/dxOs.js'
 if (condition1) {
-  common.setMode("prod"); // Supported parameters include: dev, test, prod
+  dxos.setMode("prod"); // Supported parameters include: dev, test, prod
 } else if (condition2) {
-  common.setMode("dev"); // Supported parameters include: dev, test, prod
+  dxos.setMode("dev"); // Supported parameters include: dev, test, prod
 }
 ```
 
