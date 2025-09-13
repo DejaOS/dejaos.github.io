@@ -1,0 +1,138 @@
+{
+  "en": {
+    "headingTitle": "Showcase",
+    "headingSubtitle": "See the awesome app or demo people are building with DejaOS.",
+    "ctaTitle": "Want to add your project to the list?",
+    "ctaSubtitle": "Open an issue on GitHub",
+    "items": [
+      {
+        "label": "Access Control",
+        "desc": "This is the official standard access control application for DW200_V20 devices. It provides a comprehensive access control solution with rich functionality for secondary development. The application is designed to be highly portable and can be easily adapted to other devices with minimal code changes."
+      },
+      {
+        "label": "Generate QR Code",
+        "desc": "A simple DejaOS demo that generates and displays a QR code on the device screen."
+      },
+      {
+        "label": "Smart Home Control",
+        "desc": "This is a UI demonstration project built with the dxUi module for the DW200 device. It showcases a modern smart home control interface design with no actual business logic - purely focused on UI layout, interactions, and visual presentation."
+      },
+      {
+        "label": "Smart Drying Control",
+        "desc": "This is a UI demo project that mimics industrial control system smart panels, showcasing the design and interaction of modern industrial equipment operation interfaces."
+      },
+      {
+        "label": "DW200 Full Keyboard",
+        "desc": "This is a UI demonstration project built with the dxUi module for the DW200 device. It showcases a complete full keyboard input interface with no actual business logic - purely focused on UI layout, interactions, and visual presentation."
+      },
+      {
+        "label": "Medical Intelligent Panel",
+        "desc": "This is a medical intelligent panel demonstration that simulates real-time monitoring of vital signs. The application provides a modern, intuitive interface for displaying various medical parameters with dynamic visual representations."
+      },
+      {
+        "label": "Access Control MQTT",
+        "desc": "Access control app,The device scans the QR code Or user input Mobile Number and Pin， sends its content via MQTT to the Server. The MQTT server determines whether to allow access based on the content."
+      },
+      {
+        "label": "Scanner Reader",
+        "desc": "The DW200 Scanner Reader Application is a comprehensive, multi-functional reader system designed for industrial and commercial use. This official standard reader application provides extensive functionality for barcode scanning, NFC card reading, network communication, and device management with a modern touch screen interface."
+      },
+      {
+        "label": "WebLogCat Demo",
+        "desc": "A demonstration of real-time log viewing through an embedded HTTP server running on device, showcasing multi-threaded log collection via shared queue."
+      },
+      {
+        "label": "Network Demo",
+        "desc": "This Demo showcases the complete network connection, configuration, and diagnostic capabilities of the DW200_V20 device, including Ethernet and WiFi connection testing, network status monitoring, ping testing, and other practical features."
+      },
+      {
+        "label": "NFC Key",
+        "desc": "This is an access control case using a customized NFC key. The NFC key is a dedicated peripheral that supports both NFC and Bluetooth, communicating with the DW200 via these two methods to manage door access."
+      },
+      {
+        "label": "Hotel Card Apply",
+        "desc": "This is a hotel key card issuance application. After booking a room via mobile phone, users receive a QR code. The system scans this code with a dedicated device to generate an NFC-enabled key card for door access."
+      },
+      {
+        "label": "Security Control",
+        "desc": "This is a security control system project where the DW200 acts as the security controller. It receives sensor data via TCP protocol and controls other devices through TCP connections"
+      },
+      {
+        "label": "Game Card",
+        "desc": "This is a paper strip ticket system for arcade game scoring. The DW200 serves as a peripheral device for game machines, functioning as both an NFC card reader for player identification and a controller for processing paper ticket data."
+      },
+      {
+        "label": "Smart Granary",
+        "desc": "This is a smart granary app that uses the VF105 to manage the temperature and humidity of the granary, and control access by Face Recognition."
+      }
+    ]
+  },
+  "zh": {
+    "headingTitle": "案例展示",
+    "headingSubtitle": "查看人们正在使用 DejaOS 构建的出色应用或演示。",
+    "ctaTitle": "想将您的项目添加到列表中吗？",
+    "ctaSubtitle": "在 GitHub 上提出一个 issue",
+    "items": [
+      {
+        "label": "访问控制",
+        "desc": "这是 DW200_V20 设备的官方标准门禁应用程序。它提供了一个全面的门禁解决方案，具有丰富的二次开发功能。该应用程序设计为高度可移植，只需少量代码更改即可轻松适应其他设备。"
+      },
+      {
+        "label": "生成二维码",
+        "desc": "一个简单的 DejaOS 演示，可在设备屏幕上生成并显示二维码。"
+      },
+      {
+        "label": "智能家居控制",
+        "desc": "这是一个使用 dxUi 模块为 DW200 设备构建的 UI 演示项目。它展示了一个现代化的智能家居控制界面设计，没有实际的业务逻辑 - 纯粹专注于 UI 布局、交互和视觉呈现。"
+      },
+      {
+        "label": "智能烘干控制",
+        "desc": "这是一个模仿工业控制系统智能面板的 UI 演示项目，展示了现代工业设备操作界面的设计和交互。"
+      },
+      {
+        "label": "DW200 全键盘",
+        "desc": "这是一个使用 dxUi 模块为 DW200 设备构建的 UI 演示项目。它展示了一个完整的全键盘输入界面，没有实际的业务逻辑 - 纯粹专注于 UI 布局、交互和视觉呈现。"
+      },
+      {
+        "label": "医疗智能面板",
+        "desc": "这是一个模拟实时监测生命体征的医疗智能面板演示。该应用程序提供了一个现代、直观的界面，用于显示各种医疗参数的动态视觉表示。"
+      },
+      {
+        "label": "MQTT 门禁控制",
+        "desc": "门禁应用程序，设备扫描二维码或用户输入手机号和密码，通过 MQTT 将其内容发送到服务器。MQTT 服务器根据内容确定是否允许访问。"
+      },
+      {
+        "label": "扫描读卡器",
+        "desc": "DW200 扫描读卡器应用程序是一个专为工业和商业用途设计的综合性、多功能读卡器系统。这个官方标准读卡器应用程序提供了条形码扫描、NFC 读卡、网络通信和设备管理的广泛功能，并配有现代化的触摸屏界面。"
+      },
+      {
+        "label": "WebLogCat 演示",
+        "desc": "通过在设备上运行的嵌入式 HTTP 服务器实时查看日志的演示，展示了通过共享队列进行多线程日志收集。"
+      },
+      {
+        "label": "网络演示",
+        "desc": "该演示展示了 DW200_V20 设备的完整网络连接、配置和诊断功能，包括以太网和 WiFi 连接测试、网络状态监控、ping 测试等实用功能。"
+      },
+      {
+        "label": "NFC 钥匙",
+        "desc": "这是一个使用定制 NFC 钥匙的门禁案例。NFC 钥匙是支持 NFC 和蓝牙的专用外设，通过这两种方式与 DW200 通信以管理门禁。"
+      },
+      {
+        "label": "酒店房卡应用",
+        "desc": "这是一个酒店钥匙卡发行应用程序。通过手机预订房间后，用户会收到一个二维码。系统使用专用设备扫描此代码以生成支持 NFC 的门禁卡。"
+      },
+      {
+        "label": "安防控制",
+        "desc": "这是一个安防控制系统项目，其中 DW200 充当安全控制器。它通过 TCP 协议接收传感器数据，并通过 TCP 连接控制其他设备。"
+      },
+      {
+        "label": "游戏卡",
+        "desc": "这是一个用于街机游戏计分的纸带票系统。DW200 作为游戏机的外围设备，既用作玩家身份识别的 NFC 读卡器，也用作处理纸票数据的控制器。"
+      },
+      {
+        "label": "智慧粮仓",
+        "desc": "这是一个智慧粮仓应用，使用 VF105 管理粮仓的温湿度，并通过人脸识别控制门禁。"
+      }
+    ]
+  }
+}
