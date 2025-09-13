@@ -1,0 +1,174 @@
+{
+  "homepage.hero.title": {
+    "message": "DejaOS",
+    "description": "首页主标题"
+  },
+  "homepage.hero.subtitle": {
+    "message": "嵌入式设备的 JavaScript 运行时环境 - 让 JavaScript 简化嵌入式应用开发",
+    "description": "首页副标题"
+  },
+  "homepage.hero.buttonLabel": {
+    "message": "开始使用",
+    "description": "开始按钮标签"
+  },
+  "homepage.imageAndText.title": {
+    "message": "JavaScript 在嵌入式世界中无处不在",
+    "description": "JavaScript 无处不在部分的标题"
+  },
+  "homepage.imageAndText.description": {
+    "message": "DejaOS 让嵌入式应用开发变得简单高效。使用 JavaScript 控制硬件接口、创建美观的图形界面、构建网络应用。利用 QuickJS 引擎和 LVGL 图形库的强大功能。实时代码同步和调试能力让开发更快速。从物联网设备到智能终端，DejaOS 为嵌入式计算的未来提供动力！",
+    "description": "JavaScript 无处不在部分的描述"
+  },
+  "homepage.ctaCards.title": {
+    "message": "几分钟内开始构建",
+    "description": "行动呼吁卡片部分标题"
+  },
+  "homepage.ctaCards.subtitle": {
+    "message": "快速搭建您的 DejaOS 开发环境。获取安装 DXIDE、连接设备的说明，开始编写您的第一个嵌入式 JavaScript 应用程序。",
+    "description": "行动呼吁卡片部分副标题"
+  },
+  "homepage.ctaCards.card1.text": {
+    "message": "我想搭建开发环境",
+    "description": "第一个 CTA 卡片的文本"
+  },
+  "homepage.ctaCards.card1.buttonLabel": {
+    "message": "安装指南",
+    "description": "第一个 CTA 卡片的按钮标签"
+  },
+  "homepage.ctaCards.card2.text": {
+    "message": "我想查看支持的设备",
+    "description": "第二个 CTA 卡片的文本"
+  },
+  "homepage.ctaCards.card2.buttonLabel": {
+    "message": "设备列表",
+    "description": "第二个 CTA 卡片的按钮标签"
+  },
+  "homepage.textCards.features.title": {
+    "message": "强大的嵌入式开发功能",
+    "description": "功能部分标题"
+  },
+  "homepage.textCards.features.subtitle": {
+    "message": "DejaOS 功能丰富，为现代嵌入式应用开发提供您所需的一切！",
+    "description": "功能部分副标题"
+  },
+  "homepage.features.hardware.title": {
+    "message": "硬件接口模块",
+    "description": "硬件接口功能标题"
+  },
+  "homepage.features.hardware.subtitle": {
+    "message": "通过简单的 JavaScript API 控制 GPIO、PWM、UART、USB、NFC、二维码、蓝牙等。完整的硬件抽象层，方便设备集成。",
+    "description": "硬件接口功能副标题"
+  },
+  "homepage.features.gui.title": {
+    "message": "现代图形界面开发",
+    "description": "GUI 开发功能标题"
+  },
+  "homepage.features.gui.subtitle": {
+    "message": "使用 JavaScript 和 LVGL 创建美观的用户界面。支持触摸屏、自定义组件和响应式布局。",
+    "description": "GUI 开发功能副标题"
+  },
+  "homepage.features.network.title": {
+    "message": "网络与通信",
+    "description": "网络通信功能标题"
+  },
+  "homepage.features.network.subtitle": {
+    "message": "内置支持 TCP、UDP、HTTP、MQTT、Web 服务器和各种 IoT 应用通信协议。",
+    "description": "网络通信功能副标题"
+  },
+  "homepage.features.realtime.title": {
+    "message": "实时开发",
+    "description": "实时开发功能标题"
+  },
+  "homepage.features.realtime.subtitle": {
+    "message": "从 VSCode 到设备的实时代码同步、即时调试和热重载功能，让开发周期更快速。",
+    "description": "实时开发功能副标题"
+  },
+  "homepage.features.multithreading.title": {
+    "message": "多线程支持",
+    "description": "多线程功能标题"
+  },
+  "homepage.features.multithreading.subtitle": {
+    "message": "JavaScript Worker 线程支持并发操作，EventBus 实现线程间通信，线程池管理。",
+    "description": "多线程功能副标题"
+  },
+  "homepage.features.database.title": {
+    "message": "数据库与存储",
+    "description": "数据库存储功能标题"
+  },
+  "homepage.features.database.subtitle": {
+    "message": "SQLite 数据库支持、文件系统操作和数据管理的持久化存储功能。",
+    "description": "数据库存储功能副标题"
+  },
+  "homepage.features.security.title": {
+    "message": "安全与加密",
+    "description": "安全加密功能标题"
+  },
+  "homepage.features.security.subtitle": {
+    "message": "内置加密/解密模块、安全通信协议和身份验证机制。",
+    "description": "安全加密功能副标题"
+  },
+  "homepage.features.thirdparty.title": {
+    "message": "第三方模块支持",
+    "description": "第三方模块功能标题"
+  },
+  "homepage.features.thirdparty.subtitle": {
+    "message": "使用 ES6 import 语法导入和使用任何 npm 包或纯 JavaScript 模块。",
+    "description": "第三方模块功能副标题"
+  },
+  "homepage.features.deployment.title": {
+    "message": "生产部署",
+    "description": "生产部署功能标题"
+  },
+  "homepage.features.deployment.subtitle": {
+    "message": "简单的 DPK 打包系统，可将应用程序部署到生产设备并支持自动更新。",
+    "description": "生产部署功能副标题"
+  },
+  "homepage.features.compatibility.title": {
+    "message": "跨平台兼容性",
+    "description": "跨平台兼容性功能标题"
+  },
+  "homepage.features.compatibility.subtitle": {
+    "message": "支持各种基于 ARM 的设备，持续扩展到新的硬件平台。",
+    "description": "跨平台兼容性功能副标题"
+  },
+  "homepage.featureShowcase.title": {
+    "message": "您会喜爱的开发体验",
+    "description": "开发体验展示标题"
+  },
+  "homepage.featureShowcase.text": {
+    "message": "享受与 VSCode 集成的现代开发工具、实时调试和完善的文档。像开发 Web 应用一样轻松构建嵌入式应用。",
+    "description": "开发体验展示文本"
+  },
+  "homepage.textCards.technical.title": {
+    "message": "技术基础",
+    "description": "技术基础部分标题"
+  },
+  "homepage.textCards.technical.subtitle": {
+    "message": "基于成熟技术构建，确保可靠性和性能",
+    "description": "技术基础部分副标题"
+  },
+  "homepage.technical.quickjs.title": {
+    "message": "QuickJS 引擎",
+    "description": "QuickJS 技术基础标题"
+  },
+  "homepage.technical.quickjs.subtitle": {
+    "message": "快速轻量的 JavaScript 引擎，支持 ES2020 标准，非常适合资源受限的嵌入式设备。",
+    "description": "QuickJS 技术基础副标题"
+  },
+  "homepage.technical.lvgl.title": {
+    "message": "LVGL 图形库",
+    "description": "LVGL 技术基础标题"
+  },
+  "homepage.technical.lvgl.subtitle": {
+    "message": "流行的开源嵌入式图形库，提供丰富的 UI 组件和流畅的动画效果。",
+    "description": "LVGL 技术基础副标题"
+  },
+  "homepage.technical.linux.title": {
+    "message": "Mip/ARMLinux",
+    "description": "Linux 技术基础标题"
+  },
+  "homepage.technical.linux.subtitle": {
+    "message": "具有完整系统功能、进程管理和资源调度的嵌入式 Linux 发行版。",
+    "description": "Linux 技术基础副标题"
+  }
+}

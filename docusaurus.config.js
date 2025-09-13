@@ -11,6 +11,18 @@ module.exports = {
 	organizationName: 'DejaOS',
 	projectName: 'dejaos-docs',
 	onBrokenLinks: 'warn',
+	i18n: {
+		defaultLocale: 'en',
+		locales: ['en', 'zh'],
+		localeConfigs: {
+			en: {
+				label: 'English',
+			},
+			zh: {
+				label: '中文',
+			},
+		},
+	},
 	staticDirectories: ['static'],
 	scripts: [
 		{
@@ -67,6 +79,7 @@ module.exports = {
 					label: 'Showcase',
 					position: 'right',
 				},
+				{ type: 'localeDropdown', position: 'right' },
 				{
 					href: 'http://54.196.161.216/',
 					label: 'FEOCEY',

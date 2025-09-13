@@ -1,0 +1,22 @@
+{
+  "item.label.Guide": {
+    "message": "指南",
+    "description": "Navbar item with label Guide"
+  },
+  "item.label.Modules": {
+    "message": "模块",
+    "description": "Navbar item with label Modules"
+  },
+  "item.label.Devices": {
+    "message": "设备",
+    "description": "Navbar item with label Devices"
+  },
+  "item.label.Blog": {
+    "message": "博客",
+    "description": "Navbar item with label Blog"
+  },
+  "item.label.Showcase": {
+    "message": "案例",
+    "description": "Navbar item with label Showcase"
+  }
+}

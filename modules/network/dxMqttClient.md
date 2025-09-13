@@ -225,7 +225,6 @@ Gets the native client object.
 
 **Returns:** `Object|null` - The native client object, or null if not initialized
 
-
 ## 7. Related Modules
 
 - **dxMqtt:** Deprecated,Replaced by dxMqttClient
@@ -235,56 +234,56 @@ Gets the native client object.
 ### Complete MQTT Client Application
 
 ```javascript
-const url = 'tcp://192.168.50.36:1883'
-net.init()
-mqttclient.init(url, 'my-device-12345');
+const url = "tcp://192.168.50.36:1883";
+net.init();
+mqttclient.init(url, "my-device-12345");
 
 net.connectWifiWithDHCP("xxxx", "xxxxxx");
 mqttclient.setCallbacks({
-    onConnectSuccess: () => {
-        logger.info("MQTT connected");
-        mqttclient.subscribe('testmqttclient/test1', { qos: 1 });
-        mqttclient.subscribe('testmqttclient/test2');
-    },
-    onMessage: (topic, message, qos, retained) => {
-        logger.info(`MQTT message received: topic=${topic}, message=${message}`);
-    },
-    onDelivery: (messageId) => {
-        logger.info(`MQTT message delivered: messageId=${messageId}`);
-    },
-    onConnectionLost: (reason) => {
-        logger.info(`MQTT connection lost: reason=${reason}`);
-        autoconnect()
-    }
+  onConnectSuccess: () => {
+    logger.info("MQTT connected");
+    mqttclient.subscribe("testmqttclient/test1", { qos: 1 });
+    mqttclient.subscribe("testmqttclient/test2");
+  },
+  onMessage: (topic, message, qos, retained) => {
+    logger.info(`MQTT message received: topic=${topic}, message=${message}`);
+  },
+  onDelivery: (messageId) => {
+    logger.info(`MQTT message delivered: messageId=${messageId}`);
+  },
+  onConnectionLost: (reason) => {
+    logger.info(`MQTT connection lost: reason=${reason}`);
+    autoconnect();
+  },
 });
 function autoconnect() {
-    std.setTimeout(() => {
-        connectMqtt()
-    }, 5000)
+  std.setTimeout(() => {
+    connectMqtt();
+  }, 5000);
 }
-autoconnect()
+autoconnect();
 function connectMqtt() {
-    try {
-        mqttclient.connect()
-    } catch (e) {
-        logger.error(`MQTT connect error:`, e)
-        std.setTimeout(() => {
-            connectMqtt()
-        }, 5000)
-    }
+  try {
+    mqttclient.connect();
+  } catch (e) {
+    logger.error(`MQTT connect error:`, e);
+    std.setTimeout(() => {
+      connectMqtt();
+    }, 5000);
+  }
 }
-bus.on('mqtt_publish', (data) => {
-    logger.info(`MQTT publish: topic=${data.topic}, payload=${data.payload}`)
-    mqttclient.publish(data.topic, data.payload, { qos: 1 })
-})
+bus.on("mqtt_publish", (data) => {
+  logger.info(`MQTT publish: topic=${data.topic}, payload=${data.payload}`);
+  mqttclient.publish(data.topic, data.payload, { qos: 1 });
+});
 std.setInterval(() => {
-    try {
-        net.loop()
-        mqttclient.loop()
-    } catch (e) {
-        logger.error(`loop error: ${e}`)
-    }
-}, 100)
+  try {
+    net.loop();
+    mqttclient.loop();
+  } catch (e) {
+    logger.error(`loop error: ${e}`);
+  }
+}, 100);
 ```
 
-[Source Code]( https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_test_mqttclient)
+[Source Code](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_test_mqttclient)

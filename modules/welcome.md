@@ -52,4 +52,4 @@ Choose a module from the sidebar to learn more about its API, usage examples, an
 
 ## Module Development
 
-If you're developing custom modules for DejaOS, check out our [Module Development Guide](../docs/module-development) for detailed information.
+If you're developing custom modules for DejaOS，doc will be release later.
