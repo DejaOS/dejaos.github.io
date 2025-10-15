@@ -17,6 +17,10 @@ module.exports = {
 			'basics/app',
 			'basics/mode',
 		],
+		'UI Development': [
+			'ui/overview',
+			'ui/getstart',
+		],
 		'FAQ': [
 			'faq/basicfaq',
 			'faq/devfaq',

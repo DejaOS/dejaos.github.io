@@ -17,6 +17,10 @@ module.exports = {
             'current/basics/app',
             'current/basics/mode',
         ],
+        'UI 开发': [
+            'current/ui/overview',
+            'current/ui/getstart',
+        ],
         '常见问题': [
             'current/faq/basicfaq',
             'current/faq/devfaq',
