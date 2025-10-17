@@ -38,6 +38,8 @@
 
 - `httpserver.route(path, callback)`
 
+path支持全局匹配，也支持通配符匹配，比如 '/app/*' 就能匹配所有'/app/'开头的path
+
 ### 响应对象
 
 - `res.send(body, headers)`

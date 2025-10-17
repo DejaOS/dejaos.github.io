@@ -38,6 +38,8 @@ Compatible with all devices running dejaOS v2.0+
 
 - `httpserver.route(path, callback)`
 
+The `path` parameter supports exact matching and wildcard matching. For example, `'/app/*'` matches all paths starting with `'/app/'`
+
 ### Response Object
 
 - `res.send(body, headers)`
