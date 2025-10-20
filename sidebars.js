@@ -20,6 +20,7 @@ module.exports = {
 		'UI Development': [
 			'ui/overview',
 			'ui/getstart',
+			'ui/lvglfunc',
 		],
 		'FAQ': [
 			'faq/basicfaq',

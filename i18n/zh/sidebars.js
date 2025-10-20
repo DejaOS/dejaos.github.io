@@ -20,6 +20,7 @@ module.exports = {
         'UI 开发': [
             'current/ui/overview',
             'current/ui/getstart',
+            'current/ui/lvglfunc',
         ],
         '常见问题': [
             'current/faq/basicfaq',
