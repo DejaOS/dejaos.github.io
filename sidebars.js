@@ -21,6 +21,7 @@ module.exports = {
 			'ui/overview',
 			'ui/getstart',
 			'ui/lvglfunc',
+			'ui/dxui'
 		],
 		'FAQ': [
 			'faq/basicfaq',
