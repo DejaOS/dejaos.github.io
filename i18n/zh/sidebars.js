@@ -21,7 +21,8 @@ module.exports = {
             'current/ui/overview',
             'current/ui/getstart',
             'current/ui/lvglfunc',
-            'current/ui/dxui'
+            'current/ui/dxui',
+            'current/ui/dxuipage'
         ],
         '常见问题': [
             'current/faq/basicfaq',
