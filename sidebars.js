@@ -22,7 +22,8 @@ module.exports = {
 			'ui/getstart',
 			'ui/lvglfunc',
 			'ui/dxui',
-			'ui/dxuipage'
+			'ui/dxuipage',
+			'ui/layout',
 		],
 		'FAQ': [
 			'faq/basicfaq',

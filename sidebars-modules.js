@@ -34,6 +34,9 @@ module.exports = {
             'db/dxSqliteDB',
             'db/dxKeyValueDB',
          ],
+         'UI':[
+            'ui/dxUi',
+         ],
         // 'GUI Development': [
         // 	// 'gui/components',
         // 	// 'gui/layouts',
