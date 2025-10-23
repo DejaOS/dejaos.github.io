@@ -25,6 +25,9 @@ module.exports = {
 			'ui/dxuipage',
 			'ui/layout',
 		],
+        'Face Recognition': [
+            'face/overview',
+        ],
 		'FAQ': [
 			'faq/basicfaq',
 			'faq/devfaq',

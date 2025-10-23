@@ -25,6 +25,9 @@ module.exports = {
             'current/ui/dxuipage',
             'current/ui/layout',
         ],
+        '人脸识别': [
+            'current/face/overview',
+        ],
         '常见问题': [
             'current/faq/basicfaq',
             'current/faq/devfaq',
