@@ -27,6 +27,7 @@ module.exports = {
         ],
         '人脸识别': [
             'current/face/overview',
+            'current/face/detect',
         ],
         '常见问题': [
             'current/faq/basicfaq',
