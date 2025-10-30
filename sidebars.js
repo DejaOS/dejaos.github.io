@@ -28,6 +28,7 @@ module.exports = {
         'Face Recognition': [
             'face/overview',
             'face/detect',
+            'face/recognition',
         ],
 		'FAQ': [
 			'faq/basicfaq',
