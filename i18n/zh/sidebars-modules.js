@@ -17,6 +17,8 @@ module.exports = {
             'current/hardware/dxAlsa',
             'current/hardware/dxAlsaplay',
             'current/hardware/dxPwm',
+            'current/hardware/dxNfc',
+            'current/hardware/dxNfcCard',
             // 	// 'hardware/watchdog',
         ],
         '网络通信': [
