@@ -8,9 +8,11 @@
     "devices": [
       {
         "id": "dw200",
-        "name": "DW200",
+        "name": "FC6820",
         "description": "High-performance multi-functional board supporting various interfaces",
         "specs": {
+          "model":"Model",
+          "model_value":"DW200",
           "interfaces": "Interfaces",
           "interfaces_value": "GPIO, RS485, Ethernet, WiFi(V20), Bluetooth, NFC",
           "display": "Display",
@@ -33,9 +35,11 @@
       },
       {
         "id": "vf105",
-        "name": "VF105",
+        "name": "FCV4905",
         "description": "High-performance multi-functional board supporting facial recognition, big screen, and more interfaces",
         "specs": {
+          "model":"Model",
+          "model_value":"VF105",
           "processor": "Processor",
           "processor_value": "ARM Cortex A7 MP2 1GHz",
           "interfaces": "Interfaces",
@@ -60,9 +64,11 @@
       },
       {
         "id": "vf114",
-        "name": "VF114",
+        "name": "FCV4914",
         "description": "High-performance multi-functional board supporting facial recognition, big screen, and more interfaces",
         "specs": {
+          "model":"Model",
+          "model_value":"VF114",
           "processor": "Processor",
           "processor_value": "ARM Cortex A7 MP2 1GHz",
           "interfaces": "Interfaces",
@@ -87,9 +93,11 @@
       },
       {
         "id": "vf203",
-        "name": "VF203",
+        "name": "FCV4920",
         "description": "High-performance multi-functional board supporting facial recognition, big screen, and more interfaces",
         "specs": {
+          "model":"Model",
+          "model_value":"VF203",
           "processor": "Processor",
           "processor_value": "ARM Cortex A7 1GHz",
           "interfaces": "Interfaces",
@@ -112,9 +120,11 @@
       },
       {
         "id": "cc101",
-        "name": "CC101",
+        "name": "FCC4901",
         "description": "High-performance industrial controller supporting more interfaces",
         "specs": {
+          "model":"Model",
+          "model_value":"CC101",
           "processor": "Processor",
           "processor_value": "ARM Cortex-M4",
           "memory": "Memory",
@@ -131,9 +141,11 @@
       },
       {
         "id": "cc104",
-        "name": "CC104",
+        "name": "FCC4901",
         "description": "High-performance industrial controller supporting more interfaces",
         "specs": {
+          "model":"Model",
+          "model_value":"CC104",
           "processor": "Processor",
           "processor_value": "ARM Cortex-A9 Quad Core",
           "memory": "Memory",
@@ -150,9 +162,11 @@
       },
       {
         "id": "m350",
-        "name": "M350",
+        "name": "FC7735",
         "description": "High-performance industrial scanner supporting more interfaces",
         "specs": {
+          "model":"Model",
+          "model_value":"M350",
           "interfaces": "Interfaces",
           "interfaces_value": "RS485, Ethernet, NFC, Wiegand, TTL",
           "audio": "Audio",
@@ -169,9 +183,11 @@
       },
       {
         "id": "mu86",
-        "name": "MU86",
+        "name": "FC7785",
         "description": "High-performance industrial scanner supporting more interfaces",
         "specs": {
+          "model":"Model",
+          "model_value":"MU86",
           "interfaces": "Interfaces",
           "interfaces_value": "RS485, Ethernet, NFC, Wiegand",
           "audio": "Audio",
@@ -197,9 +213,11 @@
     "devices": [
       {
         "id": "dw200",
-        "name": "DW200",
+        "name": "FC6820",
         "description": "支持多种接口的高性能多功能板",
         "specs": {
+          "model":"型号",
+          "model_value":"DW200",
           "interfaces": "接口",
           "interfaces_value": "GPIO, RS485, 以太网, WiFi(V20), 蓝牙, NFC",
           "display": "显示屏",
@@ -222,9 +240,11 @@
       },
       {
         "id": "vf105",
-        "name": "VF105",
+        "name": "FCV4905",
         "description": "支持人脸识别、大屏幕和更多接口的高性能多功能板",
         "specs": {
+          "model":"型号",
+          "model_value":"VF105",
           "processor": "处理器",
           "processor_value": "ARM Cortex A7 MP2 1GHz",
           "interfaces": "接口",
@@ -249,9 +269,11 @@
       },
       {
         "id": "vf114",
-        "name": "VF114",
+        "name": "FCV4914",
         "description": "支持人脸识别、大屏幕和更多接口的高性能多功能板",
         "specs": {
+          "model":"型号",
+          "model_value":"VF114",
           "processor": "处理器",
           "processor_value": "ARM Cortex A7 MP2 1GHz",
           "interfaces": "接口",
@@ -276,9 +298,11 @@
       },
       {
         "id": "vf203",
-        "name": "VF203",
+        "name": "FCV4920",
         "description": "支持人脸识别、大屏幕和更多接口的高性能多功能板",
         "specs": {
+          "model":"型号",
+          "model_value":"VF203",
           "processor": "处理器",
           "processor_value": "ARM Cortex A7 1GHz",
           "interfaces": "接口",
@@ -301,9 +325,11 @@
       },
       {
         "id": "cc101",
-        "name": "CC101",
+        "name": "FCC4901",
         "description": "支持更多接口的高性能工业控制器",
         "specs": {
+          "model":"型号",
+          "model_value":"CC101",
           "processor": "处理器",
           "processor_value": "ARM Cortex-M4",
           "memory": "内存",
@@ -320,9 +346,11 @@
       },
       {
         "id": "cc104",
-        "name": "CC104",
+        "name": "FCC4904",
         "description": "支持更多接口的高性能工业控制器",
         "specs": {
+          "model":"型号",
+          "model_value":"CC104",
           "processor": "处理器",
           "processor_value": "ARM Cortex-A9 四核",
           "memory": "内存",
@@ -339,9 +367,11 @@
       },
       {
         "id": "m350",
-        "name": "M350",
+        "name": "FC7735",
         "description": "支持更多接口的高性能工业扫描器",
         "specs": {
+          "model":"型号",
+          "model_value":"M350",
           "interfaces": "接口",
           "interfaces_value": "RS485, 以太网, NFC, 韦根, TTL",
           "audio": "音频",
@@ -358,9 +388,11 @@
       },
       {
         "id": "mu86",
-        "name": "MU86",
+        "name": "FC7785",
         "description": "支持更多接口的高性能工业扫描器",
         "specs": {
+          "model":"型号",
+          "model_value":"MU86",
           "interfaces": "接口",
           "interfaces_value": "RS485, 以太网, NFC, 韦根",
           "audio": "音频",

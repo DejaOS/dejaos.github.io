@@ -81,7 +81,7 @@ module.exports = {
 				},
 				{ type: 'localeDropdown', position: 'right' },
 				{
-					href: 'http://54.196.161.216/',
+					href: 'https://www.feocey.com/',
 					label: 'FEOCEY',
 					position: 'right',
 				},

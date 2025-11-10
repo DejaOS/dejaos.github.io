@@ -13,42 +13,42 @@ export default function Devices() {
         {
             id: 'dw200',
             image: 'img/devices/DW200.png',
-            purchaseUrl: 'http://54.196.161.216/product/fc6820/'
+            purchaseUrl: 'https://www.feocey.com/product/fc6820/'
         },
         {
             id: 'vf105',
             image: 'img/devices/VF105.png',
-            purchaseUrl: 'http://54.196.161.216/product/fcv4905/'
+            purchaseUrl: 'https://www.feocey.com/product/fcv4905/'
         },
         {
             id: 'vf114',
             image: 'img/devices/VF114.png',
-            purchaseUrl: 'https://'
+            purchaseUrl: 'https://www.feocey.com/product/'
         },
         {
             id: 'vf203',
             image: 'img/devices/VF203.png',
-            purchaseUrl: 'https://'
+            purchaseUrl: 'https://www.feocey.com/product/'
         },
         {
             id: 'cc101',
             image: 'img/devices/CC101.png',
-            purchaseUrl: 'https://example.com/purchase/dw100'
+            purchaseUrl: 'https://www.feocey.com/product/'
         },
         {
             id: 'cc104',
             image: 'img/devices/CC104.png',
-            purchaseUrl: 'https://'
+            purchaseUrl: 'https://www.feocey.com/product/'
         },
         {
             id: 'm350',
             image: 'img/devices/M350.png',
-            purchaseUrl: 'https://'
+            purchaseUrl: 'https://www.feocey.com/product/'
         },
         {
             id: 'mu86',
             image: 'img/devices/MU86.jpg',
-            purchaseUrl: 'https://'
+            purchaseUrl: 'https://www.feocey.com/product/'
         }
     ];
 
