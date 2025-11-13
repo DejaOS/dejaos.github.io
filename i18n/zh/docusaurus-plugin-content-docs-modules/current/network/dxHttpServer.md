@@ -8,7 +8,7 @@
 - 静态 Web 服务
 - 服务监听和启动
 - 路由注册
-- 支持文件上传，Content-Type 应为 'application/octet-stream' 或 'text/plain' 等，**不支持** 'multipart/form-data'
+- 支持文件上传，支持原始二进制流 (如 'application/octet-stream') 和表单数据 ('multipart/form-data') 两种方式。
 - 支持文件下载
 - **不支持**多线程，所有函数应在单线程中运行。对于跨线程通信，使用 dxEventbus 传递数据
 
@@ -27,37 +27,69 @@
 
 兼容所有运行 dejaOS v2.0+ 的设备
 
-## 5. 使用方法
+## 5. API 参考
 
-### 初始化
+### 核心生命周期与服务控制
 
-- `httpserver.init()`
-- `httpserver.deinit()`
+- **`httpserver.init()`**: 初始化服务实例。此函数会被其他函数自动调用，因此通常无需显式调用。
+- **`httpserver.deinit()`**: 反初始化服务并释放资源。
+- **`httpserver.listen(port)`**: 启动 HTTP 服务并监听指定端口上的连接。
+- **`httpserver.loop()`**: 处理传入的请求和事件。此函数必须在循环中（例如 `setInterval`）周期性地调用。
 
-### 路由注册
+### 路由
 
-- `httpserver.route(path, callback)`
+- **`httpserver.route(path, callback)`**: 为特定的 URL 路径注册一个处理器。
 
-path支持全局匹配，也支持通配符匹配，比如 '/app/*' 就能匹配所有'/app/'开头的path
+  - `path` (String): URL 路径。支持精确匹配 (如 `'/hello'`) 和通配符匹配 (如 `'/api/*'`)。
+  - `callback` (Function): 一个 `(req, res)` 函数，用于处理请求。
+    - `req`: 请求对象。
+    - `res`: 响应对象。
 
-### 响应对象
+- **`httpserver.serveStatic(pathPrefix, directory)`**: 提供来自本地目录的静态文件服务。
+  - `pathPrefix` (String): 映射到静态目录的 URL 前缀 (如 `/static`)。
+  - `directory` (String): 包含文件的本地绝对路径 (如 `/app/code/web`)。
 
-- `res.send(body, headers)`
-- `res.sendFile(path)`
+### 请求对象 (`req`)
 
-### 请求对象
+传递给路由回调的 `req` 对象包含：
 
-- `req.method`、`req.url`、`req.query`、`req.headers`、`req.body`
-- `req.saveFile(path)`
+- `req.method`: (String) HTTP 方法 (如 'GET', 'POST')。
+- `req.url`: (String) 完整的请求 URL。
+- `req.query`: (String) URL 的查询字符串部分。
+- `req.headers`: (Object) 包含请求头的对象。
+- `req.body`: (String|ArrayBuffer) 原始上传的请求体。
+- `req.saveFile(path)`: (Function) 将原始请求体 (如来自 'application/octet-stream') 保存到指定的文件路径。成功时返回 `true`。
+- `req.saveMultipartFile(path)`: (Function) 处理 'multipart/form-data' 上传。它会将**第一个文件部分**保存到指定的 `path`，并返回一个包含其他表单字段的对象。
 
-### 启动服务
+### 响应对象 (`res`)
 
-- `httpserver.listen(port)`
-- `setInterval(() => httpserver.loop(), 20)`
+传递给路由回调的 `res` 对象用于发送响应：
 
-### 静态服务
+- `res.send(body, headers)`: 向客户端发送响应。
+  - `body` (String|ArrayBuffer): 响应体。
+  - `headers` (Object, 可选): HTTP 头对象。
+- `res.sendFile(path)`: 将文件内容作为响应发送。
 
-- `httpserver.serveStatic(pathPrefix, directory)`
+### 示例
+
+**处理 multipart/form-data 表单上传:**
+
+```javascript
+// 使用 curl 的示例:
+// curl -X POST -F "file1=@/path/to/your/file.bin" \
+//   -F "user=JohnDoe" -F "timestamp=1678886400" \
+//   http://<device-ip>:8080/form-upload
+
+httpserver.route("/form-upload", function (req, res) {
+  try {
+    const fields = req.saveMultipartFile("/app/code/data/uploaded_file.bin");
+    // fields 将是: { user: "JohnDoe", timestamp: "1678886400" }
+    res.send(`文件已保存。用户是 ${fields.user}`);
+  } catch (e) {
+    res.send(`保存文件时出错: ${e}`, { "Content-Type": "text/plain" });
+  }
+});
+```
 
 更详细的使用方法，请参考演示：demo/test_server.js,demo/web
 截图如下：192.168.50.212 是设备 IP
