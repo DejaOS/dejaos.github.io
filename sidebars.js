@@ -17,6 +17,13 @@ module.exports = {
 			'basics/app',
 			'basics/mode',
 		],
+        'Worker':[
+            'worker/overview',
+            'worker/eventbus',
+            'worker/mapqueue',
+            'worker/rpc',
+            'worker/pool',
+        ],
 		'UI Development': [
 			'ui/overview',
 			'ui/getstart',

@@ -17,6 +17,13 @@ module.exports = {
             'current/basics/app',
             'current/basics/mode',
         ],
+        'Worker':[
+            'current/worker/overview',
+            'current/worker/eventbus',
+            'current/worker/mapqueue',
+            'current/worker/rpc',
+            'current/worker/pool',
+        ],
         'UI 开发': [
             'current/ui/overview',
             'current/ui/getstart',
