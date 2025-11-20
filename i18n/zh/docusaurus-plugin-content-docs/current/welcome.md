@@ -18,7 +18,7 @@ DejaOS 基于以下核心组件构建：
 
 ---
 
-## 📚 特性
+## 📚 特性   
 
 DejaOS 提供全面的 JavaScript API 和系统功能：
 
