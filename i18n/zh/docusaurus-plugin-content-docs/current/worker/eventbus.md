@@ -25,19 +25,27 @@
 3.  如果**主线程**发现 `Worker B` 订阅了该事件，它会再次通过 `postMessage` 将事件转发给 `Worker B`。
 4.  `Worker B` 接收到主线程转发来的消息，并最终执行对应的回调函数。
 
-```mermaid
-sequenceDiagram
-    participant Worker A
-    participant Main Thread
-    participant Worker B
-
-    Worker A->>Main Thread: bus.fire('topic', data)
-    Note right of Worker A: (底层通过 postMessage)
-    Main Thread->>Main Thread: 查找 'topic' 的订阅者
-    Note right of Main Thread: 发现 Worker B 订阅了该事件
-    Main Thread->>Worker B: 转发事件和数据
-    Note right of Main Thread: (底层通过 postMessage)
-    Worker B->>Worker B: 执行 bus.on('topic') 回调
+```text
++----------+                  +-------------+                  +----------+
+| Worker A |                  | Main Thread |                  | Worker B |
++----------+                  +-------------+                  +----------+
+    |                                |                               |
+    | bus.fire('topic', data)        |                               |
+    |------------------------------->|                               |
+    | (底层通过 postMessage)         |                               |
+    |                                | 查找 'topic' 的订阅者         |
+    |                                |------------------------------>|
+    |                                |                               |
+    |                                | 发现 Worker B 订阅了该事件    |
+    |                                |------------------------------>|
+    |                                |                               |
+    |                                | 转发事件和数据                |
+    |                                |------------------------------>|
+    |                                | (底层通过 postMessage)        |
+    |                                |                               |
+    |                                |                               | 执行 bus.on('topic') 回调
+    |                                |                               |------------------------------>|
+    |                                |                               |
 ```
 
 :::danger 性能考量

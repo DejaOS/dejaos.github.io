@@ -24,21 +24,29 @@ When dealing with a large number of concurrent, independent tasks, manually crea
 
 The workflow of `dxWorkerPool` is entirely event-driven:
 
-```mermaid
-sequenceDiagram
-    participant Main Thread
-    participant dxEventBus
-    participant dxWorkerPool
-    participant Worker 1
-    participant Worker 2
-
-    Main Thread->>dxEventBus: bus.fire('topic', data)
-    dxEventBus->>dxWorkerPool: on('topic', ...)
-    dxWorkerPool->>dxWorkerPool: Add task to internal queue
-    dxWorkerPool->>Worker 1: (Finds idle worker) Assign task
-    Worker 1->>Worker 1: Execute pool.callback()
-    Worker 1-->>dxWorkerPool: Notify task completion, becomes idle
-    Note over dxWorkerPool: (Continues to assign if tasks are queued)
+```text
++-------------+        +------------+        +--------------+        +----------+
+| Main Thread |        | dxEventBus |        | dxWorkerPool |        | Worker 1 |
++-------------+        +------------+        +--------------+        +----------+
+       |                     |                      |                      |
+       | bus.fire('topic')   |                      |                      |
+       |-------------------->|                      |                      |
+       |                     | on('topic', ...)     |                      |
+       |                     |--------------------->|                      |
+       |                     |                      | Add task to queue    |
+       |                     |                      |--------------------->|
+       |                     |                      |                      |
+       |                     |                      | (Idle) Assign task   |
+       |                     |                      |--------------------->|
+       |                     |                      |                      |
+       |                     |                      |                      | Execute pool.callback()
+       |                     |                      |                      |-------------------->|
+       |                     |                      |                      |
+       |                     |                      | Notify completion    |
+       |                     |                      |<---------------------|
+       |                     |                      |                      |
+       |                     |                      | (Become Idle)        |
+       |                     |                      |--------------------->|
 ```
 
 ---

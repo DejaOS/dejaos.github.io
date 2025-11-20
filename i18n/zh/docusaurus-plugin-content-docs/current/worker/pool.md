@@ -24,21 +24,29 @@
 
 `dxWorkerPool` 的工作流程完全是事件驱动的：
 
-```mermaid
-sequenceDiagram
-    participant Main Thread
-    participant dxEventBus
-    participant dxWorkerPool
-    participant Worker 1
-    participant Worker 2
-
-    Main Thread->>dxEventBus: bus.fire('topic', data)
-    dxEventBus->>dxWorkerPool: on('topic', ...)
-    dxWorkerPool->>dxWorkerPool: 将任务加入内部队列
-    dxWorkerPool->>Worker 1: (发现空闲) 分配任务
-    Worker 1->>Worker 1: 执行 pool.callback()
-    Worker 1-->>dxWorkerPool: 通知任务完成，变为空闲
-    Note over dxWorkerPool: (若有排队任务，则继续分配)
+```text
++-------------+        +------------+        +--------------+        +----------+
+| Main Thread |        | dxEventBus |        | dxWorkerPool |        | Worker 1 |
++-------------+        +------------+        +--------------+        +----------+
+       |                     |                      |                      |
+       | bus.fire('topic')   |                      |                      |
+       |-------------------->|                      |                      |
+       |                     | on('topic', ...)     |                      |
+       |                     |--------------------->|                      |
+       |                     |                      | 将任务加入内部队列   |
+       |                     |                      |--------------------->|
+       |                     |                      |                      |
+       |                     |                      | (发现空闲) 分配任务  |
+       |                     |                      |--------------------->|
+       |                     |                      |                      |
+       |                     |                      |                      | 执行 pool.callback()
+       |                     |                      |                      |-------------------->|
+       |                     |                      |                      |
+       |                     |                      | 通知任务完成         |
+       |                     |                      |<---------------------|
+       |                     |                      |                      |
+       |                     |                      | (变为空闲)           |
+       |                     |                      |--------------------->|
 ```
 
 ---

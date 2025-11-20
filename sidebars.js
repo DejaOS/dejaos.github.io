@@ -37,6 +37,10 @@ module.exports = {
             'face/detect',
             'face/recognition',
         ],
+        'Best Practice': [
+            'bestpractice/ota',
+            'bestpractice/access',
+        ],
 		'FAQ': [
 			'faq/basicfaq',
 			'faq/devfaq',

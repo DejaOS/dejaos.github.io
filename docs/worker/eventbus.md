@@ -25,19 +25,27 @@ When a `Worker` calls `bus.fire()`, the event is not sent directly to another `W
 3.  If the **main thread** finds that `Worker B` has subscribed to the event, it forwards the event to `Worker B` via `postMessage` again.
 4.  `Worker B` receives the message forwarded from the main thread and finally executes the corresponding callback function.
 
-```mermaid
-sequenceDiagram
-    participant Worker A
-    participant Main Thread
-    participant Worker B
-
-    Worker A->>Main Thread: bus.fire('topic', data)
-    Note right of Worker A: (Underlying: postMessage)
-    Main Thread->>Main Thread: Find subscribers for 'topic'
-    Note right of Main Thread: Finds that Worker B is a subscriber
-    Main Thread->>Worker B: Forward event and data
-    Note right of Main Thread: (Underlying: postMessage)
-    Worker B->>Worker B: Execute bus.on('topic') callback
+```text
++----------+                  +-------------+                  +----------+
+| Worker A |                  | Main Thread |                  | Worker B |
++----------+                  +-------------+                  +----------+
+    |                                |                               |
+    | bus.fire('topic', data)        |                               |
+    |------------------------------->|                               |
+    | (via postMessage)              |                               |
+    |                                | Find subscribers for 'topic'  |
+    |                                |------------------------------>|
+    |                                |                               |
+    |                                | Found Worker B subscribed     |
+    |                                |------------------------------>|
+    |                                |                               |
+    |                                | Forward event and data        |
+    |                                |------------------------------>|
+    |                                | (via postMessage)             |
+    |                                |                               |
+    |                                |                               | Execute bus.on('topic') callback
+    |                                |                               |------------------------------>|
+    |                                |                               |
 ```
 
 :::danger Performance Considerations

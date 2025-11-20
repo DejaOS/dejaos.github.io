@@ -37,6 +37,10 @@ module.exports = {
             'current/face/detect',
             'current/face/recognition',
         ],
+        '最佳实践': [
+            'current/bestpractice/ota',
+            'current/bestpractice/access',
+        ],
         '常见问题': [
             'current/faq/basicfaq',
             'current/faq/devfaq',
