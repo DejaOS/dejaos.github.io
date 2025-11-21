@@ -79,14 +79,22 @@ function performCalculation(params) {
 }
 
 // 2. Register the function with the RPC system
-bus.rpc.register("calculate", performCalculation);
+// :::warning Note
+// In a worker script, accessing `bus.rpc` directly at the top level might fail because the RPC module
+// initializes after the worker script loads. To safely register RPC functions, wrap your registration code in `setTimeout`.
+// :::
+setTimeout(() => {
+  bus.rpc.register("calculate", performCalculation);
 
-// Register a function for notify
-bus.rpc.register("logMessage", (msg) => {
-  log.info(`[Worker] Received log notification: ${msg.text}`);
-});
+  // Register a function for notify
+  bus.rpc.register("logMessage", (msg) => {
+    log.info(`[Worker] Received log notification: ${msg.text}`);
+  });
 
-log.info('[Worker] RPC functions "calculate" and "logMessage" are registered.');
+  log.info(
+    '[Worker] RPC functions "calculate" and "logMessage" are registered.'
+  );
+}, 1000);
 ```
 
 **`main.js` (Caller)**
@@ -128,7 +136,7 @@ async function runRpcDemo() {
 }
 
 // Delay execution to ensure the Worker has enough time to start up and register its functions
-setTimeout(runRpcDemo, 500);
+setTimeout(runRpcDemo, 2500);
 ```
 
 ### Inter-Worker RPC

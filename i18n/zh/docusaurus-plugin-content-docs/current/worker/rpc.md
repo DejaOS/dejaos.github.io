@@ -81,12 +81,15 @@ function performCalculation(params) {
 // 2. 将函数注册到 RPC 系统
 bus.rpc.register("calculate", performCalculation);
 
-// 注册一个用于 notify 的函数
-bus.rpc.register("logMessage", (msg) => {
-  log.info(`[Worker] Received log notification: ${msg.text}`);
-});
+  // 注册一个用于 notify 的函数
+  bus.rpc.register("logMessage", (msg) => {
+    log.info(`[Worker] Received log notification: ${msg.text}`);
+  });
 
-log.info('[Worker] RPC functions "calculate" and "logMessage" are registered.');
+  log.info(
+    '[Worker] RPC functions "calculate" and "logMessage" are registered.'
+  );
+}, 1000);
 ```
 
 **`main.js` (调用方 Caller)**
@@ -127,7 +130,7 @@ async function runRpcDemo() {
   log.info("[Main] ---- RPC Demo Finished ----");
 }
 
-setTimeout(runRpcDemo, 500);
+setTimeout(runRpcDemo, 2500);
 ```
 
 ### Worker 间 RPC
