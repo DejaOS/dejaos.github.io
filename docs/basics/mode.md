@@ -2,24 +2,13 @@
 
 ## Overview
 
-The dejaOS system provides four operating modes, each with different system behaviors, and modes can be switched between:
+The dejaOS system provides three main operating modes, each with different system behaviors, and modes can be switched between:
 
-- Safe Mode (safe)
 - Development Mode (dev)
 - Production Mode (prod)
 - Test Mode (test)
 
-## 1. Safe Mode
-
-Safe mode is similar to the BIOS mode of a PC computer. When the device starts up, there is a 2-second delay window during which you can connect to PC tools via serial cable to enter safe mode. The main functions of safe mode are:
-
-- **Install DPK Applications**: This is the most important function of safe mode.
-- **Switch System Modes**: You can use tools to switch the device to other modes.
-- **Get System Information**: You can view basic information about the system and installed applications.
-
-![Application Installation](/img/app_install2.png)
-
-## 2. Development Mode
+## 1. Development Mode
 
 Development mode is the default mode for development devices. In development mode:
 
@@ -27,9 +16,7 @@ Development mode is the default mode for development devices. In development mod
 - **No Interface Display**: If the device has a screen, it won't display application-related interfaces.
 - **Debug App**: The system automatically starts a built-in debug App for interacting with VSCode via USB cable. This mode is suitable for syncing JavaScript code under development to the device.
 
-You can manually switch to development mode using tools in safe mode.
-
-## 3. Production Mode
+## 2. Production Mode
 
 Production mode is the default mode for production devices. In production mode:
 
@@ -37,23 +24,31 @@ Production mode is the default mode for production devices. In production mode:
 - **Application Interface Display**: If the device has a screen, it will display application-related interfaces.
 - **Debugging Disabled**: The debug App won't start, and you cannot sync code to the device via VSCode.
 
-You can switch to production mode using tools in safe mode.
-
-## 4. Test Mode
+## 3. Test Mode
 
 In test mode, both the production App and debug App run simultaneously, typically used for special testing requirements. In this mode:
 
 - **Start Production App**: The corresponding production App will automatically start after device restart and display the application interface (if the device has a screen).
 - **Start Debug App**: The debug App will automatically start after device startup, allowing code syncing to the device via VSCode.
 
-You can manually switch to test mode using tools in safe mode.
+## Mode Switching
 
-## Switching Modes via Code
+You can switch between different modes in the following two ways:
 
-In addition to using tools to switch modes, you can also trigger mode switching through code, such as scanning QR codes on the device or using other protocols. You can use the `setMode` function of the `dxOs` module for switching:
+### 1. Via System Management App
+
+This is the most common way to switch, especially during development, debugging, or device maintenance. You can use the System Manager App to switch the device to the desired mode.
+
+For details, please refer to [System Management App](/docs/basics/managerapp).
+
+### 2. Via Code
+
+You can also trigger mode switching through code, which is typically used for specific business scenarios, such as scanning a QR code, receiving an MQTT command, or triggering via a specific gesture.
+
+You can use the `setMode` function of the `dxOs` module for switching:
 
 ```javascript
-import dxos from '../dxmodules/dxOs.js'
+import dxos from "../dxmodules/dxOs.js";
 if (condition1) {
   dxos.setMode("prod"); // Supported parameters include: dev, test, prod
 } else if (condition2) {
@@ -72,12 +67,11 @@ if (condition1) {
 
 ## Mode Behavior Comparison Table
 
-| Mode             | Start App | Display Interface | Support Debug | Application Scenarios                          |
-| ---------------- | --------- | ----------------- | ------------- | ---------------------------------------------- |
-| Safe Mode        | No        | No                | No            | Installation, mode switching, view information |
-| Development Mode | No        | No                | ✅            | Development and debugging phase                |
-| Production Mode  | ✅        | ✅                | No            | Commercial deployment, official release        |
-| Test Mode        | ✅        | ✅                | ✅            | Integration testing, pre-release validation    |
+| Mode | Start App | Display Interface | Support Debug | Application Scenarios |
+| :--- | :--- | :--- | :--- | :--- |
+| Development Mode | No | No | ✅ | Development and debugging phase |
+| Production Mode | ✅ | ✅ | No | Commercial deployment, official release |
+| Test Mode | ✅ | ✅ | ✅ | Integration testing, pre-release validation |
 
 ---
 

@@ -75,6 +75,19 @@ Return format:
 dxNtp.updateGmt(8);
 ```
 
+### Manually Setting Time
+
+```javascript
+// Manually set the system time
+// Note: If a network connection is available, it is recommended to use dxNtp.startSync() for higher accuracy.
+// Param 1: Time string in format "YYYY-MM-DD HH:mm:ss"
+// Param 2: Whether to synchronize to hardware clock (default: false)
+dxNtp.setTime("2023-10-01 12:00:00");
+
+// Set time and synchronize to hardware clock (RTC)
+dxNtp.setTime("2023-10-01 12:00:00", true);
+```
+
 ### Deprecated Methods
 
 The `dxNtp.loop()` and `dxNtp.beforeLoop()` methods are deprecated. Please use `dxNtp.startSync()` instead, which provides a more complete automatic management mechanism.

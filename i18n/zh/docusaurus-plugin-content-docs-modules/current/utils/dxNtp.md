@@ -75,6 +75,19 @@ logger.info("NTP 状态:", status);
 dxNtp.updateGmt(8);
 ```
 
+### 手动设置时间
+
+```javascript
+// 手动设置系统时间
+// 注意：如果有网络连接，建议优先使用 dxNtp.startSync() 以确保更高的时间准确性。
+// 参数1：时间字符串，格式 "YYYY-MM-DD HH:mm:ss"
+// 参数2：是否同步到硬件时钟 (默认 false)
+dxNtp.setTime("2023-10-01 12:00:00");
+
+// 设置时间并同步写入硬件时钟 (RTC)
+dxNtp.setTime("2023-10-01 12:00:00", true);
+```
+
 ### 已弃用的方法
 
 `dxNtp.loop()` 和 `dxNtp.beforeLoop()` 方法已弃用。请使用 `dxNtp.startSync()` 代替，它提供更完整的自动管理机制。

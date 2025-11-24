@@ -16,6 +16,7 @@ module.exports = {
             'current/basics/debugging',
             'current/basics/app',
             'current/basics/mode',
+			'current/basics/managerapp',
         ],
         'Worker':[
             'current/worker/overview',
