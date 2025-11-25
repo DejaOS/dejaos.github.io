@@ -36,8 +36,8 @@ module.exports = {
             'current/db/dxSqliteDB',
             'current/db/dxKeyValueDB',
         ],
-        'UI':[
-           'current/ui/dxUi',
+        'UI': [
+            'current/ui/dxUi',
         ],
         // 'GUI 开发': [
         // 	// 'gui/components',
@@ -48,6 +48,7 @@ module.exports = {
         '系统工具': [
             'current/utils/dxLogger',
             'current/utils/dxNtp',
+            'current/utils/dxTimeZones',
             'current/utils/dxIconv',
             'current/utils/dxOta',
             'current/utils/dxStd',
