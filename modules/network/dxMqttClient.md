@@ -71,6 +71,38 @@ setInterval(() => {
 mqtt.disconnect();
 ```
 
+### SSL/TLS Connection
+
+```javascript
+// Connect to a secure broker (e.g., test.mosquitto.org:8883)
+mqtt.init("ssl://test.mosquitto.org:8883", "my-secure-device");
+
+// Connect with SSL options
+mqtt.connect({
+  ssl: {
+    enableServerCertAuth: true,
+    // Path to the CA certificate file 
+    caFile: "/app/code/src/mosquitto.org.crt",
+    // Optional: Client certificate and key for mutual authentication
+    // certFile: "/path/to/client.crt",
+    // keyFile: "/path/to/client.key",
+  },
+});
+```
+
+#### SSL/TLS Configuration Guide
+
+1.  **One-way Authentication (Server Authentication):**
+
+    - The client verifies the server's identity using a CA certificate.
+    - Required: Set `enableServerCertAuth: true` and provide `caFile`.
+    - **Note:** Public brokers like `test.mosquitto.org` provide CA certificates for download (e.g., `mosquitto.org.crt`) to verify their identity.
+
+2.  **Two-way Authentication (Mutual Authentication):**
+    - Both client and server verify each other's identity.
+    - Required: In addition to the above, provide `certFile` (client certificate) and `keyFile` (client private key).
+    - Production environments often use self-signed certificates generated via OpenSSL for this purpose.
+
 ## 6. API Reference
 
 ### `mqtt.init(serverURI, clientId)`

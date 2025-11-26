@@ -71,6 +71,38 @@ setInterval(() => {
 mqtt.disconnect();
 ```
 
+### SSL/TLS 安全连接
+
+```javascript
+// 连接到安全代理 (例如: test.mosquitto.org:8883)
+mqtt.init("ssl://test.mosquitto.org:8883", "my-secure-device");
+
+// 使用 SSL 选项连接
+mqtt.connect({
+  ssl: {
+    enableServerCertAuth: true,
+    // CA 证书文件路径 
+    caFile: "/app/code/src/mosquitto.org.crt",
+    // 可选: 用于双向认证的客户端证书和私钥
+    // certFile: "/path/to/client.crt",
+    // keyFile: "/path/to/client.key",
+  },
+});
+```
+
+#### SSL/TLS 配置指南
+
+1.  **单向认证 (服务器认证):**
+
+    - 客户端使用 CA 证书验证服务器的身份。
+    - **必需:** 设置 `enableServerCertAuth: true` 并提供 `caFile`。
+    - **注意:** 公共代理如 `test.mosquitto.org` 提供 CA 证书下载（例如 `mosquitto.org.crt`）以验证其身份。
+
+2.  **双向认证 (相互认证):**
+    - 客户端和服务器互相验证对方的身份。
+    - **必需:** 除上述外，还需要提供 `certFile`（客户端证书）和 `keyFile`（客户端私钥）。
+    - 生产环境通常为此目的使用通过 OpenSSL 生成的自签名证书。
+
 ## 6. API 参考
 
 ### `mqtt.init(serverURI, clientId)`
