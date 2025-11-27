@@ -5,7 +5,7 @@ const darkTheme = themes.dracula;
 module.exports = {
 	title: 'DejaOS',
 	tagline: 'JavaScript Runtime Environment for Embedded Devices - Make embedded application development easier with JavaScript.',
-	url: 'https://dejaos.github.io',
+	url: 'https://dejaos.com',
 	baseUrl: '/',
 	favicon: '/img/favicon.png',
 	organizationName: 'DejaOS',
