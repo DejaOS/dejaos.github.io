@@ -89,3 +89,27 @@ sidebar_label: 常见问题2
 
 2.  **对于现有设备，必须重新刷入固件。**
     此过程较为复杂，通常需要我们的远程协助。我们可以通过 AnyDesk 访问您的 PC，手动将新固件刷入您的设备。
+
+---
+
+### 6. 为什么我在点击"Connect"时会遇到 WMI 错误？
+
+如果您在尝试连接设备时遇到类似于以下截图的错误：
+
+![WMI Error](/img/ide_error1.png)
+
+这表明您计算机上的 **Windows WMI (Windows Management Instrumentation) 服务**不可用或已损坏。IDE 依赖 WMI 通过 USB 检测和管理连接的设备。
+
+**什么是 WMI？**
+WMI 是 Windows 操作系统的核心组件，用于管理和监控。它可能由于系统更新、软件冲突或注册表问题而损坏。
+
+#### 解决方案：
+
+您需要重置 WMI 存储库。请按照以下步骤操作：
+
+1.  以**管理员身份**打开 **命令提示符 (cmd)** 或 **PowerShell**。
+2.  运行以下命令：
+    ```bash
+    winmgmt /resetrepository
+    ```
+3.  重启您的计算机（可选但推荐），然后再次尝试连接。

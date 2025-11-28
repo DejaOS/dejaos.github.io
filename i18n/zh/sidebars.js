@@ -32,6 +32,7 @@ module.exports = {
             'current/ui/dxui',
             'current/ui/dxuipage',
             'current/ui/layout',
+            'current/ui/animation',
         ],
         '人脸识别': [
             'current/face/overview',

@@ -89,3 +89,27 @@ Regarding the replacement of the device's boot background image, please note the
 
 2.  **For existing devices, the firmware must be reflashed.**
     This process is more complex and requires our remote assistance. We will use AnyDesk to access your PC and manually flash the new firmware to your device.
+
+---
+
+### 6. Why do I encounter a WMI error when clicking "Connect"?
+
+If you encounter an error similar to the screenshot below when trying to connect to the device:
+
+![WMI Error](/img/ide_error1.png)
+
+This indicates that the **Windows WMI (Windows Management Instrumentation) service** on your computer is unavailable or corrupted. The IDE relies on WMI to detect and manage connected devices via USB.
+
+**What is WMI?**
+WMI is a core component of the Windows operating system used for management and monitoring. It can become corrupted due to system updates, software conflicts, or registry issues.
+
+#### Solution:
+
+You need to reset the WMI repository. Please follow these steps:
+
+1.  Open **Command Prompt (cmd)** or **PowerShell** as **Administrator**.
+2.  Run the following command:
+    ```bash
+    winmgmt /resetrepository
+    ```
+3.  Restart your computer (optional but recommended) and try connecting again.

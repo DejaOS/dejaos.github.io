@@ -32,6 +32,7 @@ module.exports = {
 			'ui/dxui',
 			'ui/dxuipage',
 			'ui/layout',
+			'ui/animation',
 		],
         'Face Recognition': [
             'face/overview',

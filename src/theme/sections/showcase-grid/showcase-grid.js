@@ -86,7 +86,10 @@ export default function ShowcaseGrid(props) {
 			image: useBaseUrl('img/showcase/smartgranary.png'),
 			link: '',
 		},
-
+		{
+			image: useBaseUrl('img/ui/animation_demo.gif'),
+			link: 'https://github.com/DejaOS/DejaOS/tree/main/demos/vf203_v12/vf203_v12_animation_demo',
+		},
 	];
 
 	const itemsData = publicData.map((item, index) => ({

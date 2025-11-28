@@ -64,6 +64,10 @@
       {
         "label": "Smart Granary",
         "desc": "This is a smart granary app that uses the VF105 to manage the temperature and humidity of the granary, and control access by Face Recognition."
+      },
+      {
+        "label": "UI Animation Demo",
+        "desc": "This demo showcases the powerful animation capabilities of the DejaOS UI system. It includes three distinct loader animations: Simple, Creative, and Advanced, demonstrating how to create complex, fluid animations using the dxui.Utils.anime function with various easing modes."
       }
     ]
   },
@@ -132,6 +136,10 @@
       {
         "label": "智慧粮仓",
         "desc": "这是一个智慧粮仓应用，使用 VF105 管理粮仓的温湿度，并通过人脸识别控制门禁。"
+      },
+      {
+        "label": "UI 动画演示",
+        "desc": "该演示展示了 DejaOS UI 系统强大的动画功能。它包含简单、创意和高级三种不同的加载动画，演示了如何使用 dxui.Utils.anime 函数配合各种缓动模式创建流畅复杂的动画效果。"
       }
     ]
   }
