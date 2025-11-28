@@ -193,4 +193,4 @@ The device compares feature vectors at the low level, not original photos. The e
     - **Pros**: Greatly reduces edge-side pressure, extremely fast enrollment.
     - **Prerequisite**: The algorithm model used on the server must be **identical** to the one on the device; otherwise, feature vectors are not interchangeable.
 
-For more details on facial technology, please refer to the [Face Recognition Overview](../face/overview).
+For more details on facial technology, please refer to the [Face Recognition Overview](../../face/overview).

@@ -11,6 +11,7 @@ module.exports = {
 	organizationName: 'DejaOS',
 	projectName: 'dejaos-docs',
 	onBrokenLinks: 'warn',
+	trailingSlash: true,
 	i18n: {
 		defaultLocale: 'en',
 		locales: ['en', 'zh'],
@@ -125,8 +126,7 @@ module.exports = {
 			sidebar: {
 				autoCollapseCategories: true,
 			},
-		},
-		trailingSlash: false,
+		}
 	},
 	presets: [
 		[
@@ -155,7 +155,7 @@ module.exports = {
 				},
 				sitemap: {
 					changefreq: 'weekly',
-					priority: 0.5,
+					priority: 0.5
 				},
 			},
 		],
