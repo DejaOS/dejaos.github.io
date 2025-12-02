@@ -1,7 +1,7 @@
 ---
 title: DejaOS VSCode 扩展 v1.0.32 发布
 description: DejaOS VSCode 扩展 v1.0.32 发布
-slug: ide1.0.32-release
+slug: ide-new-version-release
 authors: voxer
 tags: [dejaos, IDE]
 hide_table_of_contents: false

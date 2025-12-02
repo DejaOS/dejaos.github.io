@@ -3,6 +3,7 @@ module.exports = {
         '开始使用': [
             'current/welcome',
             'current/basics/installation',
+            'current/basics/connect-device',
             'current/basics/quick-start',
             'current/basics/dejaos-device'
         ],
@@ -16,9 +17,9 @@ module.exports = {
             'current/basics/debugging',
             'current/basics/app',
             'current/basics/mode',
-			'current/basics/managerapp',
+            'current/basics/managerapp',
         ],
-        'Worker':[
+        'Worker': [
             'current/worker/overview',
             'current/worker/eventbus',
             'current/worker/mapqueue',

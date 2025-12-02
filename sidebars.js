@@ -3,6 +3,7 @@ module.exports = {
 		'Getting Started': [
 			'welcome',
 			'basics/installation',
+			'basics/connect-device',
 			'basics/quick-start',
 			'basics/dejaos-device'
 		],
@@ -18,13 +19,13 @@ module.exports = {
 			'basics/mode',
 			'basics/managerapp',
 		],
-        'Worker':[
-            'worker/overview',
-            'worker/eventbus',
-            'worker/mapqueue',
-            'worker/rpc',
-            'worker/pool',
-        ],
+		'Worker': [
+			'worker/overview',
+			'worker/eventbus',
+			'worker/mapqueue',
+			'worker/rpc',
+			'worker/pool',
+		],
 		'UI Development': [
 			'ui/overview',
 			'ui/getstart',
@@ -34,15 +35,15 @@ module.exports = {
 			'ui/layout',
 			'ui/animation',
 		],
-        'Face Recognition': [
-            'face/overview',
-            'face/detect',
-            'face/recognition',
-        ],
-        'Best Practice': [
-            'bestpractice/ota',
-            'bestpractice/access',
-        ],
+		'Face Recognition': [
+			'face/overview',
+			'face/detect',
+			'face/recognition',
+		],
+		'Best Practice': [
+			'bestpractice/ota',
+			'bestpractice/access',
+		],
 		'FAQ': [
 			'faq/basicfaq',
 			'faq/devfaq',
