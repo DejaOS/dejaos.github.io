@@ -43,7 +43,15 @@ Provides animation capabilities.
 
 The following example demonstrates three different types of loaders: Simple Loader, Creative Loader, and Advanced Loader.
 
-![UI Animation Demo](/img/ui/animation_demo.gif)
+<iframe
+  width="315"
+  height="560"
+  src="https://www.youtube.com/embed/IEkC9R3rwpw"
+  title="UI Animation Demo"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
 
 ### 1. Simple Loader
 
@@ -274,4 +282,3 @@ std.setInterval(
 ### Full Code
 
 You can find the complete code on GitHub: [Link](https://github.com/DejaOS/DejaOS/tree/main/demos/vf203_v12/vf203_v12_animation_demo)
-

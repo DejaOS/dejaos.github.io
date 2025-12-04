@@ -43,7 +43,15 @@ DejaOS 提供了强大的 UI 动画支持，可以通过 `dxui.Utils.anime` 函�
 
 以下示例展示了三种不同类型的加载动画：简单加载器 (Simple Loader)、创意加载器 (Creative Loader) 和高级加载器 (Advanced Loader)。
 
-![UI Animation Demo](/img/ui/animation_demo.gif)
+<iframe
+  width="315"
+  height="560"
+  src="https://www.youtube.com/embed/IEkC9R3rwpw"
+  title="UI Animation Demo"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
 
 ### 1. 简单加载器 (Simple Loader)
 

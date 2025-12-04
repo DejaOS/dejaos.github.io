@@ -40,9 +40,15 @@ module.exports = {
             'current/face/detect',
             'current/face/recognition',
         ],
+        '指纹识别': [
+            'current/finger/overview',
+            'current/finger/dxFingerZaz',
+            'current/finger/dxFingerMz',
+        ],
         '最佳实践': [
             'current/bestpractice/ota',
             'current/bestpractice/access',
+            'current/bestpractice/uimanager',
         ],
         '常见问题': [
             'current/faq/basicfaq',

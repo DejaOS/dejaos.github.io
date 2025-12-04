@@ -48,6 +48,7 @@ module.exports = {
 		'Best Practice': [
 			'bestpractice/ota',
 			'bestpractice/access',
+			'bestpractice/uimanager',
 		],
 		'FAQ': [
 			'faq/basicfaq',

@@ -19,6 +19,8 @@ module.exports = {
             'current/hardware/dxPwm',
             'current/hardware/dxNfc',
             'current/hardware/dxNfcCard',
+            'current/hardware/dxFingerZaz',
+            'current/hardware/dxFingerMz',
             // 	// 'hardware/watchdog',
         ],
         '网络通信': [
