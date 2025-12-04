@@ -19,6 +19,8 @@ module.exports = {
          'hardware/dxPwm',
          'hardware/dxNfc',
          'hardware/dxNfcCard',
+         'hardware/dxFingerZaz',
+         'hardware/dxFingerMz',
          // 	// 'hardware/watchdog',
       ],
       'Network & Communication': [
@@ -39,6 +41,10 @@ module.exports = {
       'UI': [
          'ui/dxUi',
       ],
+      // 'Finger': [
+      //    'finger/dxFingerZaz',
+      //    'finger/dxFingerMz',
+      // ],
       // 'GUI Development': [
       // 	// 'gui/components',
       // 	// 'gui/layouts',

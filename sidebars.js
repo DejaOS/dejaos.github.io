@@ -40,6 +40,11 @@ module.exports = {
 			'face/detect',
 			'face/recognition',
 		],
+		'Finger Recognition': [
+			'finger/overview',
+			'finger/dxFingerZaz',
+			'finger/dxFingerMz',
+		],
 		'Best Practice': [
 			'bestpractice/ota',
 			'bestpractice/access',
