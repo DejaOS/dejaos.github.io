@@ -107,7 +107,7 @@ module.exports = {
 		algolia: {
 			appId: '6AJUQ28C49',
 			apiKey: 'd3e5fb24b60f78b0e2a1d946b1b7381f',
-			indexName: 'dejaos',
+			indexName: 'dejaos_com_pages',
 			startUrls: [
 				'https://dejaos.com'
 			],
