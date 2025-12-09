@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Layout from '@theme/Layout';
 import { liteClient as algoliasearch } from 'algoliasearch/lite';
 import {
@@ -37,7 +37,6 @@ function Hit({ hit }) {
                 </a>
             </h3>
 
-            {/* 调试：显示原始 URL */}
             <div style={{ fontSize: '0.8em', color: '#888', margin: '4px 0', wordBreak: 'break-all' }}>
                 <a href={url} style={{ color: 'green' }}>{url}</a>
             </div>
@@ -128,7 +127,29 @@ export default function SearchPage() {
                     }
                 `}</style>
 
-                <InstantSearch searchClient={searchClient} indexName="dejaos_com_pages">
+                <InstantSearch
+                    searchClient={searchClient}
+                    indexName="dejaos_com_pages"
+                    routing={{
+                        stateMapping: {
+                            stateToRoute(uiState) {
+                                const indexUiState = uiState['dejaos_com_pages'] || {};
+                                return {
+                                    q: indexUiState.query,
+                                    page: indexUiState.page,
+                                };
+                            },
+                            routeToState(routeState) {
+                                return {
+                                    dejaos_com_pages: {
+                                        query: routeState.q,
+                                        page: routeState.page,
+                                    },
+                                };
+                            },
+                        },
+                    }}
+                >
                     <div style={{ marginBottom: '2rem' }}>
                         <SearchBox
                             autoFocus
@@ -136,7 +157,10 @@ export default function SearchPage() {
                         />
                     </div>
 
-                    <Configure hitsPerPage={10} />
+                    <Configure
+                        hitsPerPage={10}
+                        queryLanguages={['zh', 'en']}
+                    />
 
                     <CustomResults />
                 </InstantSearch>
