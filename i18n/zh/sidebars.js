@@ -5,7 +5,9 @@ module.exports = {
             'current/basics/installation',
             'current/basics/connect-device',
             'current/basics/quick-start',
-            'current/basics/dejaos-device'
+            'current/basics/dejaos-device',
+            'current/basics/dejaos-device-model',
+            'current/basics/version-diff'
         ],
         '核心概念': [
             'current/basics/dejaos-arch',
