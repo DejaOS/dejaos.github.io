@@ -3,6 +3,15 @@ module.exports = {
         '模块概览': [
             'welcome',
         ],
+        '基础组件': [
+            'current/utils/dxLogger',
+            'current/utils/dxStd',
+            'current/hardware/dxOs',
+            'current/utils/dxDriver',
+            'current/utils/dxMap',
+            'current/utils/dxEventBus',
+            'current/utils/dxCommonUtils',
+        ],
         '硬件接口': [
             // 	// 'hardware/gpio',
             // 	// 'hardware/pwm',
@@ -11,7 +20,6 @@ module.exports = {
             // 	// 'hardware/nfc',
             'current/hardware/dxBarcode',
             'current/hardware/dxCode',
-            'current/hardware/dxOs',
             // 	// 'hardware/bluetooth',
             'current/hardware/dxAudio',
             'current/hardware/dxAlsa',
@@ -48,18 +56,13 @@ module.exports = {
         // 	// 'gui/threading',
         // ],
         '系统工具': [
-            'current/utils/dxLogger',
             'current/utils/dxNtp',
             'current/utils/dxTimeZones',
             'current/utils/dxIconv',
             'current/utils/dxOta',
-            'current/utils/dxStd',
-            'current/utils/dxCommonUtils',
             'current/utils/dxCryptoES',
-            'current/utils/dxEventBus',
             'current/utils/dxConfiguration',
             'current/utils/dxConfig',
-            'current/utils/dxMap',
             'current/utils/dxQueue',
             'current/utils/dxWorkerPool'
 

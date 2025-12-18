@@ -3,6 +3,15 @@ module.exports = {
       'Getting Started': [
          'welcome',
       ],
+      'Basic Modules': [
+         'utils/dxLogger',
+         'utils/dxStd',
+         'hardware/dxOs',
+         'utils/dxDriver',
+         'utils/dxMap',
+         'utils/dxEventBus',
+         'utils/dxCommonUtils',
+      ],
       'Hardware Interfaces': [
          // 	// 'hardware/gpio',
          // 	// 'hardware/pwm',
@@ -11,7 +20,6 @@ module.exports = {
          // 	// 'hardware/nfc',
          'hardware/dxBarcode',
          'hardware/dxCode',
-         'hardware/dxOs',
          // 	// 'hardware/bluetooth',
          'hardware/dxAudio',
          'hardware/dxAlsa',
@@ -52,18 +60,13 @@ module.exports = {
       // 	// 'gui/threading',
       // ],
       'System & Utilities': [
-         'utils/dxLogger',
          'utils/dxNtp',
          'utils/dxTimeZones',
          'utils/dxIconv',
          'utils/dxOta',
-         'utils/dxStd',
-         'utils/dxCommonUtils',
          'utils/dxCryptoES',
-         'utils/dxEventBus',
          'utils/dxConfiguration',
          'utils/dxConfig',
-         'utils/dxMap',
          'utils/dxQueue',
          'utils/dxWorkerPool'
 
