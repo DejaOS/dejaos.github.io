@@ -23,7 +23,7 @@ screen_img.source("/app/code/resource/image/bk_90.png");
 
 ## Replacing the Device Boot Background
 
-The device boot background is a system-level resource managed by the firmware, and cannot be changed dynamically via JavaScript code. Currently, we support customizing the boot screen during firmware image creation, but this feature is only available for the DW200 series.
+The device boot background is a system-level resource managed by the firmware, and cannot be changed dynamically via JavaScript code. Currently, we support customizing the boot screen during firmware image creation, which may involve additional costs depending on your requirements.
 
 ![DW200 Boot Screen](/img/blog/bootscreen.png)
 

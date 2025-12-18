@@ -23,7 +23,7 @@ screen_img.source("/app/code/resource/image/bk_90.png");
 
 ## 替换设备启动背景
 
-设备启动背景是由固件管理的系统级资源，无法通过 JavaScript 代码动态更改。目前，我们支持在固件镜像创建过程中自定义启动屏幕，但此功能仅适用于 DW200 系列。
+设备启动背景是由固件管理的系统级资源，无法通过 JavaScript 代码动态更改。目前，我们支持在固件镜像创建过程中自定义启动屏幕，可能需要一定的额外费用。
 
 ![DW200 启动屏幕](/img/blog/bootscreen.png)
 
