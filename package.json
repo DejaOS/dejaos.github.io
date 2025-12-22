@@ -32,7 +32,8 @@
     "build": "docusaurus build",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "write-translations": "npx docusaurus write-translations --locale zh"
   },
   "dependencies": {
     "@docsearch/react": "^3.9.0",

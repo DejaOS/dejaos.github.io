@@ -18,5 +18,13 @@
   "item.label.Showcase": {
     "message": "案例",
     "description": "Navbar item with label Showcase"
+  },
+  "logo.alt": {
+    "message": "DejaOS Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.FEOCEY": {
+    "message": "FEOCEY",
+    "description": "Navbar item with label FEOCEY"
   }
 }

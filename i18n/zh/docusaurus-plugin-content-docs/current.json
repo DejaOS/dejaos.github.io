@@ -1,0 +1,38 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docs.category.Getting Started": {
+    "message": "开始使用",
+    "description": "The label for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.Core Concepts": {
+    "message": "核心概念",
+    "description": "The label for category Core Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Worker": {
+    "message": "Worker",
+    "description": "The label for category Worker in sidebar docs"
+  },
+  "sidebar.docs.category.UI Development": {
+    "message": "UI 开发",
+    "description": "The label for category UI Development in sidebar docs"
+  },
+  "sidebar.docs.category.Face Recognition": {
+    "message": "人脸识别",
+    "description": "The label for category Face Recognition in sidebar docs"
+  },
+  "sidebar.docs.category.Finger Recognition": {
+    "message": "指纹识别",
+    "description": "The label for category Finger Recognition in sidebar docs"
+  },
+  "sidebar.docs.category.Best Practice": {
+    "message": "最佳实践",
+    "description": "The label for category Best Practice in sidebar docs"
+  },
+  "sidebar.docs.category.FAQ": {
+    "message": "常见问题",
+    "description": "The label for category FAQ in sidebar docs"
+  }
+}

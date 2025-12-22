@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.modules.category.Getting Started": {
+    "message": "模块概览",
+    "description": "The label for category Getting Started in sidebar modules"
+  },
+  "sidebar.modules.category.Basic Modules": {
+    "message": "基础组件",
+    "description": "The label for category Basic Modules in sidebar modules"
+  },
+  "sidebar.modules.category.Hardware Interfaces": {
+    "message": "硬件接口",
+    "description": "The label for category Hardware Interfaces in sidebar modules"
+  },
+  "sidebar.modules.category.Network & Communication": {
+    "message": "网络通信",
+    "description": "The label for category Network & Communication in sidebar modules"
+  },
+  "sidebar.modules.category.DB": {
+    "message": "数据库",
+    "description": "The label for category DB in sidebar modules"
+  },
+  "sidebar.modules.category.UI": {
+    "message": "UI",
+    "description": "The label for category UI in sidebar modules"
+  },
+  "sidebar.modules.category.System & Utilities": {
+    "message": "系统工具",
+    "description": "The label for category System & Utilities in sidebar modules"
+  }
+}
