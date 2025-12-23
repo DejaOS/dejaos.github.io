@@ -48,6 +48,7 @@ module.exports = {
       ],
       'UI': [
          'ui/dxUi',
+         'ui/dxScreenshot',
       ],
       // 'Finger': [
       //    'finger/dxFingerZaz',
