@@ -7,7 +7,6 @@ module.exports = {
 			'basics/quick-start',
 			'basics/dejaos-device',
 			'basics/dejaos-device-model',
-			'basics/version-diff'
 		],
 		'Core Concepts': [
 			'basics/dejaos-arch',

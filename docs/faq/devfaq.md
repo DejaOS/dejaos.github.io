@@ -85,7 +85,7 @@ Switch the device to **[Production Mode](/docs/basics/mode)**.
 Regarding the replacement of the device's boot background image, please note the following:
 
 1.  **The boot screen background can be replaced, but it cannot be changed dynamically through code.**
-    If you would like to use your own custom image, please provide the image to us. We will regenerate the firmware based on your picture and pre-install it on **newly manufactured devices**. For more details, please refer to: [Boot Screen Customization](/blog/boot-screen/).
+    If you would like to use your own custom image, please provide the image to us. We will regenerate the firmware based on your picture and pre-install it on **newly manufactured devices**. For more details, please refer to: [Boot Screen Customization](/changelog/change-notes/2025#07-11).
 
 2.  **For existing devices, the firmware must be reflashed.**
     This process is more complex and requires our remote assistance. We will use AnyDesk to access your PC and manually flash the new firmware to your device.

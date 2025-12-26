@@ -63,15 +63,15 @@ module.exports = {
 					position: 'right',
 				},
 				{
-					to: '/devices',
-					activeBasePath: 'devices',
-					label: 'Devices',
+					to: 'changelog/welcome',
+					activeBasePath: 'changelog',
+					label: 'Updates',
 					position: 'right',
 				},
 				{
-					to: '/blog',
-					activeBasePath: 'blog',
-					label: 'Blog',
+					to: '/devices',
+					activeBasePath: 'devices',
+					label: 'Devices',
 					position: 'right',
 				},
 				{
@@ -146,13 +146,7 @@ module.exports = {
 						require.resolve('@infinum/docusaurus-theme/dist/style.css'),
 					],
 				},
-				blog: {
-					blogTitle: 'Tutorials and articles about DejaOS',
-					blogDescription: 'Tutorials and articles about DejaOS JavaScript Runtime Environment for Embedded Devices',
-					blogSidebarTitle: 'Latest posts',
-					showReadingTime: true,
-					postsPerPage: 9,
-				},
+				blog: false,
 				sitemap: {
 					changefreq: 'weekly',
 					priority: 0.5
@@ -168,6 +162,15 @@ module.exports = {
 				path: 'modules',
 				routeBasePath: 'modules',
 				sidebarPath: require.resolve('./sidebars-modules.js'),
+			},
+		],
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'changelog',
+				path: 'changelog',
+				routeBasePath: 'changelog',
+				sidebarPath: require.resolve('./sidebars-changelog.js'),
 			},
 		],
 		// [

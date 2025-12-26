@@ -7,13 +7,13 @@
     "message": "模块",
     "description": "Navbar item with label Modules"
   },
+  "item.label.Updates": {
+    "message": "更新",
+    "description": "Navbar item with label Updates"
+  },
   "item.label.Devices": {
     "message": "设备",
     "description": "Navbar item with label Devices"
-  },
-  "item.label.Blog": {
-    "message": "博客",
-    "description": "Navbar item with label Blog"
   },
   "item.label.Showcase": {
     "message": "案例",
