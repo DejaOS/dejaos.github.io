@@ -1,0 +1,23 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.apps.category.Getting Started": {
+    "message": "开始使用",
+    "description": "The label for category Getting Started in sidebar apps"
+  },
+  "sidebar.apps.category.Basics": {
+    "message": "基础组件",
+    "description": "The label for category Basics in sidebar apps"
+  },
+  "sidebar.apps.category.Features": {
+    "message": "功能组合",
+    "description": "The label for category Features in sidebar apps"
+  },
+  "sidebar.apps.category.Solutions": {
+    "message": "场景方案",
+    "description": "The label for category Solutions in sidebar apps"
+  }
+}
+

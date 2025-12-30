@@ -69,6 +69,12 @@ module.exports = {
 					position: 'right',
 				},
 				{
+					to: 'apps/welcome',
+					activeBasePath: 'apps',
+					label: 'Apps',
+					position: 'right',
+				},
+				{
 					to: '/devices',
 					activeBasePath: 'devices',
 					label: 'Devices',
@@ -171,6 +177,15 @@ module.exports = {
 				path: 'changelog',
 				routeBasePath: 'changelog',
 				sidebarPath: require.resolve('./sidebars-changelog.js'),
+			},
+		],
+		[
+			'@docusaurus/plugin-content-docs',
+			{
+				id: 'apps',
+				path: 'apps',
+				routeBasePath: 'apps',
+				sidebarPath: require.resolve('./sidebars-apps.js'),
 			},
 		],
 		// [

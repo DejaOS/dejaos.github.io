@@ -11,6 +11,10 @@
     "message": "更新",
     "description": "Navbar item with label Updates"
   },
+  "item.label.Apps": {
+    "message": "应用",
+    "description": "Navbar item with label Apps"
+  },
   "item.label.Devices": {
     "message": "设备",
     "description": "Navbar item with label Devices"
