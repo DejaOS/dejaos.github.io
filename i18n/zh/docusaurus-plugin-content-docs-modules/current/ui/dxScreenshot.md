@@ -26,6 +26,7 @@
 - `dxMap`
 - `dxNetwork`
 - `dxHttpClient`
+- `dxEventBus`
 
 ## 4. 兼容设备
 

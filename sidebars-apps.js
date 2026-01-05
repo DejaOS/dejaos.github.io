@@ -7,12 +7,13 @@ module.exports = {
         'Basics': [
             // 示例: 'basics/demo1'
         ],
-        'Features': [
-            // 示例: 'features/demo1'
-        ],
+        
         'Solutions': [
             // 示例: 'solutions/demo1'
         ],
         */
+       'Features': [
+            'features/videointercom_ui_demo'
+        ],
     },
 };

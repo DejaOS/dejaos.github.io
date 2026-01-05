@@ -26,6 +26,7 @@ It provides a simple way to:
 - `dxMap`
 - `dxNetwork`
 - `dxHttpClient`
+- `dxEventBus`
 
 ## 4. Compatible Devices
 
