@@ -4,10 +4,6 @@ Welcome to the DejaOS Apps showcase. Here you can find various examples ranging 
 
 ## What's Inside?
 
-### 🧩 Basics
-
-Small, focused demonstrations of individual modules and components. Perfect for learning how a specific part of DejaOS works.
-
 ### ⚙️ Features
 
 Combined demos that showcase how multiple modules work together to achieve specific functionalities.

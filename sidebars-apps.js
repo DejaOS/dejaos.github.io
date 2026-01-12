@@ -13,7 +13,8 @@ module.exports = {
         ],
         */
        'Features': [
-            'features/videointercom_ui_demo'
+            'features/videointercom_ui_demo',
+            'features/nfc_demo'
         ],
     },
 };
