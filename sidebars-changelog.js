@@ -14,6 +14,7 @@ module.exports = {
             type: 'category',
             label: 'Change notes',
             items: [
+                'change-notes/2026',
                 'change-notes/2025',
             ],
         },

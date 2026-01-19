@@ -46,6 +46,9 @@ module.exports = {
 			'finger/dxFingerZaz',
 			'finger/dxFingerMz',
 		],
+		'QR Code Recognition': [
+			'qrcode/overview',
+		],
 		'Best Practice': [
 			'bestpractice/ota',
 			'bestpractice/access',

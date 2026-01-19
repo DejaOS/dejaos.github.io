@@ -7,14 +7,13 @@ module.exports = {
         'Basics': [
             // 示例: 'basics/demo1'
         ],
-        
-        'Solutions': [
-            // 示例: 'solutions/demo1'
-        ],
         */
-       'Features': [
+        'Features': [
             'features/videointercom_ui_demo',
             'features/nfc_demo'
+        ],
+        'Solutions': [
+            'solutions/smart_locker_offline'
         ],
     },
 };

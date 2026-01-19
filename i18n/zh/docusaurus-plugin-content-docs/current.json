@@ -27,6 +27,10 @@
     "message": "指纹识别",
     "description": "The label for category Finger Recognition in sidebar docs"
   },
+  "sidebar.docs.category.QR Code Recognition": {
+    "message": "二维码识别",
+    "description": "The label for category QR Code Recognition in sidebar docs"
+  },
   "sidebar.docs.category.Best Practice": {
     "message": "最佳实践",
     "description": "The label for category Best Practice in sidebar docs"
