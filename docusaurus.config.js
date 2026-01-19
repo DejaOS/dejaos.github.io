@@ -74,18 +74,6 @@ module.exports = {
 					label: 'Apps',
 					position: 'right',
 				},
-				{
-					to: '/devices',
-					activeBasePath: 'devices',
-					label: 'Devices',
-					position: 'right',
-				},
-				{
-					to: '/showcase',
-					activeBasePath: 'showcase',
-					label: 'Showcase',
-					position: 'right',
-				},
 				{ type: 'localeDropdown', position: 'right' },
 				{
 					href: 'https://www.feocey.com/',

@@ -15,14 +15,6 @@
     "message": "应用",
     "description": "Navbar item with label Apps"
   },
-  "item.label.Devices": {
-    "message": "设备",
-    "description": "Navbar item with label Devices"
-  },
-  "item.label.Showcase": {
-    "message": "案例",
-    "description": "Navbar item with label Showcase"
-  },
   "logo.alt": {
     "message": "DejaOS Logo",
     "description": "The alt text of navbar logo"
