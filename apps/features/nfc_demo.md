@@ -1,4 +1,4 @@
-# NFC Demo Application Guide
+# NFC Demo
 
 This is an NFC card reading demo application built on DejaOS. It demonstrates hardware interaction, UI management, and data processing in a multi-threaded environment.
 

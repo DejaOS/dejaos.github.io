@@ -10,7 +10,8 @@ module.exports = {
         */
         'Features': [
             'features/videointercom_ui_demo',
-            'features/nfc_demo'
+            'features/nfc_demo',
+            'features/remote_open_demo'
         ],
         'Solutions': [
             'solutions/smart_locker_offline'
