@@ -14,7 +14,8 @@ module.exports = {
             'features/remote_open_demo'
         ],
         'Solutions': [
-            'solutions/smart_locker_offline'
+            'solutions/smart_locker_offline',
+            'solutions/smart_locker_face_offline'
         ],
     },
 };

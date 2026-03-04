@@ -22,7 +22,7 @@ The new version provides a visualized System Manager App, supporting management 
 
 ### 1.1 How to Enter
 
-When the device starts up, a solid gray background image is displayed for about 2 seconds. During this period, **long-press anywhere on the screen** to enter the System Manager App.
+When the device starts up, a solid gray background is displayed for about 2 seconds. During this period, **long-press anywhere on the screen** to enter the System Manager App. Note: Start long-pressing only after you see the gray background, not as soon as the device powers on.
 
 ![System App Entry](/img/sysapp_entry.png)
 
