@@ -37,7 +37,8 @@ DejaOS offers a variety of [GitHub examples](https://github.com/DejaOS/DejaOS). 
 ## 🔌 Connect Device & Sync Code
 
 1. Click the `Not Connected` button at the bottom of VSCode and select your device
-2. Once connected, click `syncAll` for the initial full sync (this may take a while)
+2. Click the `install` button at the bottom of VSCode to download the dependent libraries
+3. Once connected, click `syncAll` for the initial full sync (this may take a while)
 
 ![Device Sync Demo](/img/demo-6.gif)
 > ⚠️ **Note:**

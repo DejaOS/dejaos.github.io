@@ -54,6 +54,11 @@ module.exports = {
 			'bestpractice/access',
 			'bestpractice/uimanager',
 		],
+		'Vibe Coding': [
+			'vibecoding/overview',
+			'vibecoding/prompts',
+			'vibecoding/uimanager',
+		],
 		'FAQ': [
 			'faq/basicfaq',
 			'faq/devfaq',
