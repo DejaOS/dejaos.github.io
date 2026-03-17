@@ -125,6 +125,7 @@ audio.deinit();
 - 路径应以 '/app/code/' 开头
 - 文件应为标准 WAV 格式
 - WAV 格式应为：通道：1，采样率：约 24000，精度：16 位，其他格式需要转换为此格式
+- 推荐：https://www.text-to-speech.cn/ 用于 WAV 生成（文字转语音）。每个音频前后最好加 1 秒停顿，该网站中停顿的标识为 `<break time="1000ms" />`。
 - 推荐：https://onlineaudioconverter.com/# 用于格式转换
 - 推荐：https://www.maztr.com/audiofileanalyzer 用于分析当前 WAV 文件格式
 

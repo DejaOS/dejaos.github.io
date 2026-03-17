@@ -125,6 +125,7 @@ Plays WAV audio file from file path.
 - Path should start with '/app/code/'
 - File should be in standard WAV format
 - The WAV format should be Channels: 1, Sample Rate: around 24000, Precision: 16-bit, other formats need to be converted to this format
+- Recommended: https://www.text-to-speech.cn/ for WAV generation (text-to-speech). It is best to add a 1-second pause at the start and end of each audio; on this site use `<break time="1000ms" />` for pauses.
 - Recommended: https://onlineaudioconverter.com/# for format conversion
 - Recommended: https://www.maztr.com/audiofileanalyzer for analyzing current WAV file format
 

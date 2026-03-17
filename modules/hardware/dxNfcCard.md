@@ -33,6 +33,7 @@ Compatible with all devices running dejaOS 2.0+ that are equipped with NFC hardw
 ```javascript
 import { dxNfcCard } from "./dxmodules/dxNfcCard.js";
 import logger from "./dxmodules/dxLogger.js";
+import std from "./dxmodules/dxStd.js";
 
 // 1. Initialize the module
 dxNfcCard.init();
@@ -46,7 +47,7 @@ dxNfcCard.setCallbacks({
 });
 
 // 3. Poll for events in a timer
-setInterval(() => {
+std.setInterval(() => {
   try {
     dxNfcCard.loop();
   } catch (e) {
@@ -60,6 +61,7 @@ setInterval(() => {
 ```javascript
 import { dxNfcCard } from "./dxmodules/dxNfcCard.js";
 import logger from "./dxmodules/dxLogger.js";
+import std from "./dxmodules/dxStd.js";
 
 // 1. Initialize the module
 dxNfcCard.init();
@@ -85,7 +87,7 @@ dxNfcCard.setCallbacks({
 });
 
 // 4. Poll for events in a timer
-setInterval(dxNfcCard.loop, 100);
+std.setInterval(dxNfcCard.loop, 100);
 ```
 
 ## 6. API Reference

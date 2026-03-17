@@ -33,6 +33,7 @@
 ```javascript
 import { dxNfcCard } from "./dxmodules/dxNfcCard.js";
 import logger from "./dxmodules/dxLogger.js";
+import std from "./dxmodules/dxStd.js";
 
 // 1. 初始化模块
 dxNfcCard.init();
@@ -46,7 +47,7 @@ dxNfcCard.setCallbacks({
 });
 
 // 3. 在定时器中轮询事件
-setInterval(() => {
+std.setInterval(() => {
   try {
     dxNfcCard.loop();
   } catch (e) {
@@ -60,6 +61,7 @@ setInterval(() => {
 ```javascript
 import { dxNfcCard } from "./dxmodules/dxNfcCard.js";
 import logger from "./dxmodules/dxLogger.js";
+import std from "./dxmodules/dxStd.js";
 
 // 1. 初始化模块
 dxNfcCard.init();
@@ -85,7 +87,7 @@ dxNfcCard.setCallbacks({
 });
 
 // 4. 在定时器中轮询事件
-setInterval(dxNfcCard.loop, 100);
+std.setInterval(dxNfcCard.loop, 100);
 ```
 
 ## 6. API 参考
