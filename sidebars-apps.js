@@ -15,7 +15,8 @@ module.exports = {
         ],
         'Solutions': [
             'solutions/smart_locker_offline',
-            'solutions/smart_locker_face_offline'
+            'solutions/smart_locker_face_offline',
+            'solutions/http_access',
         ],
     },
 };
