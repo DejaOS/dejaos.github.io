@@ -10,6 +10,9 @@ module.exports = {
         */
         'Features': [
             'features/videointercom_ui_demo',
+            'features/ui_animation_demo',
+            'features/ui_popup_demo',
+            'features/ui_slide_show',
             'features/nfc_demo',
             'features/remote_open_demo'
         ],

@@ -49,6 +49,8 @@ DejaOS devices are **HID (Human Interface Device) devices**. When connected, the
 
 ### macOS
 
+#### Method 1: `system_profiler`
+
 1. Open **Terminal**
 2. Run the following command:
    ```bash
@@ -61,6 +63,16 @@ DejaOS devices are **HID (Human Interface Device) devices**. When connected, the
 ![macOS USB Device Check](/img/mac_check.jpg)
 
 > If you find a device matching these IDs, your DejaOS device has been successfully recognized.
+
+#### Method 2: `ioreg` (HID device nodes)
+
+To inspect **AppleUserHIDDevice** entries and quickly confirm the DejaOS HID Gadget, run:
+
+```bash
+ioreg -n AppleUserHIDDevice -l | grep -E "ProductID|VendorID|Product" | awk -F"= " '{if ($1 ~ /ID/) printf "%s= 0x%x\n", $1, $2; else print $0}' | grep -B 3 "0xa4ac"
+```
+
+If the output includes **`ProductID` = `0xa4ac`** and nearby **`VendorID`** is **`0x525` or `0x0525`** (same value; leading zero may be omitted), often together with **`USB Product Name` / `Product` = `HID Gadget`**, the DejaOS device is recognized. Duplicate blocks in the output are normal because `ioreg` nests the same properties at multiple levels.
 
 ---
 
