@@ -4,12 +4,13 @@
 
 `dxHttpClient` module is part of the official system module library of [dejaOS](https://github.com/DejaOS/DejaOS), used for accessing HTTP servers via the HTTP/HTTPS protocol.
 
-This module provides a **stateless, function-based API**. Each request call (such as `get`, `post`) is an independent, isolated operation, ensuring code simplicity and thread safety, avoiding configuration state confusion issues that could occur in the old API.
+This module provides a **stateless, function-based API**. Each call (`get`, `post`, `request`, etc.) uses an **isolated, short-lived native client**, which keeps requests thread-safe and avoids the state conflicts of the old stateful API.
 
 **Key Features:**
 - Send GET/POST/PUT/PATCH/DELETE requests
+- Multipart `multipart/form-data` upload via `formSubmit` (files + text fields)
 - File upload and download with progress callback support
-- HTTPS support with certificate verification options
+- HTTPS with certificate verification options (**peer/host verification default to off** for typical IoT convenience)
 - Fully configurable via a unified `options` object for each request
 - Automatic JSON stringification for object bodies
 - Robust error handling and parameter validation
@@ -38,13 +39,17 @@ This is the core function of the module. All other convenience functions (such a
 - `options` `{object}`: An object containing all request configuration.
   - `url` `{string}`: **(Required)** The request URL.
   - `method` `{string}`: Request method (e.g., 'GET', 'POST', 'PUT', etc.). **Defaults to 'GET'**.
-  - `headers` `{object}`: A key-value pair header object, e.g., `{ 'Content-Type': 'application/json' }`.
-  - `body` `{string|object}`: Request body. If a JS object is provided, it will be **automatically converted** to a JSON string, and the `'Content-Type: application/json'` header will be automatically added.
+  - `headers` `{object<string, string>|string[]}`: Request headers as a **key-value object** (recommended), e.g. `{ 'Content-Type': 'application/json' }`, or an **array of `"Name: value"` strings** for backward compatibility with older callers.
+  - `body` `{string|object}`: Request body. If a JS object is provided, it will be **automatically converted** to a JSON string, and the `'Content-Type: application/json'` header will be automatically added (unless a `Content-Type` header already exists).
   - `timeout` `{number}`: Timeout in milliseconds. **Defaults to 5000**.
   - `onProgress` `{Function}`: Progress callback function, receiving parameters `(dltotal, dlnow, ultotal, ulnow)`.
   - `verifyPeer` `{number}`: Whether to verify peer certificate (0: disable, 1: enable). **Defaults to 0**.
   - `verifyHost` `{number}`: Whether to verify hostname (0: disable, 2: enable). **Defaults to 0**.
   - `caFile` `{string}`: Path to CA certificate file.
+
+Throws `Error` if `options` is missing/invalid or `options.url` is omitted.
+
+**Returns:** `{ code, status, message, headers, data }`. **`headers`** is an **object** whose keys are **lowercase** header names.
 
 ### Convenience Functions
 
@@ -55,8 +60,33 @@ This is the core function of the module. All other convenience functions (such a
 - `httpclient.delete(url, [timeout=5000], [options={}])`
 - `httpclient.download(url, localPath, [timeout=30000], [options={}])`
 - `httpclient.upload(url, localPath, [timeout=30000], [options={}])`
+- `httpclient.formSubmit(url, form, [timeoutOrOptions], [options])`
 
-**Note:** The convenience functions maintain backward compatibility by accepting `timeout` as the second parameter, followed by `options` as the third parameter.
+**Note:** Positional `timeout` / `options` match the implementations above: for **`get`** / **`delete`**, argument 2 is `timeout` and argument 3 is `options`. For **`post`** / **`put`** / **`patch`**, argument 3 is `timeout` and argument 4 is `options`. For **`download`** / **`upload`**, argument 3 is `timeout` and argument 4 is `options`. **`formSubmit`** is special: see below.
+
+**Timeout must be a number** in those positions (e.g. `get(url, 3000)` or `get(url, 3000, { headers: {} })`). Passing an object where `timeout` is expected **does not** set timeout — use **`httpclient.request({ url, method: 'GET', timeout: 3000, ... })`** for a fully object-based call.
+
+### `httpclient.formSubmit(url, form, [timeoutOrOptions], [options])`
+
+Uploads **`multipart/form-data`**: one or more files plus optional text fields in a single request. Use this when the server expects a HTML-style form POST; use `upload` when the server expects a raw file body.
+
+- `url` `{string}`: **(Required)** Request URL.
+- `form` `{object}`: **(Required)** Multipart form descriptor. After building the part list, it must be **non-empty**; otherwise an `Error` is thrown.
+  - `file` `{object}`: Single file part.
+    - `path` `{string}`: **(Required)** Local path of the file.
+    - `fieldName` `{string}`: Multipart field name. **Defaults to `'file'`.**
+    - `filename` `{string}`: Optional filename in `Content-Disposition`.
+    - `contentType` `{string}`: Optional `Content-Type` for this part.
+  - `files` `{object[]}`: Multiple file parts; each element uses the same shape as `file`. Non-object entries are **skipped**; each kept item must have a string `path`.
+  - `fields` `{object}`: Text fields; keys are field names; values use `String(value)` (`null` / `undefined` become `''`).
+- **`timeoutOrOptions`** (third argument):
+  - If a **`number`**: timeout in milliseconds. **Default overall timeout is 30000** when you omit this slot (see below).
+  - If an **`object`**: treated as **`options`** only; timeout remains **30000**. Example: `httpclient.formSubmit(url, form, { headers: { 'X-Id': '1' } })`.
+- **`options`** `{object}` (fourth argument): Only when the third argument is a **`number`**; same fields as `httpclient.request` (`headers`, `onProgress`, `verifyPeer`, `verifyHost`, `caFile`, etc.).
+
+Throws `Error` on missing `url`, invalid `form`, missing `form.file.path`, invalid `files[]` items, or an empty multipart payload.
+
+**Returns:** `{ code, status, message, headers, data }` with **`headers`** as an **object** (lowercase keys), same style as `request`.
 
 ## 6. Usage Examples
 
@@ -126,38 +156,88 @@ log.info(res_https);
 
 // 7. PATCH request
 log.info("\n=== PATCH ===");
-let res_patch = httpclient.patch(urlroot + "/patch", 5000, { 
-    email: "patched@example.com", 
-    status: "active" 
-});
+let res_patch = httpclient.patch(
+    urlroot + "/patch",
+    { email: "patched@example.com", status: "active" },
+    5000
+);
 log.info(res_patch);
 
 // 8. DELETE request (without body)
 log.info("\n=== DELETE ===");
 let res_delete = httpclient.delete(urlroot + "/delete/123", 5000);
 log.info(res_delete);
+
+// 9. Multipart form upload (file + text fields)
+log.info("\n=== formSubmit ===");
+let res_form = httpclient.formSubmit(
+    urlroot + "/upload",
+    {
+        file: {
+            fieldName: "file",
+            path: "/app/code/dxmodules/libvbar-m-dxhttpclient.so",
+            // filename: "custom-name.so",       // optional
+            // contentType: "application/octet-stream", // optional
+        },
+        fields: {
+            token: "demo-token",
+            faceId: "demo-faceid",
+            similarity: "0.68",
+        },
+    },
+    30000
+);
+log.info(res_form);
+
+// Same as above but third argument is options only (timeout stays default 30000 ms)
+// httpclient.formSubmit(urlroot + "/upload", { file: { path: "/tmp/a.bin" }, fields: { id: "1" } }, {
+//     headers: { "X-Request-Id": "device-001" },
+// });
+
+// Multiple files (each part can use its own fieldName)
+// httpclient.formSubmit(urlroot + "/upload-multi", {
+//     files: [
+//         { path: "/tmp/a.jpg", fieldName: "photo" },
+//         { path: "/tmp/b.jpg", fieldName: "attachment", filename: "scan.jpg" },
+//     ],
+//     fields: { albumId: "42" },
+// }, 30000, { headers: { "X-Request-Id": "device-001" } });
 ```
 
 ## 7. Response Format
 
-All HTTP request functions return a response object with the following structure:
+### `request`, `get`, `post`, `put`, `patch`, `delete`, `formSubmit`
 
 ```javascript
 {
     "code": 0,           // CURL error code (0 = success)
     "status": 200,       // HTTP status code
     "data": "...",       // Response body (string)
-    "message": "..."     // Error message (only present on errors)
+    "headers": { },      // Object; header names as lowercase keys
+    "message": "..."     // Error message (when applicable)
 }
 ```
 
-**Note:** The `download` function returns a response object without the `data` field, as the response body is written directly to the local file.
+### `download`, `upload`
+
+```javascript
+{
+    "code": 0,
+    "status": 200,
+    "headers": { },      // Always an empty object (response headers are not captured)
+    "message": "..."
+}
+```
+
+There is **no `data` field** — the payload is written to disk or sent from disk.
 
 ## 8. Deprecated APIs
 
-The old stateful API (`init`, `deinit`, `setOpt`, `reset`, `request()`) is now **deprecated** and should not be used in new projects. For backward compatibility, these functions may still exist but will throw errors or perform no operations.
+The legacy **stateful** helpers **`init`**, **`deinit`**, **`setOpt`**, and **`reset`** are **deprecated**. **`init`** and **`deinit`** are **no-ops** (they do not throw). **`setOpt`** and **`reset`** throw an `Error` directing you to the stateless API.
 
-**Always use the new stateless functional API** - it's safer, simpler, and more reliable.
+**`request` and all stateless methods above are the supported API** — use them for new code.
+
+**Always use the new stateless functional API** — it is safer, simpler, and more reliable.
 
 ## 9. Related Modules
 

@@ -41,6 +41,12 @@ module.exports = {
 			'face/detect',
 			'face/recognition',
 		],
+		'Video Intercom': [
+			'videointercom/overview',
+			'videointercom/device',
+			'videointercom/android',
+			'videointercom/server',
+		],
 		'Finger Recognition': [
 			'finger/overview',
 			'finger/dxFingerZaz',

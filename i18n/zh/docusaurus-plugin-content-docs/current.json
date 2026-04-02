@@ -23,6 +23,10 @@
     "message": "人脸识别",
     "description": "The label for category Face Recognition in sidebar docs"
   },
+  "sidebar.docs.category.Video Intercom": {
+    "message": "可视对讲",
+    "description": "The label for category Video Intercom in sidebar docs"
+  },
   "sidebar.docs.category.Finger Recognition": {
     "message": "指纹识别",
     "description": "The label for category Finger Recognition in sidebar docs"
