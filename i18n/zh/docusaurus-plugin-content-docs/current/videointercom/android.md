@@ -1,4 +1,4 @@
-# Android 客户端接入说明
+# Android 部分
 
 目标读者：进行二次开发、需要打通 Android 设备与 DejaOS 设备可视对讲的工程师。
 

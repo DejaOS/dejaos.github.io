@@ -1,4 +1,4 @@
-# Android Client Integration Guide
+# Android
 
 Target audience: engineers doing secondary development who need to connect Android clients with DejaOS devices for video intercom.
 
