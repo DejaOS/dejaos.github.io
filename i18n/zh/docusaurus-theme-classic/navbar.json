@@ -22,5 +22,9 @@
   "item.label.FEOCEY": {
     "message": "FEOCEY",
     "description": "Navbar item with label FEOCEY"
+  },
+  "item.label.Forum": {
+    "message": "论坛",
+    "description": "Navbar item with label Forum"
   }
 }

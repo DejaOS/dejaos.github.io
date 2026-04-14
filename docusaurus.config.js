@@ -63,7 +63,7 @@ module.exports = {
 					position: 'right',
 				},
 				{
-					to: 'changelog/welcome',
+					to: 'changelog/change-notes/2026',
 					activeBasePath: 'changelog',
 					label: 'Updates',
 					position: 'right',
@@ -72,6 +72,11 @@ module.exports = {
 					to: 'apps/welcome',
 					activeBasePath: 'apps',
 					label: 'Apps',
+					position: 'right',
+				},
+				{
+					label: 'Forum',
+					href: 'https://github.com/DejaOS/DejaOS/discussions',
 					position: 'right',
 				},
 				{ type: 'localeDropdown', position: 'right' },
