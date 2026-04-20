@@ -99,7 +99,10 @@ Admin functions are largely the same as in `smart_locker_offline`:
 
 ## Project Structure
 
-The complete source code for this application can be found here: [GitHub Source Code](https://github.com/DejaOS/DejaOS/tree/main/apps/solutions/smartlocker/face_offline/source)
+- [FCV5003 source code](https://github.com/DejaOS/DejaOS/tree/main/apps/solutions/smartlocker/face_offline/source)
+- [FCV5005 source code](https://github.com/DejaOS/DejaOS/blob/main/apps/solutions/smartlocker/smartlocker.zip)
+
+The application source is the same for both; only `app.dxproj` differs, meaning the versions of the dependent component libraries differ. The two devices have different screen sizes, so minor UI adjustments were made.
 
 The project layout is very similar to `smart_locker_offline`, with additional modules for face recognition and large-screen UI:
 

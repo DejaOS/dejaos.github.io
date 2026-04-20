@@ -99,7 +99,10 @@ AI 主要完成了：
 
 ## 项目结构
 
-该应用的完整源代码请参考：[GitHub 源码地址](https://github.com/DejaOS/DejaOS/tree/main/apps/solutions/smartlocker/face_offline/source)
+- [FCV5003 源码](https://github.com/DejaOS/DejaOS/tree/main/apps/solutions/smartlocker/face_offline/source)
+- [FCV5005 源码](https://github.com/DejaOS/DejaOS/blob/main/apps/solutions/smartlocker/smartlocker.zip)
+
+两套工程业务源码一致，仅 `app.dxproj` 不同，也就是所依赖的组件库版本有差异；两台设备屏幕尺寸不同，针对 UI 做了小幅调整。
 
 项目目录结构与 `smart_locker_offline` 非常相似，只是在 UI 与人脸模块上做了扩展与调整：
 
