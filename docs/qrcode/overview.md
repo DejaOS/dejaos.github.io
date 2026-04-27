@@ -30,6 +30,9 @@ DejaOS devices are equipped with different QR code recognition hardware dependin
 - Industrial-grade barcode/QR code recognition
 - Dedicated hardware ensures stable performance
 
+### Corresponding Example
+- [dw200_barcode_demo](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_barcode_demo)
+
 ---
 
 ## Type 2: Built-in QR Code Camera + UART Bus
@@ -51,6 +54,9 @@ DejaOS devices are equipped with different QR code recognition hardware dependin
 - Serial communication interface
 - Dedicated hardware ensures stable performance
 
+### Corresponding Example
+- [vf105_v12_barcode_demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf105_v12/vf105_v12_barcode_demo)
+
 ---
 
 ## Type 3: QR Recognition via Face Recognition Camera
@@ -71,6 +77,9 @@ DejaOS devices are equipped with different QR code recognition hardware dependin
 - Camera is optimized for face recognition, QR code scanning is a secondary function
 - Recognition performance is relatively lower compared to Type 1 and Type 2
 
+### Corresponding Example
+- [vf202_v12_barcode](https://github.com/DejaOS/DejaOS/tree/main/demos/vf202_v12/vf202_v12_barcode)
+
 :::info Note
 Type 1 and Type 2 devices are equipped with dedicated QR code cameras, offering comparable high-performance recognition. Type 3 devices share the face recognition camera for QR scanning, which results in relatively lower recognition performance but provides a cost-effective solution.
 :::
@@ -84,3 +93,5 @@ To determine which QR code recognition type your device uses:
 1. Check your device model number (e.g., DW200, VF105, VF202)
 2. Refer to the comparison table above
 3. Use the corresponding implementation components in your application
+
+In the future, we will work on unifying these three approaches into the `dxBarcode` component to hide device-level differences.
