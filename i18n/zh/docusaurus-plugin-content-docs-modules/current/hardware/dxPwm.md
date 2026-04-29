@@ -11,6 +11,8 @@
 - 针对不同场景的预定义蜂鸣模式（按键、成功、失败、警告）
 - 跨线程 PWM 控制支持
 
+在部分设备上，PWM 输出会接到 **LED** 而非蜂鸣器：此时 `setPower` 表现为调节灯光亮度（占空比），`pwm.beep()` 则表现为按次数与间隔 **闪烁**（`volume` 可理解为闪烁时的亮度）。通道索引需与硬件原理图一致；未显式传通道时，多数接口默认使用通道 `0`。
+
 ## 2. 文件
 
 - dxPwm.js
@@ -66,6 +68,49 @@ pwm.failBeep(); // 失败长蜂鸣
 pwm.warningBeep(); // 标准警告蜂鸣
 ```
 
+### PWM 驱动 LED（亮度与闪烁）
+
+下列示例假设通道 `0` 为白光 LED、通道 `1` 为另一路（例如近红外），仅演示白光通道；多路时需对每个用到的通道分别 `init`。
+
+```javascript
+import pwm from "../dxmodules/dxPwm_new.js";
+import logger from "../dxmodules/dxLogger.js";
+import * as os from "os";
+
+// 通道号与硬件一致；init / setPower / beep 不传第二参数时，默认通道为 0
+const CHANNEL_WHITE = 0;
+const CHANNEL_NIR = 1; // 本示例未使用，多路灯时按通道分别初始化与调用
+
+// 初始化该路 PWM（使用该通道前必须先 init）
+let resp = pwm.init(CHANNEL_WHITE);
+logger.info("PWM 初始化: " + resp);
+
+// --- 恒亮：setPower(0–100) 调节占空比，接 LED 时即为亮度（0 熄灭，100 最亮）---
+let power = 0;
+pwm.setPower(power, CHANNEL_WHITE);
+os.sleep(500);
+
+power = 10; // 示例：较低亮度，可按观感与硬件调整
+pwm.setPower(power, CHANNEL_WHITE);
+os.sleep(2000);
+
+power = 0;
+pwm.setPower(power, CHANNEL_WHITE);
+os.sleep(500);
+
+// --- 闪烁：beep 在接蜂鸣器时发声；接 LED 时表现为“亮–暗–亮”的闪烁节奏 ---
+// time：单次点亮时长（ms）；interval：两次点亮之间的间隔（ms）；count：闪烁次数；volume：闪烁时的等效亮度（0–100）
+logger.info("双短闪演示（节奏类似两次短蜂鸣）");
+pwm.beep(
+  {
+    time: 50,
+    interval: 50,
+    count: 2,
+    volume: 80,
+  },
+  CHANNEL_WHITE
+);
+```
 ## 6. API 参考
 
 ### `pwm.init(channel)`

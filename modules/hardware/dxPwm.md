@@ -11,6 +11,8 @@ It includes comprehensive PWM control features:
 - Pre-defined beep patterns for different scenarios (press, success, fail, warning)
 - Cross-thread PWM control support
 
+On some devices, the PWM output is connected to an **LED** instead of a buzzer: in this case, `setPower` controls LED brightness (duty cycle), and `pwm.beep()` becomes a blink pattern (with `volume` interpreted as blink brightness). Channel indexes must match your hardware design. If no channel is passed, most APIs default to channel `0`.
+
 ## 2. Files
 
 - dxPwm.js
@@ -65,6 +67,54 @@ pwm.successBeep();  // Two short beeps for success
 pwm.failBeep();     // Long beep for failure
 pwm.warningBeep();  // Standard warning beep
 
+```
+
+### PWM for LED (Brightness and Blinking)
+
+The example below assumes channel `0` drives a white LED and channel `1` is another output (for example, NIR). Only the white channel is used in this demo. For multi-channel use, initialize each channel before use.
+
+```javascript
+import pwm from "../dxmodules/dxPwm_new.js";
+import logger from "../dxmodules/dxLogger.js";
+import * as os from "os";
+
+// Channel IDs must match hardware wiring.
+// If channel is omitted, init / setPower / beep usually use channel 0 by default.
+const CHANNEL_WHITE = 0;
+const CHANNEL_NIR = 1; // Not used in this demo
+
+// Initialize the PWM channel before any operation on it.
+let resp = pwm.init(CHANNEL_WHITE);
+logger.info("PWM init: " + resp);
+
+// --- Steady light: setPower(0-100) controls duty cycle / brightness ---
+let power = 0;
+pwm.setPower(power, CHANNEL_WHITE);
+os.sleep(500);
+
+power = 10; // Example low brightness; tune per hardware and visual effect
+pwm.setPower(power, CHANNEL_WHITE);
+os.sleep(2000);
+
+power = 0;
+pwm.setPower(power, CHANNEL_WHITE);
+os.sleep(500);
+
+// --- Blink pattern: beep is "sound" on a buzzer, but "blink rhythm" on LED ---
+// time: LED on duration per blink (ms)
+// interval: pause between blinks (ms)
+// count: number of blinks
+// volume: brightness level during blink (0-100)
+logger.info("Two short blinks demo");
+pwm.beep(
+  {
+    time: 50,
+    interval: 50,
+    count: 2,
+    volume: 80,
+  },
+  CHANNEL_WHITE
+);
 ```
 
 ## 6. API Reference
