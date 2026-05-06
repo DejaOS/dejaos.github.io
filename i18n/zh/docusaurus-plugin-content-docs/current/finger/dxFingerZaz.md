@@ -14,6 +14,7 @@
   - [存储管理](#存储管理)
   - [搜索功能](#搜索功能)
   - [系统配置](#系统配置)
+- [错误处理](#错误处理)
 
 ---
 
@@ -722,6 +723,40 @@ if (result === false) {
     // 查看日志获取详细错误信息
 }
 ```
+
+### 模块返回码（Response）
+
+日志中的 `code` 与模块通讯协议中的 Response 一致，可用于区分失败原因（例如合并成功但 `storeChar` 失败时，应查看存储步骤返回的码，而非合并步骤）。
+
+| Response | 值 | 说明 |
+|----------|-----|------|
+| `ERR_SUCCESS` | `0x00` | 指令处理成功。 |
+| `ERR_FAIL` | `0x01` | 指令处理失败。 |
+| `ERR_VERIFY` | `0x10` | 与指定编号中 Template 的 1:1 比对失败。 |
+| `ERR_IDENTIFY` | `0x11` | 已进行 1:N 比对，但相同 Template 不存在。 |
+| `ERR_TMPL_EMPTY` | `0x12` | 在指定编号中不存在已注册的 Template。 |
+| `ERR_TMPL_NOT_EMPTY` | `0x13` | 在指定编号中已存在 Template。 |
+| `ERR_ALL_TMPL_EMPTY` | `0x14` | 不存在已注册的 Template。 |
+| `ERR_EMPTY_ID_NOEXIST` | `0x15` | 不存在可注册的 Template ID。 |
+| `ERR_BROKEN_ID_NOEXIST` | `0x16` | 不存在已损坏的 Template。 |
+| `ERR_INVALID_TMPL_DATA` | `0x17` | 指定的 Template Data 无效。 |
+| `ERR_DUPLICATION_ID` | `0x18` | 该指纹已注册（与库中已有模板重复）。 |
+| `ERR_BAD_QUALITY` | `0x19` | 指纹图像质量不好。 |
+| `ERR_MERGE_FAIL` | `0x1A` | Template 合成失败。 |
+| `ERR_NOT_AUTHORIZED` | `0x1B` | 没有进行通讯密码确认。 |
+| `ERR_MEMORY` | `0x1C` | 外部 Flash 烧写出错。 |
+| `ERR_INVALID_TMPL_NO` | `0x1D` | 指定 Template 编号无效。 |
+| `ERR_INVALID_PARAM` | `0x22` | 使用了不正确的参数。 |
+| `ERR_TIME_OUT` | `0x23` | 在 TimeOut 时间内没有输入指纹。 |
+| `ERR_GEN_COUNT` | `0x25` | 指纹合成个数无效。 |
+| `ERR_INVALID_BUFFER_ID` | `0x26` | Buffer ID 值不正确。 |
+| `ERR_FP_NOT_DETECTED` | `0x28` | 采集器上没有指纹输入。 |
+| `ERR_FP_CANCEL` | `0x41` | 指令被取消。 |
+
+**注：**
+
+- **○1** 若已设有通讯密码但没有调用 `CMD_VERIFY_DEVPASS` 进行确认，则除 `CMD_TEST_CONNECTION`、`CMD_VERIFY_DEVPASS` 之外的所有指令都返回该错误码（`ERR_NOT_AUTHORIZED`）。
+- **○2** 若没有设置通讯密码，则可以不经过确认密码就可以使用所有指令。
 
 ## 注意事项
 

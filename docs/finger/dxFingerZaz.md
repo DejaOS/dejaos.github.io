@@ -14,6 +14,7 @@
   - [Storage Management](#storage-management)
   - [Search Functions](#search-functions)
   - [System Configuration](#system-configuration)
+- [Error Handling](#error-handling)
 
 ---
 
@@ -724,6 +725,41 @@ if (result === false) {
     // Check logs for detailed error information
 }
 ```
+
+### Module Response Codes
+
+The `code` field in logs matches the protocol **Response** byte and helps distinguish failure causes—for example, if merge succeeds but `storeChar` fails, inspect the code returned by the **store** step, not the merge step.
+
+| Response | Value | Description |
+|----------|-------|-------------|
+| `ERR_SUCCESS` | `0x00` | Command completed successfully. |
+| `ERR_FAIL` | `0x01` | Command processing failed. |
+| `ERR_VERIFY` | `0x10` | 1:1 verification against the template at the specified ID failed. |
+| `ERR_IDENTIFY` | `0x11` | 1:N identification ran, but no matching template was found. |
+| `ERR_TMPL_EMPTY` | `0x12` | No enrolled template at the specified ID. |
+| `ERR_TMPL_NOT_EMPTY` | `0x13` | A template already exists at the specified ID. |
+| `ERR_ALL_TMPL_EMPTY` | `0x14` | No enrolled templates in the library. |
+| `ERR_EMPTY_ID_NOEXIST` | `0x15` | No available template ID for enrollment. |
+| `ERR_BROKEN_ID_NOEXIST` | `0x16` | No corrupted-template slot exists. |
+| `ERR_INVALID_TMPL_DATA` | `0x17` | Specified template data is invalid. |
+| `ERR_DUPLICATION_ID` | `0x18` | Fingerprint already enrolled (duplicate of an existing template). |
+| `ERR_BAD_QUALITY` | `0x19` | Poor fingerprint image quality. |
+| `ERR_MERGE_FAIL` | `0x1A` | Template merge / synthesis failed. |
+| `ERR_NOT_AUTHORIZED` | `0x1B` | Communication password not verified. |
+| `ERR_MEMORY` | `0x1C` | External Flash programming error. |
+| `ERR_INVALID_TMPL_NO` | `0x1D` | Invalid template ID / number. |
+| `ERR_INVALID_PARAM` | `0x22` | Invalid parameter. |
+| `ERR_TIME_OUT` | `0x23` | No fingerprint input within the timeout period. |
+| `ERR_GEN_COUNT` | `0x25` | Invalid template merge count. |
+| `ERR_INVALID_BUFFER_ID` | `0x26` | Invalid buffer ID. |
+| `ERR_FP_NOT_DETECTED` | `0x28` | No finger detected on the sensor. |
+| `ERR_FP_CANCEL` | `0x41` | Command cancelled. |
+
+**Notes:**
+
+- **(1)** If a communication password is configured but `CMD_VERIFY_DEVPASS` has not been executed, every command except `CMD_TEST_CONNECTION` and `CMD_VERIFY_DEVPASS` returns `ERR_NOT_AUTHORIZED`.
+- **(2)** If no communication password is configured, all commands may be used without prior password verification.
+
 
 ## Notes
 
