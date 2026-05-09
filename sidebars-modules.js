@@ -38,6 +38,7 @@ module.exports = {
          'network/dxHttpServer',
          'network/dxHttpClient',
          'network/dxMqttClient',
+         "network/dxTcp",
          'network/dxNet',
          'network/dxWebserver',
          'network/dxHttp',

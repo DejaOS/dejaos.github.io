@@ -45,6 +45,7 @@ title: 欢迎使用 DejaOS 模块
   - `dxHttp`（HTTP 能力的通用封装，deprecated）
   - `dxMqttClient`（MQTT 客户端）
   - `dxMqtt`（MQTT 能力的通用封装，deprecated）
+  - `dxTcp`（TCP Client/Server 能力的通用封装）
   - `dxNtp`（网络时间同步）
   - `dxOta`（OTA 升级）
 

@@ -45,6 +45,7 @@ Welcome to the DejaOS Modules documentation! This section contains detailed docu
   - `dxHttp` (generic HTTP helper wrapper, deprecated)
   - `dxMqttClient` (MQTT client)
   - `dxMqtt` (generic MQTT helper wrapper, deprecated)
+  - `dxTcp` (generic TCP client/server wrapper)
   - `dxNtp` (network time synchronization)
   - `dxOta` (OTA update)
 
