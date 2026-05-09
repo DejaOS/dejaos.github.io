@@ -242,5 +242,5 @@ dxTcpServer.EVENT_TYPE = {
 
 ## 10. Examples and test scripts
 
-![Example Screenshot](https://github.com/DejaOS/DejaOS/blob/main/demos/dw200_v20/dw200_test_tcp/image.png)
-[Source Code](https://github.com/DejaOS/DejaOS/blob/main/demos/dw200_v20/dw200_test_tcp)
+![Example Screenshot](https://github.com/DejaOS/DejaOS/raw/main/demos/dw200_v20/dw200_test_tcp/image.png)
+[Source Code](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_test_tcp)
