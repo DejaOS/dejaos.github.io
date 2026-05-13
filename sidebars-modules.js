@@ -27,6 +27,7 @@ module.exports = {
          'hardware/dxPwm',
          'hardware/dxNfc',
          'hardware/dxNfcCard',
+         'hardware/dxTemp',
 			'hardware/dxFingerZaz',
 			'hardware/dxFingerMz',
 			'hardware/dxFace',

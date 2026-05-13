@@ -72,6 +72,7 @@ Welcome to the DejaOS Modules documentation! This section contains detailed docu
   - `dxFacial` (face recognition and feature processing module)
   - `dxFingerZaz` (fingerprint device integration & recognition – ZAZ series)
   - `dxFingerMz` (fingerprint device integration & recognition – MZ series)
+  - `dxTemp` (temperature sensor reading)
   - `dxWatchdog` (watchdog protection to prevent system hangs)
 
 - **System Tools & Tasks**:
