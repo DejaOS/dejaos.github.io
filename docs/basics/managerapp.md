@@ -28,7 +28,7 @@ When the device starts up, a solid gray background is displayed for about 2 seco
 
 ### 1.2 Security Authentication
 
-You need to enter the administrator password to access the system. Once logged in, you can change this password in the system configuration.
+You need to enter the administrator password to access the system. The default password is 314159. Once logged in, you can change this password in the system configuration.
 
 ### 1.3 Main Function Interface
 
@@ -52,6 +52,8 @@ In the system configuration page, you can intuitively modify the system operatin
 In addition to operating on the device screen, the System Manager App also has a built-in Web server. You can connect your computer and the device to the same local network, access the device's IP address via a computer browser, and enter the Web console for remote management. This method is more flexible and simple.
 
 ![Web Management Interface](/img/sysapp_web.png)
+
+Through the Web management page, you can also upgrade and install application packages, change the operating mode, and perform other operations.
 
 ## 2. Old Version (2.0.0): PC Tool Management Mode
 

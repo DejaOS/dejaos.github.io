@@ -60,7 +60,7 @@ if (condition1) {
 >
 > - After switching the mode, the device will automatically restart.
 > - It's best to trigger the mode change conditionally, not on application startup, to prevent continuous reboots.
-> - After switching to production mode, you can no longer modify code via VSCode, so there must be a way to switch back to development mode.
+> - After switching to production mode, you can no longer modify code via VSCode; you must switch back to development mode first.
 > - Usually, this is triggered by external commands like a QR code or MQTT. Refer to the [example of triggering a change via QR code](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_switch_mode)
 
 ---
