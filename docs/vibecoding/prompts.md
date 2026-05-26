@@ -33,10 +33,10 @@ Each device type has its own reference file with all optional components and lat
 - **Base (required)**: `dxLogger` (logging, use instead of console.log), `dxStd` (system standard), `dxOs` (system), `dxDriver` (drivers), `dxMap` (cross-worker shared memory), `dxEventBus` (cross-worker messaging), `dxCommonUtils` (utilities and algorithms)
 - **UI**: `dxUi` (required if the app has a UI)
 - **Storage**: `dxSqliteDB` (SQLite), `dxKeyValueDB` (key-value)
-- **Network**: `dxNetwork` (required for network management), `dxHttpClient`, `dxHttpServer`, `dxMqttClient`
+- **Network**: `dxNetwork` (required for network management), `dxHttpClient`, `dxHttpServer`, `dxMqttClient`, `dxTcp`
 - **Audio**: `dxAudio` (WAV playback, TTS)
 - **GPIO**: `dxGpio` (output), `dxGpioKey` (input)
-- **Others**: `dxBarcode`, `dxNfc`, `dxUart`, `dxPwm`, `dxWatchdog`, `dxNtp`, `dxOta`, `dxConfiguration`
+- **Others**: `dxBarcode`, `dxNfc`, `dxUart`, `dxPwm`, `dxWatchdog`, `dxNtp`, `dxOta`, `dxConfiguration`, `dxTemp`
 
 > When generating `app.dxproj` for a new app: if the user has no special requirements, *select only the base modules*. If the user needs a UI, also select dxUi on top of the base modules.
 

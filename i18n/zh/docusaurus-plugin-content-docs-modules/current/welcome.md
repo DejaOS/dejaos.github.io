@@ -45,6 +45,7 @@ title: 欢迎使用 DejaOS 模块
   - `dxHttp`（HTTP 能力的通用封装，deprecated）
   - `dxMqttClient`（MQTT 客户端）
   - `dxMqtt`（MQTT 能力的通用封装，deprecated）
+  - `dxTcp`（TCP Client/Server 能力的通用封装）
   - `dxNtp`（网络时间同步）
   - `dxOta`（OTA 升级）
 
@@ -71,6 +72,7 @@ title: 欢迎使用 DejaOS 模块
   - `dxFacial`（人脸识别与特征处理组件）
   - `dxFingerZaz`（指纹设备接入与识别——ZAZ 系列）
   - `dxFingerMz`（指纹设备接入与识别——MZ 系列）
+  - `dxTemp`（温度传感器）
   - `dxWatchdog`（看门狗保护，防止系统卡死）
 
 - **系统工具与任务**：

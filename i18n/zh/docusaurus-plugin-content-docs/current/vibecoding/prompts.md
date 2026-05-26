@@ -31,10 +31,10 @@ DW200_V20,VF105_V12,VF203_V12,VF202_V12,VF114_V12
 - **基础模块（必选）**：`dxLogger`（打印日志，替代 console.log）, `dxStd`(系统标准组件), `dxOs`,(系统相关组件) `dxDriver`,（驱动组件） `dxMap`（跨 worker 共享内存）`dxEventBus`（跨 worker 消息通信）`dxCommonUtils`（通用算法和工具组件）
 - **UI 界面**：`dxUi`（如需 UI 必须）
 - **数据存储**：`dxSqliteDB`（sqlite 数据组件）`dxKeyValueDB`(k/v 格式的简单数据组件)
-- **网络连接**：`dxNetwork`（网络管理必须），`dxHttpClient`（HTTP 客户端请求），`dxHttpServer`（HTTP 服务），`dxMqttClient`（MQTT 客户端通信）
+- **网络连接**：`dxNetwork`（网络管理必须），`dxHttpClient`（HTTP 客户端请求），`dxHttpServer`（HTTP 服务），`dxMqttClient`（MQTT 客户端通信），`dxTcp`（TCP客户端 TCP服务端）
 - **音频播放**：`dxAudio` (WAV 播放，tts 语音)
 - **GPIO 控制**：`dxGpio`,（GPIO 控制输出） `dxGpioKey`（GPIO 输入监控）
-- **其他**：`dxBarcode`(二维码条形码识别),`dxNfc`（NFC 卡控制）, `dxUart`（串口通信）, `dxPwm`（PWM 控制，主要用于蜂鸣器和设置光）, `dxWatchdog`（看门狗） `dxNtp`（时间同步）, `dxOta`（OTA 升级）,`dxConfiguration` (配置项读写)
+- **其他**：`dxBarcode`(二维码条形码识别),`dxNfc`（NFC 卡控制）, `dxUart`（串口通信）, `dxPwm`（PWM 控制，主要用于蜂鸣器和设置光）, `dxWatchdog`（看门狗） `dxNtp`（时间同步）, `dxOta`（OTA 升级）,`dxConfiguration` (配置项读写),`dxTemp` (温度检测)
 
 > 生成新应用的 `app.dxproj` 时：用户没有特殊需求的话，\*_只勾选基础模块 _,\*如果用户需要界面，则在基础模块的基础上再勾选 dxUi。
 

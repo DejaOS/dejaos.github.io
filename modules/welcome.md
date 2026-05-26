@@ -45,6 +45,7 @@ Welcome to the DejaOS Modules documentation! This section contains detailed docu
   - `dxHttp` (generic HTTP helper wrapper, deprecated)
   - `dxMqttClient` (MQTT client)
   - `dxMqtt` (generic MQTT helper wrapper, deprecated)
+  - `dxTcp` (generic TCP client/server wrapper)
   - `dxNtp` (network time synchronization)
   - `dxOta` (OTA update)
 
@@ -71,6 +72,7 @@ Welcome to the DejaOS Modules documentation! This section contains detailed docu
   - `dxFacial` (face recognition and feature processing module)
   - `dxFingerZaz` (fingerprint device integration & recognition – ZAZ series)
   - `dxFingerMz` (fingerprint device integration & recognition – MZ series)
+  - `dxTemp` (temperature sensor reading)
   - `dxWatchdog` (watchdog protection to prevent system hangs)
 
 - **System Tools & Tasks**:
