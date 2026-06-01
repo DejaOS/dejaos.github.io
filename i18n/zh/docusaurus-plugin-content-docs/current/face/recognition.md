@@ -148,7 +148,7 @@ UI 线程和人脸处理线程通过 `dxEventBus` 进行解耦通信。UI 线程
 
 虽然一个商业级的人脸识别应用还需要更完善的 UI 交互和错误处理，但本示例已经完整地演示了其核心技术逻辑。
 
-- [FCV5003 源码](https://github.com/DejaOS/DejaOS/tree/main/demos/vf203_v12/vf203_v12_face_registe_recognition)
-- [FCV5005 源码](https://github.com/DejaOS/DejaOS/blob/main/demos/vf105_v12/registe_recognition_demo.zip)
+- [FCV5003](https://www.feocey.com/store/fcv5003/) [源码](https://github.com/DejaOS/DejaOS/tree/main/demos/vf203_v12/vf203_v12_face_registe_recognition)
+- [FCV5005](https://www.feocey.com/product/fcv5005/) [源码](https://github.com/DejaOS/DejaOS/blob/main/demos/vf105_v12/registe_recognition_demo.zip)
 
 两套工程业务源码一致，仅 `app.dxproj` 不同，也就是所依赖的组件库版本有差异。

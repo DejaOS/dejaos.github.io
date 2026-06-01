@@ -14,7 +14,7 @@ sidebar_label: 设备型号选择
 
 为了准确匹配，我们需要区分以下三个概念：
 
-1.  **产品型号 (Product Model)**：指您购买到的最终产品的销售型号（通常标注在外壳或包装上，例如 `FC6820`）。
+1.  **产品型号 (Product Model)**：指您购买到的最终产品的销售型号（通常标注在外壳或包装上，例如 [FC6820](https://www.feocey.com/product/fc6820/)）。
 2.  **主板型号 (Board Model)**：指设备内部核心主板或芯片组的型号。注意：**一个主板型号可能被用于多个不同的产品型号中**。
 3.  **DejaOS 开发设备型号 (Development Device Model)**：指在 VSCode 插件中开发项目时选择的型号。它通常由 **主板型号 + 版本号** 组成（例如 `DW200_V20`）。
 
@@ -22,13 +22,18 @@ sidebar_label: 设备型号选择
 
 请根据您手中的 **产品型号** 或 **主板型号**，在 VSCode 中选择对应的 **DejaOS 开发设备型号**。
 
-| 产品型号                                           | 主板型号 | DejaOS 开发设备型号 (VSCode) | 备注                                |
-| :------------------------------------------------- | :------- | :--------------------------- | :---------------------------------- |
-| [FC6820](https://www.feocey.com/product/fc6820/)   | DW200    | **DW200_V20**                | 其它版本已废弃                      |
-| [FCV4905](https://www.feocey.com/product/fcv4905/) | VF105    | **VF105_V12**                | 其它版本已废弃                      |
-| FCV4914                                            | VF114    | **VF114_V12**                | 其它版本已废弃                      |
-| FCV5005                                            | VF205    | **VF105_V12**                | _注意：此处映射使用 VF105 系列固件_ |
-| FCV5003                                            | VF203    | **VF203_V12**                | 其它版本已废弃                      |
-| (通用)                                             | VF202    | **VF202_V12**                | 其它版本已废弃                      |
+| 产品型号                                             | 主板型号 | DejaOS 开发设备型号 (VSCode) | 备注                                |
+| :--------------------------------------------------- | :------- | :--------------------------- | :---------------------------------- |
+| [FC6820](https://www.feocey.com/product/fc6820/)     | DW200    | **DW200_V20**                | 其它版本已废弃                      |
+| [FCV4905](https://www.feocey.com/product/fcv4905/)   | VF105    | **VF105_V12**                | 其它版本已废弃                      |
+| [FCV4914](https://www.feocey.com/product/fcv4914/)   | VF114    | **VF114_V12**                | 其它版本已废弃                      |
+| [FCV5005](https://www.feocey.com/product/fcv5005/)   | VF205    | **VF105_V12**                | _注意：此处映射使用 VF105 系列固件_ |
+| [FCV5003](https://www.feocey.com/store/fcv5003/)     | VF203    | **VF203_V12**                | 其它版本已废弃                      |
+| [FCV5002](https://www.feocey.com/store/fcv5002/)     | VF202    | **VF202_V12**                | 其它版本已废弃                      |
+| [FCV4907](https://www.feocey.com/product/fcv4907/)   | VF107    | **VF105_V12**                | _注意：此处映射使用 VF105 系列固件_ |
+| [FC6825](https://www.feocey.com/product/fc6825/)     | DW205    | **DW205_V10**                | 其它版本已废弃                      |
+| [FC7735](https://www.feocey.com/product/fc7735/)     | M350     | **M350_V10**                 | 其它版本已废弃                      |
+| [FCC4901](https://www.feocey.com/product/fcc4901/)   | CC101    | **CC101_V11**                | 其它版本已废弃                      |
+| [FCC4904](https://www.feocey.com/product/fcc4904/)   | CC104    | **CC104_V12**                | 其它版本已废弃                      |
 
 > **提示**：列表中未提及的其他型号大多为过时或特定的定制版本。如无特殊说明，请勿选择使用，未来版本中可能会逐步移除这些旧型号。

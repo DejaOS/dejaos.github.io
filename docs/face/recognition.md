@@ -153,7 +153,7 @@ This example successfully integrates the core functionalities of **registration*
 
 Although a commercial-grade facial recognition application would require more polished UI interactions and error handling, this example has fully demonstrated the core technical logic.
 
-- [FCV5003 source code](https://github.com/DejaOS/DejaOS/tree/main/demos/vf203_v12/vf203_v12_face_registe_recognition)
-- [FCV5005 source code](https://github.com/DejaOS/DejaOS/blob/main/demos/vf105_v12/registe_recognition_demo.zip)
+- [FCV5003](https://www.feocey.com/store/fcv5003/) [source code](https://github.com/DejaOS/DejaOS/tree/main/demos/vf203_v12/vf203_v12_face_registe_recognition)
+- [FCV5005](https://www.feocey.com/product/fcv5005/) [source code](https://github.com/DejaOS/DejaOS/blob/main/demos/vf105_v12/registe_recognition_demo.zip)
 
 The application source is the same for both; only `app.dxproj` differs, along with the versions of the dependent component libraries.

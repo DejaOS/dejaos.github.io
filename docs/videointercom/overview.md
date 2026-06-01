@@ -100,8 +100,8 @@ When you start implementation, you typically focus on:
 
 We provide two device lines:
 
-- **Android 11 devices**, e.g. FCV4906
-- **Linux + DejaOS devices**, e.g. FCV4905
+- **Android 11 devices**, e.g. [FCV4906](https://www.feocey.com/product/fcv4906/)
+- **Linux + DejaOS devices**, e.g. [FCV4905](https://www.feocey.com/product/fcv4905/)
 
 At a high level:
 

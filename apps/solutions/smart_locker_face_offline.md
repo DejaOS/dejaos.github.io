@@ -99,8 +99,8 @@ Admin functions are largely the same as in `smart_locker_offline`:
 
 ## Project Structure
 
-- [FCV5003 source code](https://github.com/DejaOS/DejaOS/tree/main/apps/solutions/smartlocker/face_offline/source)
-- [FCV5005 source code](https://github.com/DejaOS/DejaOS/blob/main/apps/solutions/smartlocker/smartlocker.zip)
+- [FCV5003](https://www.feocey.com/store/fcv5003/) [source code](https://github.com/DejaOS/DejaOS/tree/main/apps/solutions/smartlocker/face_offline/source)
+- [FCV5005](https://www.feocey.com/product/fcv5005/) [source code](https://github.com/DejaOS/DejaOS/blob/main/apps/solutions/smartlocker/smartlocker.zip)
 
 The application source is the same for both; only `app.dxproj` differs, meaning the versions of the dependent component libraries differ. The two devices have different screen sizes, so minor UI adjustments were made.
 
@@ -137,7 +137,7 @@ The worker architecture (Main, UI, Lock, Face/Camera) follows the same principle
 
 ## Hardware Requirements
 
-- **Device Model**: Primarily designed for the **FCV5003** device.
+- **Device Model**: Primarily designed for the **[FCV5003](https://www.feocey.com/store/fcv5003/)** device.
 - **Device Family**: Other smartlocker face-recognition models with larger displays and camera modules can also be supported with minor UI adaptations.
 - **Display**: Large touchscreen (resolution and aspect ratio depend on target hardware; UI is designed for a wide-format screen).
 - **Camera**: Built-in camera for face recognition, positioned for comfortable user interaction.

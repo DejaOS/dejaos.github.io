@@ -1,6 +1,6 @@
 # HTTP Access
 
-A **door access** app on DejaOS for the **FC6820** terminal: on-device access via **NFC, PIN, and QR** only. The device exposes **HTTP API (v1)** for integration **and** a **browser-based admin UI** at the same service (desktop and **mobile** browsers).
+A **door access** app on DejaOS for the **[FC6820](https://www.feocey.com/product/fc6820/)** terminal: on-device access via **NFC, PIN, and QR** only. The device exposes **HTTP API (v1)** for integration **and** a **browser-based admin UI** at the same service (desktop and **mobile** browsers).
 
 :::info Production-ready application
 This is a complete application ready for real-world deployment. You can go live after light customization.
