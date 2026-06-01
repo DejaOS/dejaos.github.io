@@ -42,4 +42,4 @@ The main file structure is as follows:
 
 ---
 
-**Tip**: This example is designed for the **VF105** device with a screen resolution of **800\*1280**. Most interface layouts and image resources are optimized for this resolution. While the core business logic is cross-device compatible, UI adaptation is required for devices with different resolutions.
+**Tip**: This example is designed for the **[FCV4905](https://www.feocey.com/product/fcv4905/)** device with a screen resolution of **800\*1280**. Most interface layouts and image resources are optimized for this resolution. While the core business logic is cross-device compatible, UI adaptation is required for devices with different resolutions.

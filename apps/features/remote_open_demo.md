@@ -56,6 +56,6 @@ The application uses a multi-worker architecture for smooth UI and independent h
 
 ---
 
-> **Tip**: This example is designed for the **DW200** device with a screen resolution of **480×320**. Most layout and image resources are optimized for this resolution. While the core logic is cross-device compatible, UI adaptation is required for other resolutions.
+> **Tip**: This example is designed for the **[FC6820](https://www.feocey.com/product/fc6820/)** device with a screen resolution of **480×320**. Most layout and image resources are optimized for this resolution. While the core logic is cross-device compatible, UI adaptation is required for other resolutions.
 >
 > This demo uses GPIO relay, network, and HTTP server; configure the correct GPIO pin and network parameters in `dxDriver` for your device. The web login credentials are for demo only; use proper authentication in production.

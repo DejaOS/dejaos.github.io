@@ -50,6 +50,6 @@ The application adopts a multi-threaded (Worker) architecture, ensuring UI smoot
 
 ---
 
-**Tip**: This example is designed for the **DW200** device with a screen resolution of **480\*320**. Most interface layouts and image resources are optimized for this resolution. While the core business logic is cross-device compatible, UI adaptation is required for devices with different resolutions.
+**Tip**: This example is designed for the **[FC6820](https://www.feocey.com/product/fc6820/)** device with a screen resolution of **480\*320**. Most interface layouts and image resources are optimized for this resolution. While the core business logic is cross-device compatible, UI adaptation is required for devices with different resolutions.
 
 Due to screen size limitations, this application currently only displays the content of the first 6 data blocks of the card and does not include card writing functions such as modifying block data.

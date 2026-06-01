@@ -6,16 +6,16 @@ DejaOS devices are equipped with different QR code recognition hardware dependin
 
 | Type | Hardware Configuration | Implementation Components | Performance | Device Examples |
 | :--- | :--- | :--- | :--- | :--- |
-| **Type 1** | Built-in QR Camera + SPI Bus | `dxCode` + `dxBarcode` | ⭐⭐⭐ High | DW200 |
-| **Type 2** | Built-in QR Camera + UART Bus | `dxUart` + `dxChannel` | ⭐⭐⭐ High | VF114, VF105 |
-| **Type 3** | Face Camera (Shared) | `dxFacial` | ⭐⭐ Medium | VF202, VF203 |
+| **Type 1** | Built-in QR Camera + SPI Bus | `dxCode` + `dxBarcode` | ⭐⭐⭐ High | [FC6820](https://www.feocey.com/product/fc6820/) |
+| **Type 2** | Built-in QR Camera + UART Bus | `dxUart` + `dxChannel` | ⭐⭐⭐ High | [FCV4914](https://www.feocey.com/product/fcv4914/), [FCV4905](https://www.feocey.com/product/fcv4905/) |
+| **Type 3** | Face Camera (Shared) | `dxFacial` | ⭐⭐ Medium | [FCV5002](https://www.feocey.com/store/fcv5002/), [FCV5003](https://www.feocey.com/store/fcv5003/) |
 
 ---
 
 ## Type 1: Built-in QR Code Camera + SPI Bus
 
 ### Representative Devices
-- **DW200**
+- **[FC6820](https://www.feocey.com/product/fc6820/)**
 
 ### Hardware Configuration
 - Dedicated QR code scanning camera module
@@ -38,8 +38,8 @@ DejaOS devices are equipped with different QR code recognition hardware dependin
 ## Type 2: Built-in QR Code Camera + UART Bus
 
 ### Representative Devices
-- **VF114**
-- **VF105**
+- **[FCV4914](https://www.feocey.com/product/fcv4914/)**
+- **[FCV4905](https://www.feocey.com/product/fcv4905/)**
 
 ### Hardware Configuration
 - Dedicated QR code scanning camera module
@@ -62,8 +62,8 @@ DejaOS devices are equipped with different QR code recognition hardware dependin
 ## Type 3: QR Recognition via Face Recognition Camera
 
 ### Representative Devices
-- **VF202**
-- **VF203**
+- **[FCV5002](https://www.feocey.com/store/fcv5002/)**
+- **[FCV5003](https://www.feocey.com/store/fcv5003/)**
 
 ### Hardware Configuration
 - No dedicated QR code camera
@@ -90,7 +90,7 @@ Type 1 and Type 2 devices are equipped with dedicated QR code cameras, offering 
 
 To determine which QR code recognition type your device uses:
 
-1. Check your device model number (e.g., DW200, VF105, VF202)
+1. Check your device model number (e.g., [FC6820](https://www.feocey.com/product/fc6820/), [FCV4905](https://www.feocey.com/product/fcv4905/), [FCV5002](https://www.feocey.com/store/fcv5002/))
 2. Refer to the comparison table above
 3. Use the corresponding implementation components in your application
 

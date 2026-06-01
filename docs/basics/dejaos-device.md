@@ -49,28 +49,28 @@ For devices from other manufacturers using the above architectures, DejaOS's por
 
 DejaOS has been deployed on various IoT devices, which can be roughly categorized into the following types based on functionality and hardware configuration:
 
-### 1. Control Boards (e.g., CC104)
+### 1. Control Boards (e.g., [FCC4904](https://www.feocey.com/product/fcc4904/))
 
 - **Features**: No screen, communicates with backend systems via network, controls multiple peripherals through serial ports, supports GPIO input/output.
 - **Applications**: Access control main controller, IoT controller, backend communication node.
 
 ![CC104](/img/devices/CC104.png)
 
-### 2. Reader Devices (e.g., M350)
+### 2. Reader Devices (e.g., [FC7735](https://www.feocey.com/product/fc7735/))
 
 - **Features**: Used for identifying cards, QR codes, and other identification information. Can work with control boards or directly communicate with systems via network. Generally no screen included.
 - **Applications**: Access control card reading, QR code door opening, identity recognition.
 
 ![M350](/img/devices/M350.png)
 
-### 3. Face Recognition Devices (e.g., VF105)
+### 3. Face Recognition Devices (e.g., [FCV4905](https://www.feocey.com/product/fcv4905/))
 
 - **Features**: Integrated face recognition related software and hardware, equipped with 6-inch or larger screens, network connectivity capability, automatically enters face recognition application after startup.
 - **Applications**: Smart access control, face clock-in, visitor recognition.
 
 ![VF105](/img/devices/VF105.png)
 
-### 4. Multi-function Panel Devices (e.g., DW200)
+### 4. Multi-function Panel Devices (e.g., [FC6820](https://www.feocey.com/product/fc6820/))
 
 - **Features**: Provides comprehensive communication and control interfaces (network, NFC, Bluetooth, serial port, GPIO, QR code recognition, etc.), equipped with small-sized touch screens.
 - **Applications**: Smart panels, device control terminals, scene linkage hub.
@@ -83,7 +83,7 @@ DejaOS has been deployed on various IoT devices, which can be roughly categorize
 
 | Device Type             | Has Screen  | Communication Method      | Typical Functions                         | Example Models |
 | ----------------------- | ----------- | ------------------------- | ----------------------------------------- | -------------- |
-| Control Board           | No          | Network + Serial          | Peripheral Control, GPIO                  | CC104          |
-| Reader                  | No          | Network / Serial          | Card Recognition, QR Code Scanning        | M350           |
-| Face Recognition Device | Yes         | Network + Multi-interface | Face Recognition, Camera                  | VF105          |
-| Multi-function Panel    | Yes (Touch) | Network + Multi-interface | Comprehensive Control, NFC, QR Code, etc. | DW200          |
+| Control Board           | No          | Network + Serial          | Peripheral Control, GPIO                  | [FCC4904](https://www.feocey.com/product/fcc4904/) |
+| Reader                  | No          | Network / Serial          | Card Recognition, QR Code Scanning        | [FC7735](https://www.feocey.com/product/fc7735/)  |
+| Face Recognition Device | Yes         | Network + Multi-interface | Face Recognition, Camera                  | [FCV4905](https://www.feocey.com/product/fcv4905/) |
+| Multi-function Panel    | Yes (Touch) | Network + Multi-interface | Comprehensive Control, NFC, QR Code, etc. | [FC6820](https://www.feocey.com/product/fc6820/)   |
