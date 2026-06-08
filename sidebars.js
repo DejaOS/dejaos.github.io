@@ -46,6 +46,7 @@ module.exports = {
 			'videointercom/device',
 			'videointercom/android',
 			'videointercom/server',
+			'videointercom/quickdeploy',
 		],
 		'Finger Recognition': [
 			'finger/overview',
