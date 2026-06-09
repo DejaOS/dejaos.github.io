@@ -16,9 +16,14 @@ DejaOS 设备有两种连接类型：
 
 ### 类型二：USB Type-C 母座接口
 
-部分设备采用 **USB Type-C 母座接口**（Type-C 母口）。对于这类设备，您需要使用 USB Type-C 转 USB-A 数据线连接到电脑。
+部分设备采用 **USB Type-C 母座接口**（Type-C 母口）。对于这类设备，您需要使用 USB Type-C 转 USB-A 数据线连接到电脑。常见有两种形态：
 
-![带 USB Type-C 母座接口的设备](/img/typec.jpg)
+- **接出一根 Type-C 线**：调试接口以尾线形式从设备引出，直接插到 Type-C 母口即可。
+- **设备底部带 Type-C 口**：调试接口集成在设备底部，使用数据线连接底部 Type-C 口。
+
+![接出 Type-C 线的设备](/img/typec.jpg)
+
+![设备底部带 Type-C 口的设备](/img/bottomtypc.jpg)
 
 **数据线要求：**
 

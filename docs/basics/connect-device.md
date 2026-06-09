@@ -16,9 +16,14 @@ Some devices come with a built-in USB-A male connector cable. Simply plug the US
 
 ### Type 2: USB Type-C Receptacle
 
-Some devices feature a **USB Type-C receptacle**. For these devices, you need to use a USB Type-C to USB-A data cable to connect to your computer.
+Some devices feature a **USB Type-C receptacle**. For these devices, you need to use a USB Type-C to USB-A data cable to connect to your computer. Two common form factors are:
 
-![Device with USB Type-C Receptacle](/img/typec.jpg)
+- **Pigtail Type-C cable**: The debug interface is brought out as a cable from the device; plug your data cable into that Type-C receptacle.
+- **Bottom-mounted Type-C port**: The debug interface is integrated into the bottom of the device; connect your data cable to the Type-C port on the bottom.
+
+![Device with pigtail Type-C cable](/img/typec.jpg)
+
+![Device with bottom-mounted Type-C port](/img/bottomtypc.jpg)
 
 **Cable Requirements:**
 
