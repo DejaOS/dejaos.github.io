@@ -29,6 +29,8 @@ Using prompts or context meant for "writing Web/Node apps" often leads to code t
 
 With these docs, you can get the model to "understand" DejaOS boundaries and conventions faster and reduce unnecessary output and back-and-forth edits.
 
+Together with [DejaOS CLI](../basics/cli.md), AI programming tools can run `dejaos run` after modifying code to automatically synchronize and execute it on a real device. They can also run `dejaos logs` to continuously read device logs. This allows AI to participate in the complete modification, synchronization, and verification workflow instead of only generating code.
+
 ---
 
 ## Reference: AI-Built Apps and Samples

@@ -6,6 +6,8 @@
 
 > - `app.dxproj` is the project description file for dejaOS applications, defining configuration information such as module dependencies and device models.
 
+If you prefer terminal workflows, automation scripts, or AI-assisted programming, you can use the standalone [DejaOS CLI](./cli.md). The CLI does not require the VSCode extension and provides component installation, building, synchronization, application control, and log streaming.
+
 ---
 
 ## Disconnected Device State

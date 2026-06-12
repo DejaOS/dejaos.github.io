@@ -10,13 +10,13 @@ The dejaOS app project structure is concise and clear, containing several fixed 
 
 1. **`.temp/` Directory**
 
-   - Automatically generated temporary directory by the plugin, can be ignored.
+   - Automatically generated temporary directory by the VSCode extension or DejaOS CLI, can be ignored.
    - Contains cached files such as `.dpk` installation packages generated during build.
    - Will be regenerated if deleted, **will not be synced to device**.
 
 2. **`dxmodules/` Directory**
 
-   - Stores dependency modules (modules) downloaded via the `Install` button.
+   - Stores dependency modules downloaded via the `Install` button or `dejaos install`.
    - Contains multiple `.js` script files and `.so` dynamic link library files.
    - All modules start with `dx`, such as `dxLogger.js`.
    - Plugin supports `Ctrl+click` to quickly jump to module source code in this directory and view comments.
@@ -35,7 +35,7 @@ The dejaOS app project structure is concise and clear, containing several fixed 
 5. **`app.dxproj` File**
 
    - Project configuration file, **must exist**.
-   - Essentially a JSON format file, but managed through the plugin's visual editing interface.
+   - Essentially a JSON format file, managed through the plugin's visual editing interface or the `dejaos edit` terminal interface.
    - Diagram as follows:
 
      ![Project Configuration File Editing Interface](/img/project-2.png)

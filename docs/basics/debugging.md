@@ -24,3 +24,11 @@ It supports 3 levels of printing, with different text colors displayed in the `O
 If printing an Error object, it will automatically print detailed error stack information, making it easy to locate which line of code the error occurred in.
 
 ![alt text](/img/logger.png)
+
+When using [DejaOS CLI](./cli.md), run the following command from the project root to continuously view real-time device logs:
+
+```bash
+dejaos logs
+```
+
+Press `Ctrl+C` to stop viewing logs.

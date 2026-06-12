@@ -53,6 +53,12 @@ Similar to `npm install`, the DejaOS IDE plugin provides a one-click install but
 - Requires internet access to download resources from official web services;
 - For offline development environments, contact the official team to obtain offline installation packages.
 
+When using [DejaOS CLI](./cli.md), run the equivalent installation command from the project root:
+
+```bash
+dejaos install
+```
+
 ---
 
 ## Module Composition

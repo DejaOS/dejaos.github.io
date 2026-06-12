@@ -16,6 +16,14 @@
 
 ![应用程序打包图](/img/app_dpk.png)
 
+也可以通过 [DejaOS CLI](./cli.md) 在项目根目录执行：
+
+```bash
+dejaos build
+```
+
+生成的 `.dpk` 文件保存在项目的 `.temp/` 目录中。
+
 ---
 
 ## 应用程序安装

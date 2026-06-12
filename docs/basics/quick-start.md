@@ -45,6 +45,24 @@ DejaOS offers a variety of [GitHub examples](https://github.com/DejaOS/DejaOS). 
 > - Please select an example that matches your connected device model. If they don't match, you can manually modify the device model in app.dxproj and reselect modules versions
 > - **The first sync must use `syncAll`**. For subsequent development, use `sync` for faster incremental updates.
 
+### Using the Command Line
+
+If you prefer terminal workflows, automation scripts, or AI-assisted programming, install [DejaOS CLI](./cli.md):
+
+```bash
+npm install -g dejaos-cli
+```
+
+Run the following commands from the project root:
+
+```bash
+dejaos install
+dejaos sync --all
+dejaos start
+```
+
+After subsequent code changes, run `dejaos run` to automatically stop the application, perform an incremental sync, and restart it.
+
 ---
 
 ## ✍️ Coding Example: Controls Relay
@@ -123,6 +141,8 @@ std.setInterval(() => {
 1. After coding, click the `sync` button to upload changes to your device
 2. Once synced, click `start` to launch the application
 3. View log output in the VSCode console and observe the device screen
+
+When using the command line, run `dejaos run` to synchronize and start the project, and run `dejaos logs` to continuously view real-time device logs.
 
 ## ![alt text](/img/demo-8.gif)
 

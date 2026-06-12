@@ -26,6 +26,16 @@ To develop DejaOS applications on your computer, please prepare the following to
 
 ![DejaOS IDE Extension UI](/img/dxide.png)
 
+### Command-Line Development
+
+If you do not need the VSCode extension, or prefer terminals, automation scripts, and AI programming tools, install [DejaOS CLI](./cli.md):
+
+```bash
+npm install -g dejaos-cli
+```
+
+After installation, run `dejaos --help` from a project root containing `app.dxproj` to view the available commands.
+
 ## ⚠️ System Support
 
 Currently, the development environment **supports Windows,MacOS**.  

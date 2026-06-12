@@ -24,3 +24,11 @@ log.error(err);
 如果打印 Error 对象，会自动打印详细的错误堆栈信息，便于定位错误发生在哪一行代码。
 
 ![alt text](/img/logger.png)
+
+使用 [DejaOS CLI](./cli.md) 时，可以在项目根目录执行以下命令持续查看设备实时日志：
+
+```bash
+dejaos logs
+```
+
+按 `Ctrl+C` 退出日志查看。

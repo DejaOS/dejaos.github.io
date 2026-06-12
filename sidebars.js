@@ -14,6 +14,7 @@ module.exports = {
 			'basics/gui-engine',
 			'basics/modules',
 			'basics/ide',
+			'basics/cli',
 			'basics/project',
 			'basics/debugging',
 			'basics/app',

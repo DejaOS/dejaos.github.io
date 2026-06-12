@@ -16,6 +16,14 @@ You can package with one click through the DejaOS plugin in VSCode, generating `
 
 ![App Packaging](/img/app_dpk.png)
 
+You can also use [DejaOS CLI](./cli.md) from the project root:
+
+```bash
+dejaos build
+```
+
+The generated `.dpk` file is saved in the project's `.temp/` directory.
+
 ---
 
 ## App Installation
