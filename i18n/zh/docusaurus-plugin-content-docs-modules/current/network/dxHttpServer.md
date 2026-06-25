@@ -91,6 +91,101 @@ httpserver.route("/form-upload", function (req, res) {
 });
 ```
 
+**大文件分片上传（小内存设备）:**
+
+服务端在调用路由处理器之前会把**整个请求体缓冲进内存**，且内部接收缓冲区上限为 **3 MB**，单次请求超过这个大小就会失败。要在内存受限的设备上传大文件（如固件/升级包），需要在客户端把文件切成小于 3 MB 的分片，逐片以原始二进制流上传，服务端把每个分片追加到目标文件。这样无论文件总大小如何，峰值内存都只占大约一个分片。
+
+服务端 —— 逐片追加，最后统一校验：
+
+```javascript
+import server from "../../dxmodules/dxHttpServer.js";
+import dxos from "../../dxmodules/dxOs.js";
+import dxCommonUtils from "../../dxmodules/dxCommonUtils.js";
+
+const CHUNK_TMP = "/upgrades.chunk"; // 单个分片的临时落脚文件（复用）
+const TARGET = "/upgrades.zip"; // 合并后的完整文件
+
+// 把 "index=0&total=8&md5=..." 解析为对象
+function parseQuery(query) {
+  const out = {};
+  if (!query) return out;
+  query.split("&").forEach((kv) => {
+    const i = kv.indexOf("=");
+    if (i > 0) out[decodeURIComponent(kv.slice(0, i))] = decodeURIComponent(kv.slice(i + 1));
+  });
+  return out;
+}
+
+server.route("/uploadChunk", function (req, res) {
+  const send = (code, message) =>
+    res.send(JSON.stringify({ code, message }), { "Content-Type": "application/json" });
+  try {
+    const q = parseQuery(req.query);
+    const index = parseInt(q.index, 10);
+    const total = parseInt(q.total, 10);
+    const md5 = q.md5;
+    if (isNaN(index) || isNaN(total) || index < 0 || index >= total) {
+      return send(400, "invalid chunk params");
+    }
+
+    // 第一片：清理上一次（可能中断的）上传残留
+    if (index === 0) dxos.system(`rm -f ${TARGET} ${CHUNK_TMP}`);
+
+    // 把本片的原始 body 写入临时文件（每片 < 3MB）
+    if (!req.saveFile(CHUNK_TMP)) return send(400, "save chunk failed");
+
+    // 用 shell 追加到目标文件 —— 不会把整个文件读入内存
+    if (dxos.system(`cat ${CHUNK_TMP} >> ${TARGET}`) !== 0) return send(400, "append failed");
+    dxos.system(`rm -f ${CHUNK_TMP}`);
+
+    // 非最后一片：返回成功，等待下一片
+    if (index < total - 1) return send(200, "chunk received");
+
+    // 最后一片：校验整个文件的 MD5
+    const actual = dxCommonUtils.fs.fileMd5(TARGET); // 返回十六进制字符串
+    if (typeof actual === "string" && actual.toLowerCase() === String(md5).toLowerCase()) {
+      send(200, "upload success");
+      // 这里可以触发升级 / 重启
+    } else {
+      dxos.system(`rm -f ${TARGET}`);
+      send(400, "md5 verification failed");
+    }
+  } catch (e) {
+    dxos.system(`rm -f ${TARGET} ${CHUNK_TMP}`);
+    send(400, "upload chunk failed");
+  }
+});
+```
+
+客户端（浏览器）—— 用 `File.slice` 切片并按顺序逐片上传：
+
+```javascript
+async function uploadInChunks(file, md5, token) {
+  const CHUNK_SIZE = 1 * 1024 * 1024; // 1MB，安全地低于 3MB 接收上限
+  const total = Math.ceil(file.size / CHUNK_SIZE) || 1;
+  for (let index = 0; index < total; index++) {
+    const start = index * CHUNK_SIZE;
+    const chunk = file.slice(start, Math.min(start + CHUNK_SIZE, file.size));
+    const url = `http://<device-ip>:8080/uploadChunk?index=${index}&total=${total}&md5=${encodeURIComponent(md5)}`;
+    // 严格按顺序上传（await 每一片）—— 服务端按序追加
+    const resp = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/octet-stream", Authorization: token },
+      body: chunk,
+    });
+    const result = await resp.json();
+    if (result.code !== 200) throw new Error(result.message);
+    console.log(`分片 ${index + 1}/${total} 完成`);
+  }
+}
+```
+
+> 注意事项：
+>
+> - `CHUNK_SIZE` 必须低于 3 MB，推荐默认 1 MB（服务端还会对 body 做一次内部拷贝，所以峰值内存约为分片大小的 2 倍）。
+> - 分片**必须按顺序到达** —— 串行上传（`await` 每一片），服务端的 `cat >>` 才能正确拼接。
+> - 上传失败或用户取消时，让客户端调用一个清理路由（例如 `rm -f` 目标文件），避免半成品包残留。从 `index=0` 重新上传也会自动清理。
+
 更详细的使用方法，请参考演示：demo/test_server.js,demo/web
 截图如下：192.168.50.212 是设备 IP
 ![](https://dxiot-autobackup.oss-cn-hangzhou.aliyuncs.com/mydiagram/rdmsAdmin/ec5636b0f035bc8c.png)
