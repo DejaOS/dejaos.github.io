@@ -25,6 +25,8 @@ module.exports = {
          'hardware/dxAlsa',
          'hardware/dxAlsaplay',
          'hardware/dxPwm',
+         'hardware/dxGpio',
+         'hardware/dxGpioKey',
          'hardware/dxNfc',
          'hardware/dxNfcCard',
          'hardware/dxTemp',
