@@ -41,6 +41,7 @@ module.exports = {
 			'face/overview',
 			'face/detect',
 			'face/recognition',
+			'face/face-server',
 		],
 		'Video Intercom': [
 			'videointercom/overview',
