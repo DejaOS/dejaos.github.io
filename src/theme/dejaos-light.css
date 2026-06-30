@@ -1,0 +1,291 @@
+/**
+ * DejaOS light theme overrides (design v1)
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@350;400;500&family=Roboto:wght@300;400;500;600&display=swap");
+
+html[data-theme="light"] {
+  --dejaos-color-text: #3d3d3d;
+  --dejaos-color-text-body: #1a1a1a;
+  --dejaos-color-text-muted: rgba(0, 0, 0, 0.45);
+  --dejaos-color-primary: #095ac3;
+  --dejaos-color-page-bg: #eef1f6;
+  --dejaos-color-sidebar-bg: #f7f8fa;
+  --dejaos-color-card-bg: #ffffff;
+  --dejaos-color-card-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+  --dejaos-font-inter: "Inter", system-ui, sans-serif;
+  --dejaos-font-roboto: "Roboto", system-ui, sans-serif;
+  --dejaos-font-breadcrumb: "Noto Sans SC", "Source Han Sans SC", "Source Han Sans",
+    sans-serif;
+
+  --ifm-color-primary: #095ac3;
+  --ifm-menu-color-active: #095ac3;
+  --ifm-menu-color-background-active: transparent;
+  --ifm-background-color: var(--dejaos-color-page-bg);
+  --ifm-font-color-base: var(--dejaos-color-text);
+}
+
+/* Layout */
+html[data-theme="light"] .main-wrapper {
+  background: var(--dejaos-color-page-bg);
+}
+
+html[data-theme="light"] .navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e8ebf0;
+  box-shadow: none;
+}
+
+html[data-theme="light"] .navbar__logo {
+  max-height: none !important;
+  max-width: none !important;
+  height: auto;
+}
+
+html[data-theme="light"] .navbar__logo img,
+html[data-theme="light"] .navbar__logo svg {
+  height: 48px !important;
+  width: auto !important;
+  max-height: none !important;
+  max-width: none !important;
+}
+
+html[data-theme="light"] .theme-doc-sidebar-container {
+  background: var(--dejaos-color-sidebar-bg) !important;
+  border-right-color: #e8ebf0 !important;
+}
+
+html[data-theme="light"] main[class*="docMainContainer"] {
+  background: var(--dejaos-color-page-bg);
+}
+
+/* Widen main column: remove Infinum 42rem / 75% caps */
+@media (min-width: 997px) {
+  html[data-theme="light"] main[class*="docMainContainer"] > .container > .row {
+    gap: 1.25rem;
+  }
+
+  html[data-theme="light"] main[class*="docMainContainer"] > .container > .row > [class*="docItemCol"] {
+    max-width: none !important;
+    flex: 1 1 0% !important;
+    width: auto !important;
+    min-width: 0;
+  }
+
+  html[data-theme="light"] main[class*="docMainContainer"] > .container > .row > .col.col--3 {
+    flex: 0 0 auto !important;
+    max-width: 20rem;
+  }
+}
+
+html[data-theme="light"] main[class*="docMainContainer"] .container article,
+html[data-theme="light"] main[class*="docMainContainer"] [class*="docItemContainer"] {
+  max-width: none !important;
+  width: 100%;
+}
+
+html[data-theme="light"] main[class*="docMainContainer"] > .container > .row > article {
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+}
+
+/* White card: main body only (breadcrumbs stay on page background) */
+html[data-theme="light"] main[class*="docMainContainer"] article > .markdown {
+  background: #ffffff;
+  border-radius: 13.33px;
+  backdrop-filter: blur(44.44px);
+  -webkit-backdrop-filter: blur(44.44px);
+  box-shadow: var(--dejaos-color-card-shadow);
+  padding: 1.75rem 2rem 2.5rem;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+html[data-theme="light"] main[class*="docMainContainer"] .table-of-contents {
+  background: transparent;
+}
+
+/* Left sidebar: category group (collapsed / inactive) */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item-collapsible:not(.menu__list-item-collapsible--active)
+  > .menu__link--sublist {
+  font-family: var(--dejaos-font-inter);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17.59px;
+  letter-spacing: 0;
+  color: var(--dejaos-color-text-body) !important;
+}
+
+/* Left sidebar: active category root (contains current doc) */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item-collapsible--active
+  > .menu__link--sublist,
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item--active
+  > .menu__list-item-collapsible
+  > .menu__link--sublist {
+  font-family: var(--dejaos-font-inter);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--dejaos-color-primary) !important;
+}
+
+/* Left sidebar: expanded submenu links (inactive) */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list
+  .menu__link:not(.menu__link--sublist):not(.menu__link--active) {
+  font-family: var(--dejaos-font-inter);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: var(--dejaos-color-text-body) !important;
+}
+
+/* Left sidebar: current doc link */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__link--active:not(.menu__link--sublist) {
+  font-family: var(--dejaos-font-inter);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--dejaos-color-primary) !important;
+  background: transparent !important;
+}
+
+html[data-theme="light"] .theme-doc-sidebar-container .menu__link--active {
+  color: var(--dejaos-color-primary) !important;
+  background: transparent !important;
+}
+
+html[data-theme="light"] .theme-doc-sidebar-container .menu__link:hover {
+  color: var(--dejaos-color-primary) !important;
+  background: transparent !important;
+}
+
+html[data-theme="light"] .theme-doc-sidebar-container .menu__caret:hover {
+  color: var(--dejaos-color-primary) !important;
+}
+
+/* Breadcrumbs */
+html[data-theme="light"] .breadcrumbs {
+  margin-bottom: 1.5rem !important;
+}
+
+html[data-theme="light"] .breadcrumbs__link {
+  font-family: var(--dejaos-font-breadcrumb);
+  font-size: 14px;
+  font-weight: 350;
+  line-height: 22px;
+  letter-spacing: 0;
+  color: var(--dejaos-color-text-muted) !important;
+  background: transparent !important;
+}
+
+html[data-theme="light"] .breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--dejaos-color-text-muted) !important;
+}
+
+html[data-theme="light"] .breadcrumbs__item:first-child .breadcrumbs__link {
+  display: inline-flex;
+  align-items: center;
+  width: 12px;
+  height: 22px;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+  background: url("/img/breadcrumb-home.svg") no-repeat left center;
+  background-size: 12px 12px;
+}
+
+html[data-theme="light"] .breadcrumbs__item:not(:last-child):after {
+  opacity: 0.45;
+  filter: none;
+}
+
+/* Main content typography */
+html[data-theme="light"] .markdown > h1:first-child {
+  font-family: var(--dejaos-font-roboto);
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0;
+  color: var(--dejaos-color-text);
+  margin-bottom: 1.25rem;
+}
+
+html[data-theme="light"] .markdown > h2 {
+  font-family: var(--dejaos-font-roboto);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0;
+  color: var(--dejaos-color-text);
+  margin-top: 2rem !important;
+}
+
+html[data-theme="light"] .markdown > h3,
+html[data-theme="light"] .markdown > h4,
+html[data-theme="light"] .markdown > h5,
+html[data-theme="light"] .markdown > h6 {
+  font-family: var(--dejaos-font-roboto);
+  color: var(--dejaos-color-text);
+}
+
+html[data-theme="light"] .markdown p,
+html[data-theme="light"] .markdown li {
+  font-family: var(--dejaos-font-roboto);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: var(--dejaos-color-text);
+}
+
+/* Right TOC */
+html[data-theme="light"] .table-of-contents {
+  border-left: none;
+  padding-left: 0;
+}
+
+html[data-theme="light"] .table-of-contents > li > a.table-of-contents__link {
+  font-family: var(--dejaos-font-roboto);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0;
+  color: var(--dejaos-color-text) !important;
+}
+
+html[data-theme="light"] .table-of-contents ul .table-of-contents__link {
+  font-family: var(--dejaos-font-roboto);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0;
+  color: var(--dejaos-color-text) !important;
+}
+
+html[data-theme="light"] .table-of-contents__link--active {
+  color: var(--dejaos-color-primary) !important;
+}
+
+/* Tone down legacy infinum accent on doc pages */
+html[data-theme="light"] .navbar__link--active {
+  border-top-color: var(--dejaos-color-primary);
+  color: var(--dejaos-color-primary);
+}
+
+html[data-theme="light"] .markdown a {
+  color: var(--dejaos-color-primary);
+}

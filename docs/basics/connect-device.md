@@ -2,7 +2,7 @@
 
 ---
 
-## 🔌 Device Connection Types
+## Device Connection Types
 
 DejaOS devices come in two connection types:
 
@@ -36,7 +36,7 @@ Some devices feature a **USB Type-C receptacle**. For these devices, you need to
 
 ---
 
-## ✅ Verify Device Recognition
+## Verify Device Recognition
 
 DejaOS devices are **HID (Human Interface Device) devices**. When connected, the operating system typically does not show a popup notification. You need to manually verify that the device has been recognized. This is not a required step, but it can help you confirm that the device is properly connected.
 
@@ -81,7 +81,7 @@ If the output includes **`ProductID` = `0xa4ac`** and nearby **`VendorID`** is *
 
 ---
 
-## 🔍 Troubleshooting
+## Troubleshooting
 
 If your device is not recognized:
 
@@ -93,7 +93,7 @@ If your device is not recognized:
 
 ---
 
-## 📘 Next Steps
+## Next Steps
 
 Once your device is connected and recognized:
 

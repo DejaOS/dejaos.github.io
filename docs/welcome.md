@@ -1,6 +1,6 @@
 # What is DejaOS
 
-## 🌐 Overview
+## Overview
 
 **DejaOS** is a JavaScript runtime environment purpose-built for embedded devices, enabling low-cost, resource-constrained smart hardware to run JavaScript code efficiently. By adopting JavaScript as the primary development language, DejaOS dramatically lowers the barrier and cost for embedded development, making the process simpler and more productive.
 
@@ -8,7 +8,7 @@ DejaOS has been successfully deployed in various IoT scenarios, demonstrating ex
 
 ---
 
-## ⚙️ Architecture
+## Architecture
 
 DejaOS is built on the following core components:
 
@@ -18,56 +18,56 @@ DejaOS is built on the following core components:
 
 ---
 
-## 📚 Features
+## Features
 
 DejaOS offers a comprehensive set of JavaScript APIs and system capabilities:
 
-### 🔌 Hardware Interface Libraries
+### Hardware Interface Libraries
 
 - GPIO, PWM, UART, RS-485, RS-232, USB, Wiegand, Watchdog
 - Capturer, ALSA, NFC, QRCode, BLE, Face Recognition, and more
 
-### 🌐 Networking & Communication Protocols
+### Networking & Communication Protocols
 
 - Net, TCP, TCP Server, MQTT, UDP, HTTP, Web Server, OSDP, etc.
 
-### 🖼️ Graphics Library
+### Graphics Library
 
 - Build GUIs in JavaScript, fully compatible with native LVGL features
 
-### 🛠️ Utility Libraries
+### Utility Libraries
 
 - Threads, encryption/decryption, logging, EventBus, NTP, SQLite, and more
 
-### 📦 Third-Party Libraries
+### Third-Party Libraries
 
 - Supports importing ESM-format third-party JavaScript libraries via `import`
 
-### ⚙️ Native C Library Integration
+### Native C Library Integration
 
 - Integrate native C libraries and expose them to JavaScript
 
 ---
 
-## 🚀 Development Workflow
+## Development Workflow
 
-### 📥 Environment Setup
+### Environment Setup
 
 - Install [Node.js (v20+)](https://nodejs.org)
 - Install [Visual Studio Code](https://code.visualstudio.com)
 - Install the [DejaOS IDE extension](https://marketplace.visualstudio.com/items?itemName=dxide.dxide)
 
-### 🔧 Device Preparation
+### Device Preparation
 
 1. Acquire a development device
 2. Connect the device to your computer (VSCode) via USB
 
-### 🧪 Quick Start
+### Quick Start
 
 - Use JavaScript in VSCode to [build your first application](./basics/quick-start.md)
 - Instantly sync code to your device and view real-time logs
 
-### 📦 Build & Deploy
+### Build & Deploy
 
 1. Acquire production devices
 2. Use VSCode to package your project as a `.dpk` installer
@@ -75,7 +75,7 @@ DejaOS offers a comprehensive set of JavaScript APIs and system capabilities:
 
 ---
 
-## 🤝 Support
+## Support
 
 If you have any questions, feel free to contact us:
 

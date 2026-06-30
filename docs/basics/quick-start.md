@@ -2,7 +2,7 @@
 
 ---
 
-## 📁 Create a New Project
+## Create a New Project
 
 1. Launch VSCode and click the `DejaOS` icon in the sidebar
 2. Select `Create Project`, enter a project name, and choose a storage path
@@ -23,7 +23,7 @@
 
 ---
 
-## 📂 Import an Existing Project
+## Import an Existing Project
 
 DejaOS offers a variety of [GitHub examples](https://github.com/DejaOS/DejaOS). You can download any example and import it into VSCode:
 
@@ -34,7 +34,7 @@ DejaOS offers a variety of [GitHub examples](https://github.com/DejaOS/DejaOS). 
 
 ---
 
-## 🔌 Connect Device & Sync Code
+## Connect Device & Sync Code
 
 1. Click the `Not Connected` button at the bottom of VSCode and select your device
 2. Click the `install` button at the bottom of VSCode to download the dependent libraries
@@ -65,7 +65,7 @@ After subsequent code changes, run `dejaos run` to automatically stop the applic
 
 ---
 
-## ✍️ Coding Example: Controls Relay
+## Coding Example: Controls Relay
 
 Add the following code to your project's `main.js` to control a relay with a button press:
 
@@ -136,7 +136,7 @@ std.setInterval(() => {
 
 ---
 
-## ▶️ Run the Project
+## Run the Project
 
 1. After coding, click the `sync` button to upload changes to your device
 2. Once synced, click `start` to launch the application
@@ -146,7 +146,7 @@ When using the command line, run `dejaos run` to synchronize and start the proje
 
 ## ![alt text](/img/demo-8.gif)
 
-## 📦 Package the Project
+## Package the Project
 
 When development is complete, you can package your project as a `.dpk` installer for deployment:
 
@@ -158,7 +158,7 @@ When development is complete, you can package your project as a `.dpk` installer
 
 ---
 
-## 📘 Next Steps
+## Next Steps
 
 - 📦 To install or upgrade your `.dpk` application on a device, see: [App Packaging, Installation, and Upgrade](./app.md)
 - 🧪 For more JavaScript App projects, see: [Example Projects](https://github.com/DejaOS/DejaOS/tree/main/demos)

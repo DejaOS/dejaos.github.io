@@ -2,13 +2,13 @@
 
 ---
 
-## 📦 Runtime Environment
+## Runtime Environment
 
 DejaOS is a JavaScript runtime designed for embedded devices. **No manual installation is required**—all devices we provide come with DejaOS pre-installed and ready to use out of the box.
 
 ---
 
-## 🛠️ Development Environment Setup
+## Development Environment Setup
 
 To develop DejaOS applications on your computer, please prepare the following tools:
 
@@ -36,13 +36,13 @@ npm install -g dejaos-cli
 
 After installation, run `dejaos --help` from a project root containing `app.dxproj` to view the available commands.
 
-## ⚠️ System Support
+## System Support
 
 Currently, the development environment **supports Windows,MacOS**.  
 
 ---
 
-## 🌐 Network Requirements
+## Network Requirements
 
 During development, DejaOS IDE may need to download official JavaScript modules:
 

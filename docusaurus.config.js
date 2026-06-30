@@ -45,7 +45,7 @@ module.exports = {
 		navbar: {
 			logo: {
 				alt: 'DejaOS Logo',
-				src: '/img/logo.png',
+				src: '/img/logo.svg',
 				height: 48,
 				width: 'auto',
 			},
@@ -143,6 +143,7 @@ module.exports = {
 					customCss: [
 						require.resolve('./src/theme/styles.css'),
 						require.resolve('@infinum/docusaurus-theme/dist/style.css'),
+						require.resolve('./src/theme/dejaos-light.css'),
 					],
 				},
 				blog: false,

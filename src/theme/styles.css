@@ -88,10 +88,17 @@
   margin-bottom: 0.625rem !important;
 }
 
-/* DejaOS Logo 样式调整 */
-.navbar__logo img {
-  height: 56px !important;
+/* DejaOS Logo — override Infinum theme max-height: 1.5rem */
+.navbar__logo {
+  max-height: none !important;
+  max-width: none !important;
+}
+
+.navbar__logo img,
+.navbar__logo svg {
+  height: 48px !important;
   width: auto !important;
+  max-height: none !important;
   max-width: none !important;
 }
 

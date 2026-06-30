@@ -2,7 +2,7 @@
 
 ---
 
-## 🔌 设备连接类型
+## 设备连接类型
 
 DejaOS 设备有两种连接类型：
 
@@ -36,7 +36,7 @@ DejaOS 设备有两种连接类型：
 
 ---
 
-## ✅ 验证设备识别
+## 验证设备识别
 
 DejaOS 设备是 **HID（人机接口设备）设备**。连接后，操作系统通常不会弹出提示。您需要手动验证设备是否已被识别。这不是必须的操作，但可以帮助您确认设备连接正常。
 
@@ -81,7 +81,7 @@ ioreg -n AppleUserHIDDevice -l | grep -E "ProductID|VendorID|Product" | awk -F"=
 
 ---
 
-## 🔍 故障排除
+## 故障排除
 
 如果您的设备未被识别：
 
@@ -93,7 +93,7 @@ ioreg -n AppleUserHIDDevice -l | grep -E "ProductID|VendorID|Product" | awk -F"=
 
 ---
 
-## 📘 下一步
+## 下一步
 
 设备连接并识别成功后：
 
