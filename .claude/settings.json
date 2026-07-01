@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/DXL/xwechat_files/wxid_5f8boonxis7v22_beed/msg/file/2026-06/icon/**)",
+      "Bash(cp C:/Users/DXL/xwechat_files/wxid_5f8boonxis7v22_beed/msg/file/2026-06/icon/1.svg c:/Users/DXL/Desktop/tools/dxInside/dejaos.github.io/static/img/toc/marker.svg)",
+      "Bash(cp C:/Users/DXL/xwechat_files/wxid_5f8boonxis7v22_beed/msg/file/2026-06/icon/1-1.svg c:/Users/DXL/Desktop/tools/dxInside/dejaos.github.io/static/img/toc/marker-active.svg)"
+    ]
+  }
+}
