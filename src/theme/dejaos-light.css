@@ -135,11 +135,19 @@ html[data-theme="light"]
   margin-top: 1.5rem;
 }
 
-/* Left sidebar: category group (collapsed / inactive) */
+/* Left sidebar: keep the first top-level category off the very top edge. */
 html[data-theme="light"]
   .theme-doc-sidebar-container
-  .menu__list-item-collapsible:not(.menu__list-item-collapsible--active)
-  > .menu__link--sublist {
+  .menu > .menu__list > .menu__list-item:first-child {
+  margin-top: 1rem;
+}
+
+/* Left sidebar: category group (inactive — does NOT contain the current doc).
+   Docusaurus marks an ancestor category's sublist link with .menu__link--active
+   whenever any descendant is the current doc, so we exclude that here. */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__link--sublist:not(.menu__link--active) {
   font-family: var(--dejaos-font-inter);
   font-size: 14px;
   font-weight: 500;
@@ -148,16 +156,14 @@ html[data-theme="light"]
   color: var(--dejaos-color-text-body) !important;
 }
 
-/* Left sidebar: active category root (contains current doc) */
+/* Left sidebar: active category root (its subtree contains the current doc).
+   .menu__link--sublist.menu__link--active is the reliable signal — the
+   .menu__list-item--active class does not exist in Docusaurus, and
+   .menu__list-item-collapsible--active only appears when the category link
+   itself is the current page. */
 html[data-theme="light"]
   .theme-doc-sidebar-container
-  .menu__list-item-collapsible--active
-  > .menu__link--sublist,
-html[data-theme="light"]
-  .theme-doc-sidebar-container
-  .menu__list-item--active
-  > .menu__list-item-collapsible
-  > .menu__link--sublist {
+  .menu__link--sublist.menu__link--active {
   font-family: var(--dejaos-font-inter);
   font-size: 14px;
   font-weight: 500;
@@ -200,7 +206,60 @@ html[data-theme="light"]
 html[data-theme="light"]
   .theme-doc-sidebar-container
   .menu__list .menu__list .menu__link:not(.menu__link--sublist) {
-  padding-left: 2rem;
+  /* Push the link box's LEFT edge to line up with the triangle icon of the
+     parent category (triangle sits at ~16px into the first-level link), then
+     add inner padding for the text. */
+  margin-left: 28px;
+  padding-left: 12px;
+  /* Grow the hover background so single-line items aren't a thin sliver, but
+     pull the box back with equal negative vertical margins so the row's layout
+     height — and therefore the original 1st/2nd-level spacing — is unchanged.
+     Only one item is hovered at a time, so the taller backgrounds never
+     visibly overlap. */
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+
+/* Hover/active highlight should not span the full row: leave a right gutter for
+   both levels; the left edge is governed by each level's own indentation
+   (first level insets from the menu padding, second level from margin-left
+   above so it aligns with the parent triangle). */
+html[data-theme="light"] .theme-doc-sidebar-container .menu__link {
+  margin-left: 12px;
+  margin-right: 16px;
+  border-radius: 6px;
+}
+
+/* First-level categories are collapsible: Docusaurus paints the hover/active
+   background on the outer .menu__list-item-collapsible wrapper (spanning the
+   whole row, and it triggers even when the pointer is over the caret rather
+   than the link). Keep the tint there but inset it with matching horizontal
+   margins so it doesn't reach the sidebar edges, and cancel the link's own
+   tint at this level so the two don't stack. */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item-collapsible {
+  margin-left: 12px;
+  margin-right: 16px;
+  border-radius: 6px;
+}
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item-collapsible:hover {
+  background: rgba(9, 90, 195, 0.05) !important;
+}
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item-collapsible > .menu__link {
+  margin-left: 0;
+  margin-right: 0;
+}
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item-collapsible > .menu__link:hover {
+  background: transparent !important;
 }
 
 html[data-theme="light"] .theme-doc-sidebar-container .menu__link--active {
@@ -210,7 +269,7 @@ html[data-theme="light"] .theme-doc-sidebar-container .menu__link--active {
 
 html[data-theme="light"] .theme-doc-sidebar-container .menu__link:hover {
   color: var(--dejaos-color-primary) !important;
-  background: transparent !important;
+  background: rgba(9, 90, 195, 0.05) !important;
 }
 
 html[data-theme="light"] .theme-doc-sidebar-container .menu__caret:hover {
@@ -237,16 +296,10 @@ html[data-theme="light"]
   background: url("/img/sidebar-caret.svg") no-repeat center / contain;
 }
 
-/* Active category: blue triangle */
+/* Active category (subtree contains current doc): blue triangle */
 html[data-theme="light"]
   .theme-doc-sidebar-container
-  .menu__list-item-collapsible--active
-  > .menu__link--sublist::before,
-html[data-theme="light"]
-  .theme-doc-sidebar-container
-  .menu__list-item--active
-  > .menu__list-item-collapsible
-  > .menu__link--sublist::before {
+  .menu__link--sublist.menu__link--active::before {
   background-image: url("/img/sidebar-caret-active.svg");
 }
 
@@ -336,14 +389,35 @@ html[data-theme="light"] .markdown > h2 {
   align-items: center;
 }
 
-/* Marker icon before body h2, matching the right-hand TOC first-level marker */
-html[data-theme="light"] .markdown > h2::before {
+/* Marker icon before body h2 — "What is DejaOS" page only; other pages have no
+   heading marker. (::before is only generated where content is set, so scoping
+   this base rule removes the icon everywhere else.) */
+html[data-theme="light"].docs-doc-id-welcome .markdown > h2::before {
   content: "";
   flex: 0 0 auto;
-  width: 22px;
-  height: 22px;
+  /* Body headings render the marker at 1.5x (right-hand TOC stays at 1x = 22px) */
+  width: 33px;
+  height: 33px;
   margin-right: 8px;
   background: url("/img/toc/marker.svg") no-repeat center / contain;
+}
+
+/* "What is DejaOS" page only: body h2 markers use the same numbered icons (1-5)
+   as the right-hand TOC. nth-of-type counts h2 elements within .markdown. */
+html[data-theme="light"].docs-doc-id-welcome .markdown > h2:nth-of-type(1)::before {
+  background-image: url("/img/toc/welcome-1.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome .markdown > h2:nth-of-type(2)::before {
+  background-image: url("/img/toc/welcome-2.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome .markdown > h2:nth-of-type(3)::before {
+  background-image: url("/img/toc/welcome-3.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome .markdown > h2:nth-of-type(4)::before {
+  background-image: url("/img/toc/welcome-4.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome .markdown > h2:nth-of-type(5)::before {
+  background-image: url("/img/toc/welcome-5.svg");
 }
 
 html[data-theme="light"] .markdown > h3,
@@ -391,8 +465,11 @@ html[data-theme="light"] .table-of-contents > li > a.table-of-contents__link {
   align-items: center;
 }
 
-/* First-level TOC marker icon (swaps to blue when active) */
-html[data-theme="light"] .table-of-contents > li > a.table-of-contents__link::before {
+/* First-level TOC marker icon — "What is DejaOS" page only; other pages have no
+   TOC marker. (::before is only generated where content is set, so scoping this
+   base rule removes the icon — and the active-state rules below become no-ops —
+   everywhere else.) */
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li > a.table-of-contents__link::before {
   content: "";
   flex: 0 0 auto;
   width: 22px;
@@ -413,6 +490,67 @@ html[data-theme="light"]
   background-image: url("/img/toc/marker-active.svg");
 }
 
+/* "What is DejaOS" page only: replace the five first-level TOC markers with
+   custom numbered icons (1-5). Scoped to the welcome doc so other pages keep
+   the default marker. The docs-doc-id-welcome class sits on <html> (same
+   element as data-theme), so it is chained without a descendant space. The
+   nth-child selectors override the shared marker rules above (including the
+   active/parent-active states). */
+html[data-theme="light"].docs-doc-id-welcome
+  .table-of-contents
+  > li:nth-child(1)
+  > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-1.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome
+  .table-of-contents
+  > li:nth-child(2)
+  > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-2.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome
+  .table-of-contents
+  > li:nth-child(3)
+  > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-3.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome
+  .table-of-contents
+  > li:nth-child(4)
+  > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-4.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome
+  .table-of-contents
+  > li:nth-child(5)
+  > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-5.svg");
+}
+
+/* Active state: swap each numbered marker to its blue variant, either when the
+   first-level link itself is active or when one of its nested (2nd-level)
+   headings is active. Higher specificity than the default nth-child rules. */
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(1) > a.table-of-contents__link--active::before,
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(1):has(.table-of-contents__link--active) > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-1-active.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(2) > a.table-of-contents__link--active::before,
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(2):has(.table-of-contents__link--active) > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-2-active.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(3) > a.table-of-contents__link--active::before,
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(3):has(.table-of-contents__link--active) > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-3-active.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(4) > a.table-of-contents__link--active::before,
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(4):has(.table-of-contents__link--active) > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-4-active.svg");
+}
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(5) > a.table-of-contents__link--active::before,
+html[data-theme="light"].docs-doc-id-welcome .table-of-contents > li:nth-child(5):has(.table-of-contents__link--active) > a.table-of-contents__link::before {
+  background-image: url("/img/toc/welcome-5-active.svg");
+}
+
 /* Nested TOC list: align second-level text with first-level text (icon 22px + gap 8px) */
 html[data-theme="light"] .table-of-contents ul {
   padding-left: 0;
@@ -425,12 +563,47 @@ html[data-theme="light"] .table-of-contents ul .table-of-contents__link {
   line-height: 30px;
   letter-spacing: 0;
   color: var(--dejaos-color-text) !important;
-  padding-left: 30px;
+  /* Total text indent stays 30px (aligns with 1st-level text), but split so the
+     hover background is inset 8px from the left (matching the 1st-level link's
+     padding-left) while the remaining 22px is inner padding. */
+  margin-left: 8px;
+  padding-left: 22px;
 }
 
 html[data-theme="light"] .table-of-contents__link--active,
 html[data-theme="light"] .table-of-contents ul .table-of-contents__link--active {
   color: var(--dejaos-color-primary) !important;
+}
+
+/* When a nested (2nd-level) heading is active, turn the parent 1st-level link
+   text blue too (mirrors the parent-marker rule above). */
+html[data-theme="light"]
+  .table-of-contents
+  > li:has(.table-of-contents__link--active)
+  > a.table-of-contents__link {
+  color: var(--dejaos-color-primary) !important;
+}
+
+/* Hover highlight on TOC links, matching the left sidebar's tint. Links are
+   inline-flex, so make them block-level to give the background a consistent
+   box, then inset it with a right gutter and round the corners. */
+html[data-theme="light"] .table-of-contents .table-of-contents__link {
+  display: block;
+  border-radius: 6px;
+  margin-right: 12px;
+  padding-left: 8px;
+}
+html[data-theme="light"] .table-of-contents > li > a.table-of-contents__link {
+  display: flex;
+}
+html[data-theme="light"] .table-of-contents .table-of-contents__link:hover {
+  color: var(--dejaos-color-primary) !important;
+  background: rgba(9, 90, 195, 0.05);
+}
+
+/* Top navbar link font size */
+html[data-theme="light"] .navbar__link {
+  font-size: 14px;
 }
 
 /* Tone down legacy infinum accent on doc pages */
