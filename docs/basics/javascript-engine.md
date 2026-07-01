@@ -12,11 +12,11 @@ Compared to the V8 engine used by Node.js, QuickJS is more suitable for running 
 
 ## Core Advantages of QuickJS
 
-### ✅ Compact and Efficient
+### Compact and Efficient
 
 QuickJS has an extremely small codebase with very low memory usage, capable of running smoothly in environments with just a few hundred KB. It's perfectly suited for devices with limited RAM and storage space.
 
-### ✅ Full ES2023 Standard Support
+### Full ES2023 Standard Support
 
 QuickJS provides comprehensive JavaScript feature support, including:
 
@@ -26,15 +26,15 @@ QuickJS provides comprehensive JavaScript feature support, including:
 
 This means DejaOS developers can use almost all modern JavaScript syntax, improving development efficiency and readability.
 
-### ✅ Strong Embedding Capabilities
+### Strong Embedding Capabilities
 
 QuickJS is natively designed for embedded integration, using simple C interfaces to embed the JS engine into existing C/C++ applications, making it extremely easy to extend and integrate.
 
-### ✅ High Performance
+### High Performance
 
 While not pursuing extreme JIT performance (unlike V8), QuickJS's interpretive execution performance is excellent in embedded scenarios, with fast startup and responsive behavior, meeting the needs of the vast majority of IoT applications.
 
-### ✅ Support for Extensions and Bindings
+### Support for Extensions and Bindings
 
 Developers can customize C-level modules and objects, exposing underlying hardware capabilities to the JavaScript layer through built-in interfaces, achieving flexible functional encapsulation.
 

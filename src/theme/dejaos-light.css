@@ -230,11 +230,11 @@ html[data-theme="light"]
   > .menu__link--sublist::before {
   content: "";
   flex: 0 0 auto;
-  width: 7px;
-  height: 6px;
+  width: 9px;
+  height: 9px;
   margin-left: 16px;
   margin-right: 16px;
-  background: url("/img/sidebar-caret.png") no-repeat center / contain;
+  background: url("/img/sidebar-caret.svg") no-repeat center / contain;
 }
 
 /* Active category: blue triangle */
@@ -247,7 +247,7 @@ html[data-theme="light"]
   .menu__list-item--active
   > .menu__list-item-collapsible
   > .menu__link--sublist::before {
-  background-image: url("/img/sidebar-caret-active.png");
+  background-image: url("/img/sidebar-caret-active.svg");
 }
 
 /* Expanded category (not collapsed): blue triangle */
@@ -256,7 +256,7 @@ html[data-theme="light"]
   .menu__list-item:not(.menu__list-item--collapsed)
   > .menu__list-item-collapsible
   > .menu__link--sublist::before {
-  background-image: url("/img/sidebar-caret-active.png");
+  background-image: url("/img/sidebar-caret-active.svg");
 }
 
 /* Breadcrumbs */

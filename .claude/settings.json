@@ -3,7 +3,8 @@
     "allow": [
       "Read(//c/Users/DXL/xwechat_files/wxid_5f8boonxis7v22_beed/msg/file/2026-06/icon/**)",
       "Bash(cp C:/Users/DXL/xwechat_files/wxid_5f8boonxis7v22_beed/msg/file/2026-06/icon/1.svg c:/Users/DXL/Desktop/tools/dxInside/dejaos.github.io/static/img/toc/marker.svg)",
-      "Bash(cp C:/Users/DXL/xwechat_files/wxid_5f8boonxis7v22_beed/msg/file/2026-06/icon/1-1.svg c:/Users/DXL/Desktop/tools/dxInside/dejaos.github.io/static/img/toc/marker-active.svg)"
+      "Bash(cp C:/Users/DXL/xwechat_files/wxid_5f8boonxis7v22_beed/msg/file/2026-06/icon/1-1.svg c:/Users/DXL/Desktop/tools/dxInside/dejaos.github.io/static/img/toc/marker-active.svg)",
+      "Bash(LC_ALL=C.UTF-8 grep -P '^[+-]#{1,6}\\\\s.*[\\\\x{1F000}-\\\\x{1FAFF}\\\\x{2600}-\\\\x{27BF}\\\\x{2B00}-\\\\x{2BFF}\\\\x{2300}-\\\\x{23FF}\\\\x{2190}-\\\\x{21FF}]')"
     ]
   }
 }
