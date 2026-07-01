@@ -9,10 +9,10 @@ html[data-theme="light"] {
   --dejaos-color-text-body: #1a1a1a;
   --dejaos-color-text-muted: rgba(0, 0, 0, 0.45);
   --dejaos-color-primary: #095ac3;
-  --dejaos-color-page-bg: #eef1f6;
-  --dejaos-color-sidebar-bg: #f7f8fa;
+  --dejaos-color-page-bg: #f5f7fa;
+  --dejaos-color-sidebar-bg: #ffffff;
   --dejaos-color-card-bg: #ffffff;
-  --dejaos-color-card-shadow: 0 4px 24px rgba(15, 23, 42, 0.08);
+  --dejaos-color-card-shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.03);
   --dejaos-font-inter: "Inter", system-ui, sans-serif;
   --dejaos-font-roboto: "Roboto", system-ui, sans-serif;
   --dejaos-font-breadcrumb: "Noto Sans SC", "Source Han Sans SC", "Source Han Sans",
@@ -23,6 +23,9 @@ html[data-theme="light"] {
   --ifm-menu-color-background-active: transparent;
   --ifm-background-color: var(--dejaos-color-page-bg);
   --ifm-font-color-base: var(--dejaos-color-text);
+  --ifm-navbar-height: 5rem;
+  /* Column ratio left : content : right TOC = 1 : 4 : 1 */
+  --doc-sidebar-width: 16.6667vw;
 }
 
 /* Layout */
@@ -31,6 +34,8 @@ html[data-theme="light"] .main-wrapper {
 }
 
 html[data-theme="light"] .navbar {
+  height: var(--ifm-navbar-height);
+  min-height: var(--ifm-navbar-height);
   background: #ffffff;
   border-bottom: 1px solid #e8ebf0;
   box-shadow: none;
@@ -40,6 +45,11 @@ html[data-theme="light"] .navbar__logo {
   max-height: none !important;
   max-width: none !important;
   height: auto;
+}
+
+/* Nudge the DejaOS logo slightly to the right */
+html[data-theme="light"] .navbar__brand {
+  margin-left: 1.5rem;
 }
 
 html[data-theme="light"] .navbar__logo img,
@@ -59,6 +69,13 @@ html[data-theme="light"] main[class*="docMainContainer"] {
   background: var(--dejaos-color-page-bg);
 }
 
+/* Tighten padding around the main content area (sides + top) */
+@media (min-width: 997px) {
+  html[data-theme="light"] main[class*="docMainContainer"] > .container {
+    padding: 1rem 1rem 2rem 1rem !important;
+  }
+}
+
 /* Widen main column: remove Infinum 42rem / 75% caps */
 @media (min-width: 997px) {
   html[data-theme="light"] main[class*="docMainContainer"] > .container > .row {
@@ -67,14 +84,15 @@ html[data-theme="light"] main[class*="docMainContainer"] {
 
   html[data-theme="light"] main[class*="docMainContainer"] > .container > .row > [class*="docItemCol"] {
     max-width: none !important;
-    flex: 1 1 0% !important;
+    flex: 4 1 0% !important;
     width: auto !important;
     min-width: 0;
   }
 
   html[data-theme="light"] main[class*="docMainContainer"] > .container > .row > .col.col--3 {
-    flex: 0 0 auto !important;
-    max-width: 20rem;
+    flex: 1 1 0% !important;
+    max-width: none !important;
+    min-width: 0;
   }
 }
 
@@ -108,6 +126,13 @@ html[data-theme="light"] main[class*="docMainContainer"] .table-of-contents {
   background: transparent;
 }
 
+/* Left sidebar: extra breathing room between top-level category groups */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu > .menu__list > .menu__list-item:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
 /* Left sidebar: category group (collapsed / inactive) */
 html[data-theme="light"]
   .theme-doc-sidebar-container
@@ -115,8 +140,8 @@ html[data-theme="light"]
   > .menu__link--sublist {
   font-family: var(--dejaos-font-inter);
   font-size: 14px;
-  font-weight: 600;
-  line-height: 17.59px;
+  font-weight: 500;
+  line-height: 22px;
   letter-spacing: 0;
   color: var(--dejaos-color-text-body) !important;
 }
@@ -132,9 +157,9 @@ html[data-theme="light"]
   > .menu__list-item-collapsible
   > .menu__link--sublist {
   font-family: var(--dejaos-font-inter);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: normal;
+  line-height: 22px;
   color: var(--dejaos-color-primary) !important;
 }
 
@@ -146,7 +171,7 @@ html[data-theme="light"]
   font-family: var(--dejaos-font-inter);
   font-size: 12px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 20px;
   letter-spacing: 0;
   color: var(--dejaos-color-text-body) !important;
 }
@@ -158,9 +183,22 @@ html[data-theme="light"]
   font-family: var(--dejaos-font-inter);
   font-size: 12px;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 20px;
   color: var(--dejaos-color-primary) !important;
   background: transparent !important;
+}
+
+/* Left sidebar: submenu items — extra vertical spacing + deeper indent */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list .menu__list .menu__list-item {
+  margin-top: 0.5rem;
+}
+
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list .menu__list .menu__link:not(.menu__link--sublist) {
+  padding-left: 2rem;
 }
 
 html[data-theme="light"] .theme-doc-sidebar-container .menu__link--active {
@@ -175,11 +213,53 @@ html[data-theme="light"] .theme-doc-sidebar-container .menu__link:hover {
 
 html[data-theme="light"] .theme-doc-sidebar-container .menu__caret:hover {
   color: var(--dejaos-color-primary) !important;
+  background: transparent !important;
+}
+
+/* Sidebar caret: hide default right-side arrows, add icon on the LEFT */
+html[data-theme="light"] .theme-doc-sidebar-container .menu__caret,
+html[data-theme="light"] .theme-doc-sidebar-container .menu__link--sublist-caret::after {
+  display: none !important;
+}
+
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item-collapsible
+  > .menu__link--sublist::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 7px;
+  height: 6px;
+  margin-left: 16px;
+  margin-right: 16px;
+  background: url("/img/sidebar-caret.png") no-repeat center / contain;
+}
+
+/* Active category: blue triangle */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item-collapsible--active
+  > .menu__link--sublist::before,
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item--active
+  > .menu__list-item-collapsible
+  > .menu__link--sublist::before {
+  background-image: url("/img/sidebar-caret-active.png");
+}
+
+/* Expanded category (not collapsed): blue triangle */
+html[data-theme="light"]
+  .theme-doc-sidebar-container
+  .menu__list-item:not(.menu__list-item--collapsed)
+  > .menu__list-item-collapsible
+  > .menu__link--sublist::before {
+  background-image: url("/img/sidebar-caret-active.png");
 }
 
 /* Breadcrumbs */
 html[data-theme="light"] .breadcrumbs {
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 
 html[data-theme="light"] .breadcrumbs__link {
@@ -209,19 +289,42 @@ html[data-theme="light"] .breadcrumbs__item:first-child .breadcrumbs__link {
 }
 
 html[data-theme="light"] .breadcrumbs__item:not(:last-child):after {
+  content: "/";
   opacity: 0.45;
   filter: none;
+  background: none !important;
+  margin: 0 0.25rem;
+  padding: 0;
+  font-size: 14px;
+  line-height: 22px;
+  align-self: center;
+  transform: translateY(-5px);
+}
+
+/* Breadcrumb row: drop the flex gap, keep items vertically centered */
+html[data-theme="light"] .breadcrumbs,
+html[data-theme="light"] .breadcrumbs ul {
+  gap: 0 !important;
+}
+
+html[data-theme="light"] .breadcrumbs__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem !important;
 }
 
 /* Main content typography */
-html[data-theme="light"] .markdown > h1:first-child {
+html[data-theme="light"] .markdown > h1:first-child,
+html[data-theme="light"] .markdown > header > h1 {
   font-family: var(--dejaos-font-roboto);
   font-size: 48px;
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: 0;
   color: var(--dejaos-color-text);
+  padding-bottom: 1rem;
   margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e8ebf0;
 }
 
 html[data-theme="light"] .markdown > h2 {
@@ -232,6 +335,18 @@ html[data-theme="light"] .markdown > h2 {
   letter-spacing: 0;
   color: var(--dejaos-color-text);
   margin-top: 2rem !important;
+  display: flex;
+  align-items: center;
+}
+
+/* Marker icon before body h2, matching the right-hand TOC first-level marker */
+html[data-theme="light"] .markdown > h2::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  background: url("/img/toc/marker.png") no-repeat center / contain;
 }
 
 html[data-theme="light"] .markdown > h3,
@@ -265,6 +380,27 @@ html[data-theme="light"] .table-of-contents > li > a.table-of-contents__link {
   line-height: 40px;
   letter-spacing: 0;
   color: var(--dejaos-color-text) !important;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* First-level TOC marker icon (swaps to blue when active) */
+html[data-theme="light"] .table-of-contents > li > a.table-of-contents__link::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  background: url("/img/toc/marker.png") no-repeat center / contain;
+}
+
+html[data-theme="light"] .table-of-contents > li > a.table-of-contents__link--active::before {
+  background-image: url("/img/toc/marker-active.png");
+}
+
+/* Nested TOC list: align second-level text with first-level text (icon 22px + gap 8px) */
+html[data-theme="light"] .table-of-contents ul {
+  padding-left: 0;
 }
 
 html[data-theme="light"] .table-of-contents ul .table-of-contents__link {
@@ -274,6 +410,7 @@ html[data-theme="light"] .table-of-contents ul .table-of-contents__link {
   line-height: 30px;
   letter-spacing: 0;
   color: var(--dejaos-color-text) !important;
+  padding-left: 30px;
 }
 
 html[data-theme="light"] .table-of-contents__link--active {
