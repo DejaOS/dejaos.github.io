@@ -69,22 +69,6 @@ Recommended keyboard shortcuts:
 
 ---
 
-## Visual GUI Editor
-
-The plugin also supports building GUI interfaces through visual drag-and-drop methods, as shown below:
-
-![Visual Editor](/img/ide-4.png)
-
-Usage:
-
-- Use `.dxui` extension when creating files;
-- Click on the file to open the visual GUI editor.
-
-> ⚠️ 
-> - The current visual functionality is still being continuously improved. It's recommended to still primarily build interfaces using JS code. Future versions will provide more complete component and interaction support.
-
----
-
 ## Summary
 
-dejaOS IDE provides one-stop support for embedded application development, integrating module management, packaging and deployment, device connection and debugging, GUI visualization, and other features. It is the recommended tool for efficient dejaOS application development.
+dejaOS IDE provides one-stop support for embedded application development, integrating module management, packaging and deployment, device connection and debugging, and other features. It is the recommended tool for efficient dejaOS application development.
