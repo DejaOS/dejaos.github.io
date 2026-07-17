@@ -61,3 +61,9 @@ You can:
 Since most UI construction has similarities, we can use AI tools to quickly generate complex graphical interfaces. This has been well validated in actual projects.
 
 Let's begin exploring the UI development journey with dejaOS!
+
+---
+
+## Notes on Screen Care
+
+For applications that may show the same bright UI for long periods, consider adding a simple screen saver: when the screen content has not changed for a while, lower the screen brightness or show a screensaver image or animation. This is optional best practice for long-running static pages, and problems from static display are uncommon in typical use.
