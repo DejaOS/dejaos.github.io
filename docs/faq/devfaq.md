@@ -84,11 +84,16 @@ Switch the device to **[Production Mode](/docs/basics/mode)**.
 
 Regarding the replacement of the device's boot background image, please note the following:
 
-1.  **The boot screen background can be replaced, but it cannot be changed dynamically through code.**
-    If you would like to use your own custom image, please provide the image to us. We will regenerate the firmware based on your picture and pre-install it on **newly manufactured devices**. For more details, please refer to: [Boot Screen Customization](/changelog/change-notes/2025#07-11).
+1.  **The boot screen background can be replaced, but not through ordinary application code.**
+    Contact us for a **device-specific upgrade app**. Put your custom image into that app and run it on the device to update the boot background. For more details, see: [Easier Device Boot Background Replacement](/changelog/change-notes/2026#07-20).
 
-2.  **For existing devices, the firmware must be reflashed.**
-    This process is more complex and requires our remote assistance. We will use AnyDesk to access your PC and manually flash the new firmware to your device.
+2.  **Different device models need different upgrade apps.**
+    We provide the matching package for your model. This feature will later be integrated into the System Management App and is **not** published on GitHub for now.
+
+3.  **Image resolution must match the device.**
+    Look up the screen resolution for your model in `dxDriver.js`.
+
+4.  **Factory pre-install** is not the default for small orders. For **large-volume** devices we can offer a pre-install service; otherwise an extra fee may apply. Contact us for details.
 
 ---
 
