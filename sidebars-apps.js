@@ -9,6 +9,7 @@ module.exports = {
         ],
         */
         'Features': [
+            'features/dejaos_host',
             'features/videointercom_ui_demo',
             'features/ui_animation_demo',
             'features/ui_popup_demo',
