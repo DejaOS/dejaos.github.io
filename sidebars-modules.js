@@ -30,6 +30,7 @@ module.exports = {
          'hardware/dxNfc',
          'hardware/dxNfcCard',
          'hardware/dxTemp',
+			'hardware/dxWatchdog',
 			'hardware/dxFingerZaz',
 			'hardware/dxFingerMz',
 			'hardware/dxFace',

@@ -65,6 +65,7 @@ module.exports = {
 		],
 		'Vibe Coding': [
 			'vibecoding/overview',
+			'vibecoding/dejaos-app-dev-skill',
 			'vibecoding/prompts',
 			'vibecoding/uimanager',
 		],
