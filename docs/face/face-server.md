@@ -15,6 +15,20 @@ For concepts such as feature vectors and registration, see [Facial Recognition D
 
 ---
 
+## Photo Requirements
+
+Uploaded registration photos should meet the following requirements (same as on-device photo registration):
+
+| Item | Requirement |
+| :--- | :--- |
+| Face pixels | Min **80**, max **512** |
+| File size | **50–300 KB** |
+| Image dimensions | Width **512–800**, height **640–1024** |
+| Format | **JPG** |
+| Content | Everyday / lifestyle photo; no beauty filters; no heavy makeup; no occlusion such as sunglasses, scarves, or masks |
+
+---
+
 ## Deployment Overview
 
 | Item | Requirement |

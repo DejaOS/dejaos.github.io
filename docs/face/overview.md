@@ -50,6 +50,18 @@ A complete facial recognition application typically includes three core flows: *
 The process for registering from a photo is simpler, requiring only steps 5 and 6. Developers can send a photo to the device (e.g., over the network), the device extracts the feature vector directly from the photo and saves it to the database. The original photo can then be deleted.
 :::
 
+#### Face Registration Photo Requirements
+
+When registering from a photo (on-device `getFeaByFile`, or via the [Face Feature Extraction Service](./face-server.md)), use images that meet the following requirements:
+
+| Item | Requirement |
+| :--- | :--- |
+| Face pixels | Min **80**, max **512** |
+| File size | **50–300 KB** |
+| Image dimensions | Width **512–800**, height **640–1024** |
+| Format | **JPG** |
+| Content | Everyday / lifestyle photo; no beauty filters; no heavy makeup; no occlusion such as sunglasses, scarves, or masks |
+
 ### 3. Face Recognition Flow
 
 1.  **Start Recognition**: The application begins the face recognition process.
