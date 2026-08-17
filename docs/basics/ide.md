@@ -8,6 +8,8 @@
 
 If you prefer terminal workflows, automation scripts, or AI-assisted programming, you can use the standalone [DejaOS CLI](./cli.md). The CLI does not require the VSCode extension and provides component installation, building, synchronization, application control, and log streaming.
 
+The IDE also includes a visual, what-you-see-is-what-you-get editor for `.ui` files. You can compose dxUi control trees by dragging controls on a device-sized canvas, then load the generated JSON interface with `uiLoader`. See [Visual UI Editor](../ui/editor.md) for the complete workflow.
+
 ---
 
 ## Disconnected Device State
