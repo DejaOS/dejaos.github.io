@@ -32,6 +32,7 @@ module.exports = {
 			'ui/overview',
 			'ui/getstart',
 			'ui/editor',
+			'ui/simulator',
 			'ui/lvglfunc',
 			'ui/dxui',
 			'ui/dxuipage',

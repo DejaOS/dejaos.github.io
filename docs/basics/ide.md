@@ -10,17 +10,19 @@ If you prefer terminal workflows, automation scripts, or AI-assisted programming
 
 The IDE also includes a visual, what-you-see-is-what-you-get editor for `.ui` files. You can compose dxUi control trees by dragging controls on a device-sized canvas, then load the generated JSON interface with `uiLoader`. See [Visual UI Editor](../ui/editor.md) for the complete workflow.
 
+On Windows x64, the IDE can also download and launch the **DejaOS Simulator** on demand. It runs the project's JavaScript with QuickJS and renders dxUi through native LVGL, so you can preview and interact with the UI before connecting a device. See [Windows UI Simulator](../ui/simulator.md) for setup, supported behavior, and limitations.
+
 ---
 
 ## Disconnected Device State
 
-When no device is connected, you can write and manage code, but cannot run or debug. Currently, simulators are not supported.
+When no device is connected, you can still write and manage code. On Windows x64, you can also run the project's UI in the simulator. Device deployment, hardware integration, and final validation still require a physical device.
 
 Interface illustration:
 
 ![Disconnected Device Interface](/img/ide-1.png)
 
-The bottom-left corner provides 3 basic operation buttons:
+The bottom-left corner provides these basic operation buttons:
 
 1. **Install**  
    Similar to `npm install`, downloads required modules based on dependency information in the `app.dxproj` file.
@@ -30,6 +32,9 @@ The bottom-left corner provides 3 basic operation buttons:
 
 3. **Connect**  
    After connecting the device to the computer via USB, click this button to establish a communication connection. Connection status is reported through a popup in the bottom-right corner indicating success or failure.
+
+4. **Simulator**
+   Runs the current project in the native Windows simulator. The first run asks for permission to download and install the matching simulator runtime. Runtime output is shown in the **DejaOS Simulator** output channel.
 
 ---
 
@@ -73,4 +78,4 @@ Recommended keyboard shortcuts:
 
 ## Summary
 
-dejaOS IDE provides one-stop support for embedded application development, integrating module management, packaging and deployment, device connection and debugging, and other features. It is the recommended tool for efficient dejaOS application development.
+dejaOS IDE provides one-stop support for embedded application development, integrating visual UI editing, native UI simulation, module management, packaging and deployment, device connection, and debugging. It is the recommended tool for efficient dejaOS application development.
