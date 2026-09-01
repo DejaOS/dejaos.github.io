@@ -64,6 +64,7 @@ module.exports = {
 			'bestpractice/ota',
 			'bestpractice/access',
 			'bestpractice/uimanager',
+			'bestpractice/videointercom',
 		],
 		'Vibe Coding': [
 			'vibecoding/overview',
