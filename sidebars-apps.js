@@ -11,6 +11,7 @@ module.exports = {
         'Features': [
             'features/dejaos_host',
             'features/fake_android_demo',
+            'features/canvas_demo',
             'features/videointercom_ui_demo',
             'features/ui_animation_demo',
             'features/ui_popup_demo',
