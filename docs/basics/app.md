@@ -55,6 +55,10 @@ Provide the completed `.dpk` app package to DejaOS official. The official will a
 
 App upgrades are implemented by the app itself, offering high flexibility and customization capabilities.
 
+:::caution Note
+OTA here means **application** upgrade (`.dpk`, similar to an Android app update). It does **not** flash device firmware (OS + apps). Firmware flashing is **not** open to end users.
+:::
+
 ### Basic Principle of OTA Upgrade
 
 1.  Deploy the `.dpk` file to a Web service and calculate the MD5 value of the file (for integrity verification).

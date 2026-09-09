@@ -4,7 +4,7 @@
 
 The System Manager App is a special application in the dejaOS system used for performing low-level maintenance tasks. It is primarily used for application installation, system information queries, and switching system operating modes.
 
-As system versions have evolved, the System Manager App has upgraded from an interface-less PC tool management mode to an interface-based device-side management mode. The current recommended release is **2.1.5**, which builds on **2.1.0** with several UX improvements, a clearer exit experience, passive entry under crash protection, and application runtime log download for production devices.
+As system versions have evolved, the System Manager App has upgraded from an interface-less PC tool management mode to an interface-based device-side management mode. The current recommended release is **2.1.5**, which builds on **2.1.0** with several UX improvements, a clearer exit experience, passive entry under crash protection, application runtime log download, and **cloud device management** for remote rescue and upgrades.
 
 ## 1. New Version (2.1.0+): Device-Side Management Mode
 
@@ -123,6 +123,42 @@ You get `device_log.tar.gz`. After extraction it usually contains `dejaos.log`.
 <img src="/img/sysapp_v215_log_archive.png" alt="Downloaded archive example" width="50%" />
 
 If you need logs in a more real-time way, you can upload the log file from your own application to your server using networking modules such as `dxHttpClient`. The log file path is `/data/var/log/dejaos.log`.
+
+#### Cloud device management
+
+Besides the local LAN Web console, **2.1.5** can also work with the cloud console at [https://dejaosdm.dxiot.com/](https://dejaosdm.dxiot.com/). After the device enters System Manager and connects to the internet, it reports to the cloud so you can check status, pull logs, and push app upgrades remotely—especially useful when the device is not on the same LAN as you.
+
+**When a device shows up on the cloud**
+
+- **Active entry**: You need to install/upgrade an app or collect logs yourself—enter System Manager (long-press the gray screen on boot), connect the network, and configure your tenant ID.
+- **Passive entry**: The main app crashes repeatedly and the watchdog trips after **6 consecutive restarts**. The device stays in System Manager and comes online on the cloud so you can rescue it.
+
+**Get started**
+
+1. Open [https://dejaosdm.dxiot.com/](https://dejaosdm.dxiot.com/), register an account, and save the **8-digit Tenant ID** shown after registration.
+2. On the device, enter System Manager, open **Tenant ID**, and enter the same ID so the device is bound to your account.
+3. Connect the device to the internet. After it sends a heartbeat, it appears automatically under **Device Management**—no manual enrollment.
+
+Your Tenant ID is always shown in the console (top-right / near the avatar) after login.
+
+**What you can do**
+
+On an online device you can:
+
+| Action | What it is for |
+| :--- | :--- |
+| Query info | Read version and related details for diagnosis |
+| Change config | Update selected settings only (empty fields are left unchanged) |
+| Upgrade (OTA) | Push a `.dpk` **application** package uploaded under **OTA Management** (app upgrade, not OS firmware flash) |
+| Get logs | Ask the device to upload a log archive for download under **Log Management** |
+| Reboot | Soft-reboot the device |
+
+You can also track command status (pending → running → success / fail / timeout) under **Command History**. If a previous command is still pending, wait until it finishes or times out before sending another.
+
+**Tips**
+
+- Offline usually means: no network, wrong Tenant ID, cloud access blocked, or the device is not in System Manager.
+- If a device suddenly appears online with no action from you, it is often passive entry after crash protection—pull logs first, then push a fixed app package if needed.
 
 ## 2. Old Version (2.0.0): PC Tool Management Mode
 

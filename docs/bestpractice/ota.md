@@ -4,6 +4,10 @@ In the full lifecycle management of embedded devices, OTA (Over-The-Air) updates
 
 This document details DejaOS's OTA design philosophy, implementation strategies, and how to handle exceptions during the update process.
 
+:::caution Note
+In DejaOS, **OTA means application upgrade only** (similar to upgrading an Android app via a `.dpk` package). It does **not** mean flashing device firmware (operating system + applications). Firmware flashing is **not** open to end users; if you need a firmware update, contact the DejaOS team.
+:::
+
 ---
 
 ## Core Design Philosophy: App-Driven

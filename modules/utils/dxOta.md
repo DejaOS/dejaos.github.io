@@ -3,6 +3,11 @@
 ## 1. Overview
 
 This module is part of the official system module library of [dejaOS](https://github.com/DejaOS/DejaOS), used for Over-The-Air (OTA) upgrade functionality.
+
+:::caution Note
+`dxOta` upgrades **applications** only (like an Android app update via `.dpk`). It does **not** flash device firmware (OS + apps). Firmware flashing is **not** open to end users.
+:::
+
 It provides comprehensive upgrade capabilities for dejaOS applications:
 
 - HTTP online upgrade from remote servers

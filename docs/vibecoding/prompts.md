@@ -1,5 +1,7 @@
 # DejaOS Application Development Prompts
 
+The content below can be pasted into an AI coding tool (for example **Cursor** or **Codex**) as project context or system instructions, so the model follows DejaOS conventions instead of defaulting to Web/Node.js habits. If your tool supports Skills, prefer the [DejaOS App Development Skill](./dejaos-app-dev-skill.md).
+
 ## 1. What is DejaOS
 
 DejaOS is a JavaScript runtime that runs on embedded devices. It is built on the QuickJS engine and LVGL graphics library and provides dozens of components that bridge C libraries to JavaScript. Developers can build device applications using ES6+ and these JS components.

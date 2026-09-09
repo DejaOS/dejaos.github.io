@@ -6,7 +6,7 @@
 
 AI-assisted development has become an irreversible trend. In the DejaOS ecosystem, we can fully leverage large language models to assist development, or even achieve an **entirely AI-driven** application development workflow.
 
-We have practiced with **Cursor**, **Claude Code**, and various LLMs to try and validate the feasibility of "full AI development." This documentation series is based on those practices and helps you implement features on DejaOS more efficiently and accurately with AI.
+We have practiced with tools such as **Cursor** and **Codex** (as well as other AI coding assistants and LLMs) to try and validate the feasibility of "full AI development." This documentation series is based on those practices and helps you implement features on DejaOS more efficiently and accurately with AI.
 
 ---
 
@@ -24,12 +24,13 @@ Using prompts or context meant for "writing Web/Node apps" often leads to code t
 
 ## What This Documentation Series Offers
 
-- **[Prompts](./prompts.md)**: Reusable (or lightly customized) prompt templates for common scenarios (UI layout, device connection, business logic, etc.), so you can get DejaOS-compliant implementations quickly in Cursor, Claude Code, and similar tools.
+- **[DejaOS App Development Skill](./dejaos-app-dev-skill.md)**: Install into AI coding tools that support Skills (for example **Cursor** or **Codex**), then create, modify, sync, and verify DejaOS apps with natural language.
+- **[Prompts](./prompts.md)**: Reusable (or lightly customized) prompt templates for common scenarios (UI layout, device connection, business logic, etc.). Paste them into Cursor, Codex, or similar tools when you only need shared context.
 - **[UI Manager](./uimanager.md)**: DejaOS UI and Vibe Coding guidance to help both AI and developers understand screen structure, component usage, and best practices.
 
 With these docs, you can get the model to "understand" DejaOS boundaries and conventions faster and reduce unnecessary output and back-and-forth edits.
 
-Together with [DejaOS CLI](../basics/cli.md), AI programming tools can run `dejaos run` after modifying code to automatically synchronize and execute it on a real device. They can also run `dejaos logs` to continuously read device logs. This allows AI to participate in the complete modification, synchronization, and verification workflow instead of only generating code.
+Together with [DejaOS CLI](../basics/cli.md), AI programming tools such as Cursor and Codex can run `dejaos run` after modifying code to automatically synchronize and execute it on a real device. They can also run `dejaos logs` to continuously read device logs. This allows AI to participate in the complete modification, synchronization, and verification workflow instead of only generating code.
 
 ---
 
@@ -44,4 +45,4 @@ You can use these as a reference for what AI can do on DejaOS and, together with
 
 ---
 
-Start with **[Prompts](./prompts.md)** to plug DejaOS best practices into your existing AI development workflow.
+Start with the **[DejaOS App Development Skill](./dejaos-app-dev-skill.md)** if you use Cursor or Codex, or with **[Prompts](./prompts.md)** to plug DejaOS best practices into your existing AI development workflow.

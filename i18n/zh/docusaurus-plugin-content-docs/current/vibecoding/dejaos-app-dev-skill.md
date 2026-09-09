@@ -1,6 +1,6 @@
 # 使用 DejaOS App 开发 Skill
 
-`dejaos-app-dev-sdk2-0` 是面向 DejaOS SDK 2.0 App 开发者的 AI 编程 Skill。安装后，你可以直接用自然语言让支持 Skill 的 AI 编程工具创建、修改、运行和检查 DejaOS App。
+`dejaos-app-dev-sdk2-0` 是面向 DejaOS SDK 2.0 App 开发者的 AI 编程 Skill。安装到支持 Skill 的工具（例如 **Cursor**、**Codex**）后，你可以直接用自然语言创建、修改、运行和检查 DejaOS App。
 
 它尤其适合以下场景：
 

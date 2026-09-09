@@ -6,7 +6,7 @@
 
 AI 辅助开发已成为不可逆的趋势。在 DejaOS 生态中，我们同样可以充分利用大模型来辅助开发，甚至实现**完全由 AI 驱动**的应用开发流程。
 
-我们已在实践中使用 **Cursor**、**Claude Code** 以及多种大模型，尝试并验证了「全 AI 开发」的可行性。本系列文档即基于这些实践，帮助你在 DejaOS 上更高效、更准确地借助 AI 完成功能实现。
+我们已在实践中使用 **Cursor**、**Codex** 等 AI 编程工具（以及多种大模型），尝试并验证了「全 AI 开发」的可行性。本系列文档即基于这些实践，帮助你在 DejaOS 上更高效、更准确地借助 AI 完成功能实现。
 
 ---
 
@@ -24,12 +24,13 @@ DejaOS 的 JavaScript 开发与常见的 Web 前端或 Node.js 开发存在一�
 
 ## 本系列文档能为你带来什么
 
-- **[提示词（Prompts）](./prompts.md)**：可直接复用或稍作修改的提示词模板，涵盖常见场景（如 UI 搭建、设备连接、业务逻辑等），便于在 Cursor、Claude Code 等工具中快速获得符合 DejaOS 规范的实现。
+- **[DejaOS App 开发 Skill](./dejaos-app-dev-skill.md)**：安装到支持 Skill 的 AI 编程工具（例如 **Cursor**、**Codex**）后，可用自然语言创建、修改、同步并验证 DejaOS 应用。
+- **[提示词（Prompts）](./prompts.md)**：可直接复用或稍作修改的提示词模板，涵盖常见场景（如 UI 搭建、设备连接、业务逻辑等）。在 Cursor、Codex 等工具中粘贴即可补充 DejaOS 上下文。
 - **[UI Manager](./uimanager.md)**：结合 DejaOS UI 与 Vibe Coding 的说明，帮助 AI 与开发者理解界面结构、组件用法和最佳实践。
 
 配合这些文档，你可以更快地让大模型「理解」DejaOS 的边界与习惯，减少无效输出和反复修改。
 
-配合 [DejaOS CLI](../basics/cli.md)，AI 编程工具还可以在完成代码修改后直接执行 `dejaos run`，自动同步代码并在真实设备上运行；执行 `dejaos logs` 可以持续读取设备日志。这样 AI 不仅能够生成代码，也能够参与完整的修改、同步和验证流程。
+配合 [DejaOS CLI](../basics/cli.md)，像 Cursor、Codex 这类 AI 编程工具还可以在完成代码修改后直接执行 `dejaos run`，自动同步代码并在真实设备上运行；执行 `dejaos logs` 可以持续读取设备日志。这样 AI 不仅能够生成代码，也能够参与完整的修改、同步和验证流程。
 
 ---
 
@@ -44,4 +45,4 @@ DejaOS 的 JavaScript 开发与常见的 Web 前端或 Node.js 开发存在一�
 
 ---
 
-从 **[提示词](./prompts.md)** 开始，即可在现有 AI 开发流程中接入 DejaOS 的最佳实践。
+如果你使用 Cursor 或 Codex，可从 **[DejaOS App 开发 Skill](./dejaos-app-dev-skill.md)** 开始；也可以从 **[提示词](./prompts.md)** 入手，在现有 AI 开发流程中接入 DejaOS 的最佳实践。

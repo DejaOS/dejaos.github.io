@@ -1,6 +1,6 @@
 # Using the DejaOS App Development Skill
 
-`dejaos-app-dev-sdk2-0` is an AI coding Skill for DejaOS SDK 2.0 app developers. It helps supported AI coding tools create, modify, run, and review DejaOS apps through natural-language requests.
+`dejaos-app-dev-sdk2-0` is an AI coding Skill for DejaOS SDK 2.0 app developers. After installing it into a Skill-capable tool such as **Cursor** or **Codex**, you can create, modify, run, and review DejaOS apps through natural-language requests.
 
 ## Get the Skill
 

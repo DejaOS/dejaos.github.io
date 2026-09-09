@@ -1,5 +1,7 @@
 # dejaos 应用开发提示词
 
+可将下方内容粘贴到 AI 编程工具（例如 **Cursor**、**Codex**）的项目上下文或系统说明中，让模型按 DejaOS 习惯生成代码，而不是默认套用 Web / Node.js 写法。若工具支持 Skill，更推荐使用 [DejaOS App 开发 Skill](./dejaos-app-dev-skill.md)。
+
 ## 1. dejaos 是运行在嵌入式设备上的 JavaScript 运行时，底层是 quickjs 引擎、lvgl 图形库，提供了几十个组件封装 c 库到 javascript 的桥架，开发者只需要使用 es6+几十个 js 组件就能开发设备上的应用。
 
 ## 2. 应用基本结构
