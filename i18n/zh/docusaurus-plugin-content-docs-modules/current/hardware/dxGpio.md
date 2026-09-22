@@ -166,7 +166,7 @@ dxDriver.GPIO_FUNC = {
 };
 ```
 
-继电器引脚在 `dxDriver.GPIO` 中定义，VF203 示例：
+继电器引脚在 `dxDriver.GPIO` 中定义，FCV5003 示例：
 
 ```javascript
 dxDriver.GPIO = {

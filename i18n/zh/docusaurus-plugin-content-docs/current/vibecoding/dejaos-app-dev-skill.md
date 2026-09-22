@@ -41,7 +41,7 @@ WorkBuddy: %USERPROFILE%\.workbuddy\skills\dejaos-app-dev-sdk2-0
 最明确的方式是在需求中直接写出 Skill 名称：
 
 ```text
-使用 $dejaos-app-dev-sdk2-0，帮我开发一个 VF202_V12 的门禁应用。
+使用 $dejaos-app-dev-sdk2-0，帮我开发一个 FCV5002 的门禁应用。
 ```
 
 也可以直接描述 DejaOS App 开发任务。工具识别到任务后，通常会自动启用这个 Skill。
@@ -52,7 +52,7 @@ WorkBuddy: %USERPROFILE%\.workbuddy\skills\dejaos-app-dev-sdk2-0
 
 ```text
 使用 $dejaos-app-dev-sdk2-0 创建一个 DejaOS SDK 2.0 应用。
-设备型号是 VF105_V12，需要中文 UI、刷卡开门和人脸识别。
+设备型号是 FCV4905，需要中文 UI、刷卡开门和人脸识别。
 请先确认这台设备的 SKU 配置，再创建项目。
 设备连接后，把应用同步到设备运行并检查日志。
 ```
@@ -67,7 +67,7 @@ WorkBuddy: %USERPROFILE%\.workbuddy\skills\dejaos-app-dev-sdk2-0
 6. 询问正确的设备是否已通过 USB 连接。
 7. 在你确认后同步并运行 App，再读取设备日志检查明显错误。
 
-设备型号和 SKU 信息应尽量准确。例如，`VF202_V12` 不支持 Wi-Fi，就不应该要求 AI 为它开发 Wi-Fi 配置功能；某项硬件即使是该型号的可选项，也需要确认当前设备是否实际安装。
+设备型号和 SKU 信息应尽量准确。例如，`FCV5002` 不支持 Wi-Fi，就不应该要求 AI 为它开发 Wi-Fi 配置功能；某项硬件即使是该型号的可选项，也需要确认当前设备是否实际安装。
 
 ## 4. 修改现有 App
 
@@ -77,7 +77,7 @@ WorkBuddy: %USERPROFILE%\.workbuddy\skills\dejaos-app-dev-sdk2-0
 使用 $dejaos-app-dev-sdk2-0 修改这个现有项目：
 C:\projects\access-control
 
-设备型号是 VF114_V12。请增加扫码成功页面和语音提示。
+设备型号是 FCV4914。请增加扫码成功页面和语音提示。
 改完后检查 dxmodules API；如果 USB 设备已连接，就同步运行并查看日志。
 ```
 

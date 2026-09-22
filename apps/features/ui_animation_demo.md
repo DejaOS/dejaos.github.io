@@ -37,4 +37,4 @@ Reference source: [DejaOS repository, `apps/features/ui_animation_demo`](https:/
 
 ---
 
-**Tip**: This demo targets the **VF203_V12** model (as defined in `app.dxproj`). If you run it on devices with different display resolutions, adjust layout sizes and animation offsets accordingly.
+**Tip**: This demo targets the **FCV5003** model (as defined in `app.dxproj`). If you run it on devices with different display resolutions, adjust layout sizes and animation offsets accordingly.

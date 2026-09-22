@@ -54,21 +54,21 @@ DejaOS has been deployed on various IoT devices, which can be roughly categorize
 - **Features**: No screen, communicates with backend systems via network, controls multiple peripherals through serial ports, supports GPIO input/output.
 - **Applications**: Access control main controller, IoT controller, backend communication node.
 
-![CC104](/img/devices/CC104.png)
+![FCC4904](/img/devices/CC104.png)
 
 ### 2. Reader Devices (e.g., [FC7735](https://www.feocey.com/product/fc7735/))
 
 - **Features**: Used for identifying cards, QR codes, and other identification information. Can work with control boards or directly communicate with systems via network. Generally no screen included.
 - **Applications**: Access control card reading, QR code door opening, identity recognition.
 
-![M350](/img/devices/M350.png)
+![FC7735](/img/devices/M350.png)
 
 ### 3. Face Recognition Devices (e.g., [FCV4905](https://www.feocey.com/product/fcv4905/))
 
 - **Features**: Integrated face recognition related software and hardware, equipped with 6-inch or larger screens, network connectivity capability, automatically enters face recognition application after startup.
 - **Applications**: Smart access control, face clock-in, visitor recognition.
 
-![VF105](/img/devices/VF105.png)
+![FCV4905](/img/devices/VF105.png)
 
 ### 4. Multi-function Panel Devices (e.g., [FC6820](https://www.feocey.com/product/fc6820/))
 

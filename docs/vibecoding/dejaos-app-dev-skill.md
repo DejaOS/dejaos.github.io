@@ -22,7 +22,7 @@ Name the Skill directly in your request:
 
 ```text
 Use $dejaos-app-dev-sdk2-0 to create a DejaOS SDK 2.0 access-control app
-for VF202_V12. Confirm the device capabilities first, then create the project.
+for FCV5002. Confirm the device capabilities first, then create the project.
 When the USB device is connected, run the app and check its logs.
 ```
 
@@ -30,7 +30,7 @@ For an existing app, provide its path, exact device model, actual SKU options, a
 
 ```text
 Use $dejaos-app-dev-sdk2-0 to modify C:\projects\access-control.
-The device is VF114_V12. Add a scan-success page and an audio prompt.
+The device is FCV4914. Add a scan-success page and an audio prompt.
 Check every component API against this project's dxmodules.
 ```
 

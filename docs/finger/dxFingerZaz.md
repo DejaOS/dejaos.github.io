@@ -799,4 +799,4 @@ A: Use `upChar()` to get the template's hex string, which can be saved to a file
 
 ## Demo Example
 
-For a complete working example, see the [vf105_v12_finger_demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf105_v12/finger_zaz_demo) demo project.
+For a complete working example, see the [FCV4905 finger demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf105_v12/finger_zaz_demo) demo project.

@@ -796,7 +796,7 @@ A: 使用 `upChar()` 获取模板的十六进制字符串，可以保存到文�
 
 ## Demo 示例
 
-完整的示例项目请参考 [vf105_v12_finger_demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf105_v12/finger_zaz_demo) 演示项目。
+完整的示例项目请参考 [FCV4905 指纹 demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf105_v12/finger_zaz_demo) 演示项目。
 
 
 

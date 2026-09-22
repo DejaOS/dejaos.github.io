@@ -36,4 +36,4 @@ Reference source: [DejaOS repository, `apps/features/ui_popup_demo`](https://git
 
 ---
 
-**Tip**: This demo targets the **VF203_V12** model (as defined in `app.dxproj`). For other screen sizes, tune component dimensions, spacing, and text wrapping.
+**Tip**: This demo targets the **FCV5003** model (as defined in `app.dxproj`). For other screen sizes, tune component dimensions, spacing, and text wrapping.

@@ -166,7 +166,7 @@ dxDriver.GPIO_FUNC = {
 };
 ```
 
-Relay pin numbers are defined in `dxDriver.GPIO`, for example on VF203:
+Relay pin numbers are defined in `dxDriver.GPIO`, for example on FCV5003:
 
 ```javascript
 dxDriver.GPIO = {

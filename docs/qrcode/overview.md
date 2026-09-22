@@ -56,7 +56,7 @@ DejaOS devices are equipped with different QR code recognition hardware dependin
 - DejaOS only **reads** scan results from the module through `dxChannel`. Scan interval and beep behavior are controlled **inside the scan engine**, not by the DejaOS app. To change those settings, scan the module's configuration barcodes. See [Configuring the External Scan Engine](#configuring-the-external-scan-engine) below.
 
 ### Corresponding Example
-- [vf105_v12_barcode_demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf105_v12/vf105_v12_barcode_demo)
+- [FCV4905 barcode demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf105_v12/vf105_v12_barcode_demo)
 
 ---
 
@@ -79,7 +79,7 @@ DejaOS devices are equipped with different QR code recognition hardware dependin
 - Recognition performance is relatively lower compared to Type 1 and Type 2
 
 ### Corresponding Example
-- [vf202_v12_barcode](https://github.com/DejaOS/DejaOS/tree/main/demos/vf202_v12/vf202_v12_barcode)
+- [FCV5002 barcode demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf202_v12/vf202_v12_barcode)
 
 :::info Note
 Type 1 and Type 2 devices are equipped with dedicated QR code cameras, offering comparable high-performance recognition. Type 3 devices share the face recognition camera for QR scanning, which results in relatively lower recognition performance but provides a cost-effective solution.

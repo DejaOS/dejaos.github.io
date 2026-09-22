@@ -56,7 +56,7 @@ DejaOS 设备根据型号不同，配备了不同的二维码识别硬件。本�
 - DejaOS 仅通过 `dxChannel` **读取**扫码模块输出的数据。扫码间隔、蜂鸣等行为由**扫码模块内部固件**控制，不属于 DejaOS 应用逻辑，因此无法在应用中直接改。如需调整，请扫描模块专用的配置二维码。详见下文 [配置独立扫码模块](#配置独立扫码模块)。
 
 ### 对应示例
-- [vf105_v12_barcode_demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf105_v12/vf105_v12_barcode_demo)
+- [FCV4905 barcode demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf105_v12/vf105_v12_barcode_demo)
 
 ---
 
@@ -79,7 +79,7 @@ DejaOS 设备根据型号不同，配备了不同的二维码识别硬件。本�
 - 识别性能相对类型一和类型二较低
 
 ### 对应示例
-- [vf202_v12_barcode](https://github.com/DejaOS/DejaOS/tree/main/demos/vf202_v12/vf202_v12_barcode)
+- [FCV5002 barcode demo](https://github.com/DejaOS/DejaOS/tree/main/demos/vf202_v12/vf202_v12_barcode)
 
 :::info 说明
 类型一和类型二的设备配备了专用二维码摄像头，提供相当的高性能识别。类型三的设备共用人脸识别摄像头进行二维码扫描，识别性能相对较低，但提供了更具成本效益的解决方案。

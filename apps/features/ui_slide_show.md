@@ -34,4 +34,4 @@ Reference source: [DejaOS repository, `apps/features/ui_slide_show`](https://git
 
 ---
 
-**Tip**: This demo targets the **VF203_V12** model (as defined in `app.dxproj`). For different displays, adjust image resolution and transition timing for best visual quality.
+**Tip**: This demo targets the **FCV5003** model (as defined in `app.dxproj`). For different displays, adjust image resolution and transition timing for best visual quality.
