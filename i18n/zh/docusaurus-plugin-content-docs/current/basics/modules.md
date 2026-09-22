@@ -66,7 +66,7 @@ dejaos install
 成功 `install` 模块后，模块文件会下载到当前项目的 `dxmodules` 目录中。一般来说，有 3 种类型的模块，每种对应不同的文件类型：
 
 1. **纯 JavaScript 模块**：这类模块只包含 .js 文件，不同设备间版本一致。例如 `dxLogger` 和 `dxEventBus`
-2. **基于 SOC 的模块**：这类模块同时包含 .js 和 .so 文件。同一 SOC 下不同设备型号版本一致。例如 `dxMqttClient` 和 `dxHttpClient` 在设备 DW200 和 DW200_v20 上是一致的，因为这两种设备类型共享同一个 SOC——它们的唯一区别是 V20 额外增加了一个 WiFi 模块
+2. **基于 SOC 的模块**：这类模块同时包含 .js 和 .so 文件。同一 SOC 下不同设备型号版本一致。例如 `dxMqttClient` 和 `dxHttpClient` 在基于同一 SOC 的 FC6820 系列机型上版本一致（例如仅是否带 Wi‑Fi 模块的差异）。
 3. **基于设备型号的模块**：这类模块同时包含 .js 和 .so 文件。.js 文件在不同设备型号间基本一致，但 .so 文件肯定不同。例如 `dxCode` 和 `dxNfc`。这类模块通常与底层硬件相关。
 
 ---

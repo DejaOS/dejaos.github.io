@@ -49,4 +49,4 @@ The AI will normally:
 
 Be precise about the model and installed options. A feature supported as an option by a model is not necessarily installed on a particular unit. When no device is available, the AI can still perform static checks, but real-device validation remains pending.
 
-See [DejaOS CLI](../basics/cli.md) for CLI basics, or use the [DejaOS application prompts](./prompts.md) when you only need reusable context for a general AI tool.
+See [DejaOS CLI](../basics/cli.md) for CLI basics.

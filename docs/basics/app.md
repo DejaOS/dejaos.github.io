@@ -2,7 +2,7 @@
 
 ## Overview
 
-After development is complete, DejaOS apps need to be packaged and deployed to target devices. Taking DW200 as an example, the typical process is as follows:
+After development is complete, DejaOS apps need to be packaged and deployed to target devices. Taking FC6820 as an example, the typical process is as follows:
 
 1.  Purchase a small number of development devices for debugging and complete JavaScript app development.
 2.  Package the app.
@@ -75,6 +75,6 @@ It is recommended to use the built-in `dxOta` component in the app to add upgrad
 
 ### References
 
-- **GitHub Example Code**: [dw200 App QR Code Upgrade Example](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_update_new)
-- **GitHub Example Code**: [dw200 App Network Batch Upgrade Example](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_base_upgrade)
+- **GitHub Example Code**: [FC6820 App QR Code Upgrade Example](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_update_new)
+- **GitHub Example Code**: [FC6820 App Network Batch Upgrade Example](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_base_upgrade)
 - **OTA Detailed Description**: Please refer to [OTA Best Practice](../bestpractice/ota.md).

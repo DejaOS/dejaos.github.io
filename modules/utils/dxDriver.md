@@ -24,7 +24,7 @@ Compatible with all devices running dejaOS v2.0+.
 
 ## 5. Configuration Structure
 
-Below is a simplified example from the **DW200** device:
+Below is a simplified example from the **FC6820** device:
 
 ```javascript
 const dxDriver = {};

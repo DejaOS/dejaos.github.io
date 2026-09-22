@@ -2,7 +2,7 @@
 
 ---
 
-UIManager 是 DejaOS 上推荐的**单屏多页面**管理方案：在一个屏幕内以栈的方式管理多个页面（View），支持打开新页、关闭当前页、回退到历史页，并负责页面的懒加载、根容器显示/隐藏以及生命周期回调（如 `onShow`、`onHide`、`onClose`）。配合 [提示词](./prompts.md) 中的「UI 页面标准写法」，可将每个页面写成一个带 `init` / `onShow` / `onHide` 等的对象并注册到 UIManager，由 UIManager 统一调度。此外，UIManager 提供 `font(size, style)` 方法，对字体对象做缓存，避免重复创建，提升性能。
+UIManager 是 DejaOS 上推荐的**单屏多页面**管理方案：在一个屏幕内以栈的方式管理多个页面（View），支持打开新页、关闭当前页、回退到历史页，并负责页面的懒加载、根容器显示/隐藏以及生命周期回调（如 `onShow`、`onHide`、`onClose`）。通常将每个页面写成一个带 `init` / `onShow` / `onHide` 等的对象并注册到 UIManager，由 UIManager 统一调度。此外，UIManager 提供 `font(size, style)` 方法，对字体对象做缓存，避免重复创建，提升性能。
 
 下方为 UIManager 的完整参考实现，可直接放入项目 `src/UIManager.js` 使用。使用前请根据实际路径修改顶部的 `dxLogger`、`dxUi`、`dxStd` 的 import 路径，以及 `ttf` 字体文件路径（默认 `/app/code/resource/font/font.ttf`）。
 

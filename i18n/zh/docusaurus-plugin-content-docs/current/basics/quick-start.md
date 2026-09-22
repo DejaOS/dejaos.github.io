@@ -107,25 +107,25 @@ function initScreen() {
 })();
 
 function handleGpio() {
-  const gpio_id_dw200 = 44;
+  const gpio_id_fc6820 = 44;
   // 初始化 gpio
   let res = gpio.init();
   logger.info("初始化 gpio", res);
   // 请求 gpio
-  res = gpio.request(gpio_id_dw200);
+  res = gpio.request(gpio_id_fc6820);
   logger.info("请求 gpio", res);
   // 输出高电平打开继电器
-  res = gpio.setValue(gpio_id_dw200, 1);
+  res = gpio.setValue(gpio_id_fc6820, 1);
   logger.info("输出高电平", res);
   // 获取当前电平是高还是低
-  res = gpio.getValue(gpio_id_dw200);
+  res = gpio.getValue(gpio_id_fc6820);
   logger.info("当前电平是", res);
   // 等待 3 秒
   os.sleep(3000);
   // 输出低电平关闭继电器
-  res = gpio.setValue(gpio_id_dw200, 0);
+  res = gpio.setValue(gpio_id_fc6820, 0);
   logger.info("输出低电平", res);
-  res = gpio.getValue(gpio_id_dw200);
+  res = gpio.getValue(gpio_id_fc6820);
   logger.info("当前电平是", res);
 }
 

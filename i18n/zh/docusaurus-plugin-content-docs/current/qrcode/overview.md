@@ -31,7 +31,7 @@ DejaOS 设备根据型号不同，配备了不同的二维码识别硬件。本�
 - 专用硬件确保稳定性能
 
 ### 对应示例
-- [dw200_barcode_demo](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_barcode_demo)
+- [FC6820 barcode demo](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_barcode_demo)
 
 ---
 

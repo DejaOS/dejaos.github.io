@@ -29,7 +29,7 @@ The screenshots below are from the Chinese version of the UI. However, the sourc
 
 ## Project Overview
 
-This Smart Locker application is a fully functional embedded system designed for the **DW200_V20** device. It features:
+This Smart Locker application is a fully functional embedded system designed for the **FC6820** device. It features:
 
 - **User Interface**: Intuitive touchscreen interface for storing and picking up items
 - **Administrative Panel**: Complete management system for locker configuration, records, and settings
@@ -133,7 +133,7 @@ The application uses three main tables:
 
 ## Hardware Requirements
 
-- **Device**: DW200_V20
+- **Device**: FC6820
 - **Display**: Touchscreen (480×320 resolution)
 - **Serial**: RS-485 interface for lock control board
 - **Audio**: PWM buzzer for user feedback
@@ -153,6 +153,6 @@ The application uses three main tables:
 
 ---
 
-**Tip**: This application is designed for the **DW200_V20** device with a screen resolution of **480×320**. Most interface layouts and image resources are optimized for this resolution. While the core business logic is cross-device compatible, UI adaptation is required for devices with different resolutions.
+**Tip**: This application is designed for the **FC6820** device with a screen resolution of **480×320**. Most interface layouts and image resources are optimized for this resolution. While the core business logic is cross-device compatible, UI adaptation is required for devices with different resolutions.
 
 This project demonstrates the feasibility of AI-assisted development for embedded systems. The entire codebase, architecture, and implementation were generated through iterative AI conversations, showcasing the potential of AI in complex software development scenarios.

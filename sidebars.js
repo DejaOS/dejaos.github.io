@@ -6,7 +6,6 @@ module.exports = {
 			'basics/connect-device',
 			'basics/quick-start',
 			'basics/dejaos-device',
-			'basics/dejaos-device-model',
 		],
 		'Core Concepts': [
 			'basics/dejaos-arch',
@@ -69,7 +68,6 @@ module.exports = {
 		'Vibe Coding': [
 			'vibecoding/overview',
 			'vibecoding/dejaos-app-dev-skill',
-			'vibecoding/prompts',
 			'vibecoding/uimanager',
 		],
 		'FAQ': [

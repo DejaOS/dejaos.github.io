@@ -92,7 +92,7 @@ module.exports = {
 					'aria-label': 'GitHub repository',
 				},
 				{
-					href: 'https://www.youtube.com/@dxdop_iot',
+					href: 'https://www.youtube.com/@FEOCEY',
 					position: 'right',
 					className: 'header-youtube-link',
 					'aria-label': 'YouTube channel',

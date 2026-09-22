@@ -2,7 +2,7 @@
 
 ---
 
-UIManager is the recommended **single-screen, multi-page** solution on DejaOS: it manages multiple pages (Views) in a stack on one screen, supporting open, close, and back-to-history, and handles lazy loading, root container show/hide, and lifecycle callbacks (`onShow`, `onHide`, `onClose`). Together with the [Prompts](./prompts.md) "standard UI page" pattern, each page is implemented as an object with `init` / `onShow` / `onHide` (etc.) and registered with UIManager, which then drives navigation. UIManager also provides `font(size, style)`, which caches font objects to avoid repeated creation and improve performance.
+UIManager is the recommended **single-screen, multi-page** solution on DejaOS: it manages multiple pages (Views) in a stack on one screen, supporting open, close, and back-to-history, and handles lazy loading, root container show/hide, and lifecycle callbacks (`onShow`, `onHide`, `onClose`). Each page is typically implemented as an object with `init` / `onShow` / `onHide` (etc.) and registered with UIManager, which then drives navigation. UIManager also provides `font(size, style)`, which caches font objects to avoid repeated creation and improve performance.
 
 Below is a full reference implementation of UIManager that you can drop into your project as `src/UIManager.js`. Before use, adjust the import paths for `dxLogger`, `dxUi`, and `dxStd` at the top, and the `ttf` font path (default `/app/code/resource/font/font.ttf`).
 

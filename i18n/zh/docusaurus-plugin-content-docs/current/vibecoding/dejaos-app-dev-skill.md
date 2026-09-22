@@ -120,4 +120,4 @@ Skill 不会在未经确认时操作设备。当 AI 询问 USB 连接情况时�
 - 修改现有项目时，始终让 AI 以该项目自己的 `dxmodules` 为准。
 - 设备已连接时，明确允许 AI 同步、运行和查看日志，才能形成完整的开发验证闭环。
 
-更多基础工具说明可参阅 [DejaOS CLI](../basics/cli.md)；如果只想给通用 AI 工具补充 DejaOS 上下文，也可以参考 [DejaOS 应用开发提示词](./prompts.md)。
+更多基础工具说明可参阅 [DejaOS CLI](../basics/cli.md)。

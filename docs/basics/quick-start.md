@@ -107,25 +107,25 @@ function initScreen() {
 })();
 
 function handleGpio() {
-  const gpio_id_dw200 = 44;
+  const gpio_id_fc6820 = 44;
   // Init gpio
   let res = gpio.init();
   logger.info("init gpio", res);
   // Request gpio
-  res = gpio.request(gpio_id_dw200);
+  res = gpio.request(gpio_id_fc6820);
   logger.info("request gpio", res);
   // Output high level to open the relay
-  res = gpio.setValue(gpio_id_dw200, 1);
+  res = gpio.setValue(gpio_id_fc6820, 1);
   logger.info("Output high level", res);
   // Get whether the current level is high or low
-  res = gpio.getValue(gpio_id_dw200);
+  res = gpio.getValue(gpio_id_fc6820);
   logger.info("The level is now", res);
   // Wait 3 seconds
   os.sleep(3000);
   // Output low level to close the relay
-  res = gpio.setValue(gpio_id_dw200, 0);
+  res = gpio.setValue(gpio_id_fc6820, 0);
   logger.info("Output low level", res);
-  res = gpio.getValue(gpio_id_dw200);
+  res = gpio.getValue(gpio_id_fc6820);
   logger.info("The level is now", res);
 }
 

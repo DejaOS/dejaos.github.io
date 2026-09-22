@@ -18,14 +18,13 @@ DejaOS 的 JavaScript 开发与常见的 Web 前端或 Node.js 开发存在一�
 - **API 与模块**：使用 DejaOS 提供的原生模块（如 `dxUi`、`dxGpio` 等），命名、用法和约束与 Web/Node 生态不同。
 - **项目结构**：受 `app.dxproj`、设备型号、组件版本等配置影响，项目组织方式与常规前端工程不同。
 
-因此，若直接沿用「写 Web/Node 应用」的提示词或上下文，大模型容易产生不符合 DejaOS 习惯的代码。我们提供**示范性的提示词文档**，正是为了在对话中注入正确的上下文与约束，让 AI 快速、准确地生成可运行的 DejaOS 代码。
+因此，若直接沿用「写 Web/Node 应用」的提示词或上下文，大模型容易产生不符合 DejaOS 习惯的代码。安装 **DejaOS App 开发 Skill**，即可为 AI 注入正确的上下文与约束，快速、准确地生成可运行的 DejaOS 代码。
 
 ---
 
 ## 本系列文档能为你带来什么
 
 - **[DejaOS App 开发 Skill](./dejaos-app-dev-skill.md)**：安装到支持 Skill 的 AI 编程工具（例如 **Cursor**、**Codex**）后，可用自然语言创建、修改、同步并验证 DejaOS 应用。
-- **[提示词（Prompts）](./prompts.md)**：可直接复用或稍作修改的提示词模板，涵盖常见场景（如 UI 搭建、设备连接、业务逻辑等）。在 Cursor、Codex 等工具中粘贴即可补充 DejaOS 上下文。
 - **[UI Manager](./uimanager.md)**：结合 DejaOS UI 与 Vibe Coding 的说明，帮助 AI 与开发者理解界面结构、组件用法和最佳实践。
 
 配合这些文档，你可以更快地让大模型「理解」DejaOS 的边界与习惯，减少无效输出和反复修改。
@@ -41,8 +40,8 @@ DejaOS 的 JavaScript 开发与常见的 Web 前端或 Node.js 开发存在一�
 - **功能组合（Features）**：多模块协同的演示；
 - **场景方案（Solutions）**：更完整的、接近生产级的场景示例。
 
-你可以将这些示例作为「AI 能在 DejaOS 上做到什么」的参考，并结合本系列文档中的提示词与规范，在自己的项目中复现或扩展类似能力。**提示词文档会持续更新，对应由 AI 生成的应用示例也会持续发布**，欢迎持续关注。
+你可以将这些示例作为「AI 能在 DejaOS 上做到什么」的参考，并结合本系列文档中的 Skill 与规范，在自己的项目中复现或扩展类似能力。**Skill 与由 AI 生成的应用示例会持续更新发布**，欢迎持续关注。
 
 ---
 
-如果你使用 Cursor 或 Codex，可从 **[DejaOS App 开发 Skill](./dejaos-app-dev-skill.md)** 开始；也可以从 **[提示词](./prompts.md)** 入手，在现有 AI 开发流程中接入 DejaOS 的最佳实践。
+如果你使用 Cursor 或 Codex，可从 **[DejaOS App 开发 Skill](./dejaos-app-dev-skill.md)** 开始，在 AI 开发流程中接入 DejaOS 的最佳实践。

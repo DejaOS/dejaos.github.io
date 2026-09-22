@@ -75,6 +75,6 @@ dejaos build
 
 ### 参考资料
 
-- **GitHub 示例代码**：[dw200 应用程序扫二维码升级示例](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_update_new)
-- **GitHub 示例代码**：[dw200 应用程序网络批量升级示例](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_base_upgrade)
+- **GitHub 示例代码**：[FC6820 应用程序扫二维码升级示例](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_update_new)
+- **GitHub 示例代码**：[FC6820 应用程序网络批量升级示例](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_base_upgrade)
 - **OTA 详细说明**：请参考 [OTA 最佳实践](../bestpractice/ota.md)。

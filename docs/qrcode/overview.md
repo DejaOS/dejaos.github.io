@@ -31,7 +31,7 @@ DejaOS devices are equipped with different QR code recognition hardware dependin
 - Dedicated hardware ensures stable performance
 
 ### Corresponding Example
-- [dw200_barcode_demo](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_barcode_demo)
+- [FC6820 barcode demo](https://github.com/DejaOS/DejaOS/tree/main/demos/dw200_v20/dw200_barcode_demo)
 
 ---
 

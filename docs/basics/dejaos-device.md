@@ -75,7 +75,7 @@ DejaOS has been deployed on various IoT devices, which can be roughly categorize
 - **Features**: Provides comprehensive communication and control interfaces (network, NFC, Bluetooth, serial port, GPIO, QR code recognition, etc.), equipped with small-sized touch screens.
 - **Applications**: Smart panels, device control terminals, scene linkage hub.
 
-![DW200](/img/devices/DW200.png)
+![FC6820](/img/devices/DW200.png)
 
 ---
 
